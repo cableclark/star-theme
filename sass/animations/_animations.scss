@@ -1,0 +1,64 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(-20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+
+.excerpt:first-of-type { 
+  .post-thumbnail:first-of-type {
+
+      animation: 0.3s ease-out 0.6s 1 slideInFromRight;
+      animation-fill-mode: both;
+  }
+
+  .excerpt-title:first-of-type {
+      animation: 0.5s ease-out 0.1s 1 slideInFromLeft;
+      animation-fill-mode: both;
+  }
+
+
+  .excerpt-meta:first-of-type {
+      animation: 0.5s ease-out 0.2s 1 slideInFromLeft;
+      animation-fill-mode: both;
+  }
+
+  .excerpt-content:first-of-type {
+      animation: 0.5s ease-out 0.3s 1 slideInFromLeft;
+      animation-fill-mode: both;
+  }
+
+  .read-more:first-of-type {
+      animation: 0.5s ease-out 0.4s 1 slideInFromLeft;
+      animation-fill-mode: both;
+  }
+
+
+  .excerpt-header:first-of-type {  
+    .cat-links:first-of-type {  
+        display: block;
+        /* This section calls the slideInFromLeft animation we defined above */
+        animation: 0.5s ease-out 0s 1 slideInFromLeft;
+        animation-fill-mode: both;
+    }
+    
+  }
+
+}

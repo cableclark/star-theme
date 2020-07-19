@@ -1,0 +1,68 @@
+.sexwork {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.sexwork__title {
+    margin: 3rem auto;
+    width: 300px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card  {
+    max-width: 300px;
+    margin: 2rem;
+    img {
+        object-fit: unset;
+        width: 50%;
+        height: 50%;
+    }
+   
+}
+
+
+.card__paragraph {
+    line-height: 1.4rem;
+    margin-bottom: 0;
+}
+
+.sexwork__card {
+    display:flex;
+    flex-direction: column;
+    img {
+        align-self: center;
+    }
+    h3 {
+        margin-top:2rem;
+    }
+}
+
+@mixin transition-read-more {
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+.red_link,
+.less {
+    color:red;
+    font-weight: bolder;
+    opacity:1;
+    @include transition-read-more;
+}
+.start {
+    @include transition-read-more;
+    opacity:1;
+    height: 100%;
+}
+
+.hide {
+    opacity: 0;
+    @include transition-read-more;
+    height: 0px;
+    overflow: hidden;
+    margin:0;
+}
+
+

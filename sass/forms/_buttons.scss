@@ -1,0 +1,18 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+		border: none;
+		@include background;
+		color: $light_color;
+		height: 45px;
+		width: 200px;
+		cursor: pointer;
+		@include box-shadow-normal;
+		transition: all 0.2s ease-in;
+		font-size: 1rem;
+	&:hover {
+		@include box-shadow-hover;
+	}
+	
+}

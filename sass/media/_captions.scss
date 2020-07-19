@@ -1,0 +1,27 @@
+.wp-caption, 
+figcaption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	font-size: 0.8em;
+	font-weight: lighter;
+	font-style: italic;
+	text-align: center;
+
+	img[class*="wp-image-"] {
+
+		@include center-block;
+	}
+	
+	.wp-caption-text {
+		margin: 0 0;
+	}
+}
+
+.aligncenter {  
+	figcaption {
+		margin-bottom: 0;
+	}
+ }
+.wp-caption-text {
+	text-align: center;
+}

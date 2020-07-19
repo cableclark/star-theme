@@ -1,0 +1,37 @@
+.center, 
+.site-container {
+    margin: 0 auto;
+    padding: 1rem 1rem ;
+    max-width: 800px; 
+}
+
+.container {
+    padding: 0 1rem;
+     @media screen and (min-width: $large_screen) {
+         padding: unset; 
+         margin: 0 auto;
+     }    
+ }
+
+.index-container
+ {
+    margin-top: 60px;
+    margin-bottom: 3rem;
+    @media screen and (min-width: $large_screen) {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: auto;;
+        grid-template-areas: 
+        "main main main"
+        "article1 article2 article3"
+        "article4 article5 article6";
+        justify-content: center;
+        grid-gap: 2rem;   
+    } 
+
+    @media screen and (min-width: $extra_large_screen) { 
+        grid-template-columns: 450px 450px 450px;
+        grid-gap: 3rem;
+    }  
+}

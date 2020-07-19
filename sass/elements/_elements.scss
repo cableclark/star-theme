@@ -1,0 +1,92 @@
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+body {
+	background: $light_color; // Fallback for when there is no custom background color defined.
+	overflow-x: hidden;
+}
+
+hr {
+	background-color: $light_color;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; // Make sure images are scaled correctly.
+	max-width: 100%; // Adhere to container width.
+    margin-top: 1.2em; 
+}
+
+.wp-block-cover	 {
+
+	max-width:initial;
+	max-height: 300px;
+}
+
+// .attachment-post-thumbnail  {
+    
+
+// }
+
+figure {
+	margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
+}
+
+.read-more {
+	display: none;
+}
+.card:first-of-type {
+	.read-more {
+			display: block;
+			color: $light_orange;
+			background: $light_color;
+			border: 1px solid $light_orange;
+			height: 45px;
+			width: 200px;
+			cursor: pointer;
+			margin-top: 20px;
+			box-shadow: none;
+			padding-bottom: 3px;
+			font-family: $font-headings;
+			transform: all 0.2s ease;
+			margin-bottom: 1rem;
+		@media screen and (min-width: $extra_large_screen) {
+			margin-top: 50px;
+			height: 50px;
+		}	
+	}
+
+	.read-more:active {
+		transform: scale(0.99);
+	}
+
+	.read-more:hover {
+		@media screen and (min-width: $large_screen) {
+			@include background; 
+			color: $light_color;
+			border: none;
+			box-shadow: unset;
+		}
+	}
+}
+
+.grecaptcha-badge {
+	opacity: 0;
+	visibility: hidden;
+ }
+
+@import "tables";

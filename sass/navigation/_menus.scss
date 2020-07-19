@@ -1,0 +1,171 @@
+.menu {	
+	color: $black_color;
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none;
+	letter-spacing: 0.1rem;
+	display: flex;
+	flex-direction: column;
+	@media screen and (min-width: $extra_large_screen) {
+		flex-direction: row;
+		height: unset;
+		position:static;
+		background-color: unset;
+		justify-content: flex-end;
+		min-width: 500px;
+	} 
+	li {
+		position: relative;
+		padding: 0.6rem 0;
+		&:hover > a,
+		&.focus > a {
+			@media screen and (min-width: $extra_large_screen) { 
+				border-bottom: 1px solid black;
+				color: black;
+			}
+		}
+		a {
+			display: block;
+			color: white;
+			font-size: 14px;
+			@media screen and (min-width: $extra_large_screen) { 
+				box-sizing: border-box;
+				border-bottom: 1px solid rgba(1, 1, 1, 0);
+				padding: 0.4em 1em;
+				border-width: 1px;
+				transition: all 0.3s ease-in;
+			}
+		}
+	}	
+}
+
+.main-menu {
+	position: absolute;
+	left: 0px;
+	top:0px; 
+	display:flex; 	
+	flex-direction: column; 
+	height:100vh;
+	width: 250px;
+	background:  $black_color;
+	justify-content: center;
+	align-items: center;
+	transform: translateX(-350px);
+	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+	transition: transform 0.2s ease-in;
+	@media screen and (min-width: $extra_large_screen) {
+		box-shadow: unset;
+		position: static;
+		flex-direction: row; 
+		height:unset;
+		width: unset;
+		background: unset;
+		min-width: 350px;
+		transition: unset;
+		transform: translateX(0px);
+		top:0;
+    }    
+}
+
+.menu-active {
+	display: flex;
+	transform: translateX(0px);
+	@media screen and (min-width: $extra_large_screen) {
+		position: unset;
+    }    
+}
+
+.posts-navigation,
+.post-navigation {
+	max-width:900px; 
+	margin: 3em auto;
+	.nav-links {
+		display: flex;
+		margin: 0 auto;
+		font-size: 1rem;
+		@media screen and (min-width: $large_screen) { 
+			font-size: 1.2rem;
+		}
+		@media screen and (min-width: $extra_large_screen) {  
+			font-size: 1.3rem;
+		}
+	}	
+}
+
+.toggler {
+    padding:auto 10px;
+    display: flex;
+    flex-direction:column;
+	margin: 5px 5px;
+	cursor: pointer;
+    @media screen and (min-width: $extra_large_screen) {
+        display: none;
+    }    
+    div {
+		@media screen and (max-width: $large_screen) {
+			width: 23px;
+			margin: 3px 0;
+		}   
+        height: 2px;
+        width: 30px;
+        margin: 4px 0;
+        background-color: $black_color;
+    }  
+}  
+
+.nav-menu
+ {
+    display:flex; 
+ }
+
+
+.sub-menu {
+    display:none;
+ }
+
+.menu-hider {
+	z-index: -10000000000;
+	display: none;
+}
+
+.menu-hider-active {
+	display: block;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100vw;
+	height: 100vh;
+}
+
+
+/**
+*Menu stagered animnation 
+*/
+.open-menu-items {
+	li {
+	animation: 0.4s ease pulse;
+	animation-fill-mode: both; 
+	}
+}
+
+@for $i from 1 through 9 {
+	.open-menu-items {
+	  // :nth-child(1-9) 
+	  li {
+		&:nth-child(#{$i}) {
+			// Delay the animation. Delay increases as items loop.
+			animation-delay: $i * (1.2s / 18);
+			}
+		}
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: translateX(-75px);
+	}
+	
+	100% {
+	  ttransform: translateX(0px);
+	}
+  }
