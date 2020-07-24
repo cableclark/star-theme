@@ -6,16 +6,24 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Miss Albini
+ * @package star-star
  */
 ?>
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( '%1$s, %2$s. by %3$s.', 'Miss Albini.' ), 'In the lost and found', date('Y'), '<a href="https://www.github.com/cableclark">Cableclark</a>' );
-			?>
-		</div><!-- .site-info -->
+		
+			<div class="footer-logo-container">
+				<img class="footer-logo" src="<?php echo get_template_directory_uri() . '/images/Footer_logo_MK.svg' ?>">
+			</div>
+			<div class="footer-text-container">
+				<p class="footer-text-container__paragraph"><b>СТАР-СТАР </b> </p>
+				<p class="footer-text-container__paragraph"><b>Телефон/Факс:</b> +389 (2) 32 32 411 </p>
+				<p class="footer-text-container__paragraph"><b>Електронска пошта: </b>star.contact@yahoo.com </p>
+				<img class="footer-icon" src="<?php echo get_template_directory_uri() . '/images/facebook.svg' ?>">
+				<img class="footer-icon" src="<?php echo get_template_directory_uri() . '/images/twitter.svg' ?>">
+				<img class="footer-icon" src="<?php echo get_template_directory_uri() . '/images/youtube.svg' ?>">
+				<img class="footer-icon" src="<?php echo get_template_directory_uri() . '/images/flickr.svg' ?>">
+			</div>	
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <?php wp_footer(); ?>

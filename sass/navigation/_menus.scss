@@ -6,7 +6,7 @@
 	letter-spacing: 0.1rem;
 	display: flex;
 	flex-direction: column;
-	@media screen and (min-width: $extra_large_screen) {
+	@media screen and (min-width: $larger_screen) {
 		flex-direction: row;
 		height: unset;
 		position:static;
@@ -19,19 +19,20 @@
 		padding: 0.6rem 0;
 		&:hover > a,
 		&.focus > a {
-			@media screen and (min-width: $extra_large_screen) { 
-				border-bottom: 1px solid black;
-				color: black;
+			@media screen and (min-width: $larger_screen) { 
+				border-bottom: 1px solid $light_color;
+				color: $light_color;
 			}
 		}
 		a {
 			display: block;
-			color: white;
+			color:  $red_main;
 			font-size: 14px;
-			@media screen and (min-width: $extra_large_screen) { 
+			@media screen and (min-width: $larger_screen) { 
 				box-sizing: border-box;
+				color: $light_color;
 				border-bottom: 1px solid rgba(1, 1, 1, 0);
-				padding: 0.4em 1em;
+				padding: 0.4em 0.6em;
 				border-width: 1px;
 				transition: all 0.3s ease-in;
 			}
@@ -47,13 +48,13 @@
 	flex-direction: column; 
 	height:100vh;
 	width: 250px;
-	background:  $black_color;
+	background:  $light_color;
 	justify-content: center;
 	align-items: center;
 	transform: translateX(-350px);
 	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
 	transition: transform 0.2s ease-in;
-	@media screen and (min-width: $extra_large_screen) {
+	@media screen and (min-width: $larger_screen) {
 		box-shadow: unset;
 		position: static;
 		flex-direction: row; 
@@ -70,7 +71,7 @@
 .menu-active {
 	display: flex;
 	transform: translateX(0px);
-	@media screen and (min-width: $extra_large_screen) {
+	@media screen and (min-width: $larger_screen) {
 		position: unset;
     }    
 }
@@ -98,11 +99,11 @@
     flex-direction:column;
 	margin: 5px 5px;
 	cursor: pointer;
-    @media screen and (min-width: $extra_large_screen) {
+    @media screen and (min-width: $larger_screen) {
         display: none;
     }    
     div {
-		@media screen and (max-width: $large_screen) {
+		@media screen and (max-width: $larger_screen) {
 			width: 23px;
 			margin: 3px 0;
 		}   

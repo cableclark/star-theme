@@ -45,7 +45,6 @@ function toggleClass (item, searchElement, className) {
 }
 
 
-
 const toggler = document.querySelector('.toggler');
 
 const menuElement = document.querySelector('.main-menu');
@@ -79,7 +78,6 @@ function removeClassOnTarget (item, searchElement, className) {
         return false; 
     });
 }
-
 
 
 const searchX = document.querySelector('.search-x');
@@ -125,7 +123,6 @@ removeClass(menuElement, menuUL, 'open-menu-items');
  *
  */
 
-
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     title.classList.add("smaller-navbar");
@@ -164,21 +161,24 @@ window.onscroll = function() {scrollFunction();};
  *
  */
 
-
 let more = document.querySelectorAll(".red_link");
-
 let less = document.querySelectorAll(".less");
+let sexwork = document.querySelector(".kosa-crta");
+
+console.log (sexwork);
 
 more.forEach(function toggleClass (item) {
     item.addEventListener('click', function () {
         this.previousElementSibling.classList.toggle('hide');
         this.classList.toggle('hide');
-        this.nextElementSibling.classList.toggle('hide'); 
+        this.nextElementSibling.classList.toggle('hide');
+
     });
 })
 
 less.forEach(function toggleClass (item) {
     item.addEventListener('click', function () {
+        sexwork.scrollIntoView();
         this.previousElementSibling.previousElementSibling.classList.toggle('hide');
         this.classList.toggle('hide');
         this.previousElementSibling.classList.toggle('hide');

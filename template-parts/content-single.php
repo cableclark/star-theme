@@ -50,7 +50,5 @@
 			miss_albini_get_tags(); 
 			?>
 		</div><!-- .entry-content -->
-
 	</article><!-- #post-<?php the_ID(); ?> -->
-
 </div> <!-- Container ends -->

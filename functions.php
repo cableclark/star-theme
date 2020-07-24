@@ -12,6 +12,8 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+add_filter('show_admin_bar', '__return_false');
+
 if ( ! function_exists( 'miss_albini_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -331,17 +333,7 @@ function my_search_form_text($text) {
 
 add_filter('get_search_form', 'my_search_form_text');
 
-/** 
-* This is a function which limits Number of Posts on Archive Pages
-*/
-function number_of_posts_on_archive($query){
-	if ($query->is_archive) {
-		$query->set('posts_per_page', 6);
-	}
-	return $query;
-	}
-	
-add_filter('pre_get_posts', 'number_of_posts_on_archive');
+
 
 /**
  * Custom template tags for this theme.
@@ -352,6 +344,16 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/** 
+* Filter except length to 35 words.
+*/
+  
+function tn_custom_excerpt_length( $length ) {
+	return 35;
+	}
+	add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
+
 
 
 /**
@@ -378,4 +380,9 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+require get_template_directory() . '/inc/shortcodes.php';
+
+
 

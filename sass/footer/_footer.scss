@@ -1,12 +1,38 @@
 .site-footer {
-    background-color: $dark_color;
-    height: 100px;
+    background-color: $red_main;
+    min-height: 400px;
     color: $light_color;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    @media screen  and (min-width: $medium_screen){
+        justify-content: space-evenly;
+    }
     a {
         color: $light_color; 
     }
+}
+
+.footer-text-container {
+    max-width: 320px;
+}
+
+.footer-text-container__paragraph {
+    color: $light_color;
+    font-family: $font__main;
+}
+
+.footer-logo {
+    max-width: 380px;
+
+    @media screen  and (min-width: $medium_screen){
+        max-width: 420px;
+    }
+}
+
+.footer-icon {
+    margin-right:1rem;
+    margin-bottom: 1rem;
 }

@@ -21,12 +21,17 @@
 }
 
 @mixin background {
-	background: $mid_orange;
-	;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, $mid_orange, $dark_orange 
-	);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, $mid_orange, $dark_orange
-	);
+	background:#B62626;
+    background:linear-gradient(224.35deg, #B62626 20.34%, #EE3626 73.72%);
+}
+
+@mixin front-page-title {
+	font-size: 1.5rem;
+	@media screen  and (min-width: $large_screen){
+		letter-spacing: 0.2rem;
+		font-size: 2rem;
+    }
+	
 }
 
 @mixin border {
@@ -40,7 +45,7 @@
 
 
 @mixin box-shadow-hover {
-	box-shadow: 0 2px 4px $dark_color;
+	box-shadow: 0 1px 17px $dark_color;
 }
 
 

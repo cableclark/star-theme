@@ -1,22 +1,37 @@
 #post-2995,
 #post-3029 {
-    header {
+    .entry-header {
         display: none;
     }
 }
 
 .hero {
-    background:#B62626;
-    background:linear-gradient(224.35deg, #B62626 20.34%, #EE3626 73.72%);
-    width: 100vw;
-    height: 100vh;
-    min-height: 640px;
-    max-height: 720px;
-    display: grid;
-    place-items: center;
+   @include background;
+    min-height: 100vh;
+    display: flex;
+    min-height: 720px;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 54% 10%;
+    border-bottom-right-radius: 54% 10%;
+    box-shadow: box-shadow-normal;
+    @media all and (orientation:landscape){
+        align-items: unset;
+        flex-direction: row;  
+        min-height: unset;
+    }
+    @media screen  and (min-width: $smaller_screen) and (orientation:portrait){
+        min-height: 880px;
+    }
+
+    @media screen  and (min-width: $small_screen){
+        flex-direction: row;
+        align-items: unset;
+    }
+
     @media screen  and (min-width: $large_screen){
-        min-height: 900px;
-        max-height: unset;
+        min-height: 100vh;
+        max-height: 100vh;
     }
 
     @media screen  and (min-width: $extra_large_screen){
@@ -26,98 +41,63 @@
 }
 
 .hero__image {
-    position:absolute;
-    top: -60px;
-    left: -32%;
-    transform: scale(2);
-    
-    @media screen  and (min-width: $smallest_screen){
-        left: -43%;
-        transform: scale(1.8);
+    margin-top:unset;
+    margin-bottom: 1rem;
+    @media all and (orientation:landscape){
+        max-width: 360px; 
     }
-    @media screen  and (min-width:  445px){
-        top: -130px;
-        transform: scale(1.5);
-    }
-
     @media screen  and (min-width: $small_screen){
-        left: -45%;
-        transform: scale(1.3);
-    }
-    
-    
-    @media screen  and (min-width: $medium_screen){
-        left: -40%;
-        transform: scale(1.2);
+        max-width: 380px;
     }
 
-    @media screen  and (min-width: $medium_large_screen){
-        left: -35%;
-        transform: scale(1.2);
+    @media screen  and (min-width: $medium_large_screen) and (orientation:portrait){
+        max-width: 540px;
     }
-
     @media screen  and (min-width: $large_screen){
-        top: -160px;
-        left: -16%; 
+        max-width: 540px;
     }
-
     @media screen  and (min-width: $not_quite_larger_screen){
-     
-        transform: scale(1.8);
+        
     }
-
     @media screen  and (min-width: $larger_screen){
-     
-        transform: scale(2);
+       
     }
-
     @media screen  and (min-width: $extra_large_screen){
-        top: -100px;
-        // left: -15%;
-        transform: scale(2);
+        max-width: unset;
+        width: 800px;
     }
-
     @media screen  and (min-width:$fullHD_screen){
-        left: -0%;
-        transform: scale(2);
+        
     }
 }
 
 .hero-container {
-    transform: translateY(100px);
-    margin-left: 40%;
-    margin-right: 7%; 
-    max-width: 150px;
+    max-width: 120px;
     color: $light_color;
-    @media screen  and (min-width: $smallest_screen){
-       
+    @media screen  and (min-width: 282px){
+        max-width: 150px;
     }
-    @media screen  and (min-width: $small_screen){
-        transform: translateY(0px);
-        margin-left:55%;
+    @media all and (orientation:landscape){
+        align-self: center;
+        max-width: 200px;  
     }
-
-    @media screen  and (min-width: $medium_screen){
-        max-width: 300px;
-        transform: translateY(0px);
-        margin-left:55%;
+    @media screen  and (min-width: $small_screen ){
+        align-self: center;
+        max-width: 200px; 
+        margin: 0 auto;
     }
-
+    @media screen  and (min-width: $large_screen){  
+        max-width: 383px; 
+    }
     @media screen  and (min-width: $extra_large_screen){
-        margin-left: 27%;
-        max-width: 400px;
+        max-width: 500px;
     }
-    @media screen  and (min-width:$fullHD_screen){
-        
-        margin-left: 37%;
-    
-    }
-    
 }
 
 .hero-container__heading {
     font-size: 2.3rem;
     letter-spacing: 0.3rem; 
+    line-height: unset;
     margin:0;
     color: $light_color;
     @media screen  and (min-width: $smallest_screen){
@@ -139,7 +119,8 @@
 .hero-container__slogan {
     margin: 1.2rem 0;
     line-height: 1.3; 
-    margin-top:0.5rem;  
+    margin-top:0.5rem; 
+    color:$light_color; 
     @media screen  and (min-width: $smallest_screen){
         font-size: 1.1rem;    
     }
@@ -163,11 +144,14 @@
 }
 
 .hero-container__call-to-action {
-    font-size: 0.8rem;
-    cursor: pointer;
-    margin: 1em 0; 
+    font-size: 0.7rem;
+    cursor: pointer; 
     height: 50px;
-    max-width: 200px;
+    max-width: 180px;
+    @media screen  and (min-width: 282px){
+        font-size: 0.8rem;
+        max-width: 180px;
+    }
     font-family: $font__main;
     @include box-shadow-normal;   
     background-color: white;
@@ -176,14 +160,18 @@
     display: grid;
     place-items: center;
     @media screen  and (min-width: $small_screen){
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
 .hero-container__call-to-action:hover {
     background-color: unset;
-     box-shadow: 0px 0px 2px white;
-    a {
-        color: white;
-    }
+    box-shadow: 0px 0px 2px white;
+    color: white;
+}
+
+.kosa-crta {
+    transform: translateY(1px);
+    width: 100%;
+    align-self: end;
 }

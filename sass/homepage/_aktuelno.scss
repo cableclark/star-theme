@@ -1,0 +1,136 @@
+.aktuelno,
+.s-work {
+    @include background;
+    min-height: 720px; 
+    padding-top: 3rem;
+}
+
+.s-work {
+    background: $light_color;
+    padding-bottom: 2rem;
+}
+
+.aktuelno__title,
+.s-work__title {
+    margin: 0;
+    text-align: center;
+    color: $light_color; 
+    text-align: center;
+    @include front-page-title; 
+    margin-bottom:2.5rem;   
+}
+.s-work__title {
+    color: $red_main; 
+}
+
+.aktuelno__posts,
+.s-work__posts {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;  
+}
+
+
+.kosa-crta-2 {
+    transform: translateY(5px);
+    width: 100%;
+    @media screen  and (min-width: $large_screen){
+        transform: translateY(5px);
+    }
+}
+
+.news-card {
+    max-width: 320px;
+    margin:1rem;
+    margin-bottom: 2rem;
+    img {
+        object-fit: cover; 
+        margin: 0 auto;
+        @media screen  and (min-width: $medium_screen){
+            min-width: 320px;
+            transition: all 0.2s ease-in;
+        }
+    }
+    img:hover {
+        box-shadow: 1px 1px 13px rgba(0, 0, 3, 0.5);
+    }
+    @media screen  and (min-width: $small_screen){
+        margin: 0 1em;
+        margin-bottom: 2rem;
+    }
+}
+
+.news-card-content {
+    p {
+        display:none;
+        @media screen  and (min-width: $medium_screen){
+            display: block;
+        }
+    }
+}
+
+.cat-links {
+	a {
+        text-transform: uppercase;
+        color:$black_color;
+        font-size: 0.7rem;
+        @media screen and (min-width: $large_screen) {
+            font-size: 0.9rem;
+        }
+    }
+    a:hover {
+        color: $mid_orange;
+        text-decoration: underline;
+    }
+}
+
+.news-card-title {
+    margin: 0.5rem 0;
+ }
+
+.light-color {
+    color:$light_color;  
+    a,
+    p {
+        color:$light_color;  
+    }
+    img {
+        height: 200px;
+        width: 320px;
+        box-shadow: none;
+        @media screen  and (min-width: $medium_screen){
+            min-width: 320px;           
+        }
+    }
+
+   
+}
+
+.font-white {
+    color:$light_color;
+}
+
+.large-title {
+    display: inline-block;
+    font-size: 3.4rem;
+    line-height: 3.4rem;
+    margin-bottom: 1rem;
+}
+
+.campagns {
+    background: $red_dark;
+    background-image: url("http://localhost/star/wp-content/themes/star/images/campagn_mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: $large_screen) {
+        background-image: url("http://localhost/star/wp-content/themes/star/images/campagn_large.png");
+    }
+    
+}
+
+.news-card-content {
+    display: flex;
+    flex-direction: column;
+}

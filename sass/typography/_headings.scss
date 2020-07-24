@@ -4,29 +4,30 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font__main;	
-	color: red;
+	font-family: $font__main;
 	line-height: unset;
+	color:$black_color;
+	line-height: 1.8rem;
 }
 
 h1 {
-	font-size: 1.3rem;
+	font-size: $extra_large_heading;
 }
 
 
 h2,
 .search-title {
-	font-size: 1.2rem;
+	font-size:  $large_heading;
 
 }
 
 h3 {
-	font-size: 1rem;
+	font-size: $medium_heading;
 }
 
 
 h4 {
-	font-size:1rem;
+	font-size:$smaller_heading
 }
 
 

@@ -8,5 +8,16 @@ textarea {
 	font-family: $font__main;
 }
 
+
+/**
+* Type sizes
+*/
+$ratio: 1.1;
+$regular_font_size: 1rem;
+$smaller_heading:  1rem * $ratio; 
+$medium_heading:  $smaller_heading * $ratio;
+$large_heading: $medium_heading * $ratio;
+$extra_large_heading:  $large_heading * $ratio;
+
 @import "headings";
 @import "copy";

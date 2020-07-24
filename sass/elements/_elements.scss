@@ -9,10 +9,12 @@
 html {
 	box-sizing: border-box;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
+	  
 }
 
 body {
-	background: $light_color; // Fallback for when there is no custom background color defined.
+	background: $black_color; // Fallback for when there is no custom background color defined.
 	overflow-x: hidden;
 }
 

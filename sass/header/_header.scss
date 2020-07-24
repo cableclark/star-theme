@@ -27,11 +27,16 @@
    @include box-shadow-normal;
    background-color: $light_color;
     img {
-        width: 40px;
-        height: 40px;  
+        width: 43px;
+        height: 43px;  
     }
+
     @media screen and (min-width: $small_screen) {
-        height: 50px;
+        height: 70px;
+        img {
+            width: 50px;
+            height: 50px;  
+        }
     }
 
     @media screen and (min-width: $large_screen) {
@@ -39,17 +44,14 @@
         height: 80px;
         
         img {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
         }
         p {
             font-size: 0.8rem;
         }
     }   
    
-    @media screen and (min-width: $extra_large_screen) {
-    
-    } 
 }
 
 .smaller-header-dark {
@@ -88,7 +90,7 @@
     margin: auto 1rem;
  }
 
- .main-navigation {
+.main-navigation {
 
     @media screen and (min-width: $medium_screen) {
         margin-right: 3rem;
@@ -108,14 +110,23 @@
 }
 
 .site-title {
-    margin: auto 1rem;
-    font-size: unset;
-    width: 142px;
-    @media screen and (min-width: $smallest_screen) {
-        width: 180px;  
+    display: none;
+    @media screen and (min-width: 333px) {
+        margin: auto 0;
+        margin-left: 0.5rem;
+        padding-left: 1rem;
+        line-height: 1;
+        border-left:1px solid $red_main;;
+        display: block;
+        width: 194px; 
       }   
+
+      @media screen and (min-width: 370px) {
+        width: 240px; 
+      }   
+   
     @media screen and (min-width: $small_screen) {
-        width: 230px;  
+        width: 260px;  
       }    
     @media screen and (min-width: $large_screen) {
         width: 300px;  
@@ -125,35 +136,26 @@
         font-family:$font-headings;
         font-weight: 400;
         text-transform: uppercase;
-        color:$black_color;
-        font-size: 0.5rem;
+        color: black;
         line-height: normal;
+        font-size: 10px; 
         @media screen and (min-width: $smaller_screen) {
-            font-size: 0.6rem;;  
-          }   
-        @media screen and (min-width: $small_screen) {
-          font-size: 0.7rem;   
-        }  
+            font-size: 11rem;  
+          }  
+        @media screen and (min-width: 370px) {
+            font-size: 12px;
+          }    
+    
         @media screen and (min-width: $large_screen) {
-            font-size: 0.8rem;   
+            font-size: 0.9rem;   
           }  
     }
-    a:visited {
-        color:$black_color;
-    }
+    a:visited, 
     a:hover {
-        color: $black_color;
+        color: black;
     }
  }
 
-
-//  .smaller-navbar {
-//     @media screen and (min-width: $extra_large_screen) {
-//         a {  
-//             font-size:0.9rem;
-//         }         
-//     }
-//  }
 
  .scrolled-menu-items {
     @media screen and (min-width: $extra_large_screen) {

@@ -59,13 +59,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "animations/animations";
 
-
-/*--------------------------------------------------------------
-# Hero Area
---------------------------------------------------------------*/
-@import "hero/hero";
-
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -134,10 +127,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "layout/archive";
 
+
 /*--------------------------------------------------------------
-# Sex Work Area
+#  Home page Area
 --------------------------------------------------------------*/
-@import "sexwork/sexwork";
+@import "homepage/homepage";
+
 
 
 

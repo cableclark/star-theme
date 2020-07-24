@@ -1,57 +1,59 @@
-.excerpt:first-of-type     
- {
-    @media screen and (min-width: $large_screen) {
-        grid-area: main;
-        display: flex; 
-        max-width: unset;
-        max-width: unset;
-        min-width: unset;
-        margin: 5rem 0;  
-    }
+// .excerpt:first-of-type     
+//  {
+//     @media screen and (min-width: $large_screen) {
+//         grid-area: main;
+//         display: flex; 
+//         max-width: unset;
+//         max-width: unset;
+//         min-width: unset;
+//         margin: 5rem 0;  
+//     }
 
-    .excerpt-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
-        @media screen and (min-width: $large_screen) {
-            width:450px;
-        }
-        @media screen and (min-width: $extra_large_screen) { 
-            width:600px;
-        }  
-    } 
-    .excerpt-title {
-        @media screen and (min-width: $extra_large_screen) { 
-            line-height: 3.4rem;
-            font-size: 2.7rem;
-        }  
+//     .excerpt-text {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center; 
+//         @media screen and (min-width: $large_screen) {
+//             width:450px;
+//         }
+//         @media screen and (min-width: $extra_large_screen) { 
+//             width:600px;
+//         }  
+//     } 
+//     .excerpt-title {
+//         @media screen and (min-width: $extra_large_screen) { 
+//             line-height: 3.4rem;
+//             font-size: 2.7rem;
+//         }  
 
-    }
-    .post-thumbnail { 
-        @media screen and (min-width: $large_screen) {
-            width:450px;
-            height: 450px;
-            margin-right: 4rem;
-        } 
-        @media screen and (min-width: $extra_large_screen) {
-            width:650px;
-            height:650px;
-        }
-        img {
-            margin-top: unset;
-            @media screen and (min-width: $large_screen) {
-                object-fit:fit;
-                width: 100%;
-                height: 100%;
-                margin:unset;
-                @include box-shadow-normal;
-            } 
-        }
-        img:hover {
-            filter: grayscale(0.7);
-        }
-    }
-}
+//     }
+//     .post-thumbnail { 
+//         @media screen and (min-width: $large_screen) {
+//             width:450px;
+//             height: 450px;
+//             margin-right: 4rem;
+//         } 
+//         @media screen and (min-width: $extra_large_screen) {
+//             width:650px;
+//             height:650px;
+//         }
+//         img {
+//             margin-top: unset;
+//             @media screen and (min-width: $large_screen) {
+//                 object-fit:fit;
+//                 width: 100%;
+//                 height: 100%;
+//                 margin:unset;
+//                 @include box-shadow-normal;
+//             } 
+//         }
+//         img:hover {
+//             filter: grayscale(0.7);
+//         }
+//     }
+// }
+
+
 
 .excerpt {
     margin: 0 1rem;
@@ -61,69 +63,64 @@
     
 }
 
-.excerpt:nth-of-type(2) {
-    grid-area: article1;
-}
-.excerpt:nth-of-type(3) {
-    grid-area: article2;
-}
-.excerpt:nth-of-type(4) {
-    grid-area: article3;
-}
-.excerpt:nth-of-type(5) {
-    grid-area: article4;
-}
-.excerpt:nth-of-type(6) {
-    grid-area: article5;
-}
-.excerpt:nth-of-type(7) {
-    grid-area: article6;
-}
+// .excerpt:nth-of-type(2) {
+//     grid-area: article1;
+// }
+// .excerpt:nth-of-type(3) {
+//     grid-area: article2;
+// }
+// .excerpt:nth-of-type(4) {
+//     grid-area: article3;
+// }
+// .excerpt:nth-of-type(5) {
+//     grid-area: article4;
+// }
+// .excerpt:nth-of-type(6) {
+//     grid-area: article5;
+// }
+// .excerpt:nth-of-type(7) {
+//     grid-area: article6;
+// }
 
-.excerpt-header {
-    border-left: 1px solid $light_orange;
-    padding-left: 1rem;
-    margin-top:  1rem;
-    z-index: 10000;  
-    @media screen and (min-width: $large_screen) {
-        margin-top: 0;
-        margin-bottom: 1rem; 
-    }
-    @media screen and (min-width: $extra_large_screen) {
-        padding: 0 2rem;
-    }
-}
+// .excerpt-header {
+//     border-left: 1px solid $light_orange;
+//     padding-left: 1rem;
+//     margin-top:  1rem;
+//     z-index: 10000;  
+//     @media screen and (min-width: $large_screen) {
+//         margin-top: 0;
+//         margin-bottom: 1rem; 
+//     }
+//     @media screen and (min-width: $extra_large_screen) {
+//         padding: 0 2rem;
+//     }
+// }
 
-.excerpt-content,
-.excerpt-summary {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    line-height: 1.7;
-    p {
-        margin-bottom: 1rem;
-        @media screen and (min-width: $large_screen) {  
-            margin: 0;
-        }
-        @media screen and (min-width: $extra_large_screen) {  
-            line-height: 1.7;
-        }
-    }
-    @media screen and (min-width: $extra_large_screen) {
-          margin-left: 1rem;  
-    }
-    figure {
-        margin-left: 1rem;
-    }
-}       
+// .excerpt-content,
+// .excerpt-summary {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//     line-height: 1.7;
+//     p {
+//         margin-bottom: 1rem;
+//         @media screen and (min-width: $large_screen) {  
+//             margin: 0;
+//         }
+//         @media screen and (min-width: $extra_large_screen) {  
+//             line-height: 1.7;
+//         }
+//     }
+//     figure {
+//         margin-left: 1rem;
+//     }
+// }       
 
 
 .page-title {
     margin: unset;
     @media screen and (min-width: $large_screen) {
-        line-height: 2.4rem;
         margin: unset;
         margin-bottom: 1rem;
-        font-size: 2rem;
     }
 }
 
@@ -131,10 +128,8 @@
 .entry-title {
     margin-right: 1rem;
     @media screen and (min-width: $large_screen) {
-        line-height: 2.4rem;
         margin: unset;
         margin-bottom: 1rem;
-        font-size: 2rem;
     }
     a {
         font-weight: bold;
@@ -150,13 +145,9 @@
     }
 }
 
-.entry-content {
-    font-family: $font-headings;
-}
-
 .excerpt-meta,
 .entry-meta {
-    color:$mid_color;
+    color:$light_gray;
     padding: 0.5rem 0;
     font-size: 0.8rem;
     @media screen and (min-width: $extra_large_screen) {
