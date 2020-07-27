@@ -312,7 +312,7 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 function wpforo_search_form( $html ) {
 
-	$html = str_replace( 'placeholder="Search', 'placeholder=""', $html );
+	$html = str_replace( 'Пребарувај', 'Барај', $html );
 
 
 	return $html;

@@ -382,6 +382,7 @@ h6 {
 	line-height: unset;
 	color: #413742;
 	line-height: 1.8rem;
+	font-weight: normal;
 }
 
 h1 {
@@ -407,8 +408,8 @@ h5 {
 
 p {
 	font-family: "Playfair Display", serif;
-	font-size: 1.1rem;
-	line-height: 1.8rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	color: #413742;
 }
 
@@ -535,7 +536,6 @@ html {
 }
 
 body {
-	background: #413742;
 	overflow-x: hidden;
 }
 
@@ -732,7 +732,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	color: #7B6A7F;
+	color: #B62626;
 }
 
 a:focus {
@@ -832,14 +832,6 @@ a:hover, a:active {
 	}
 }
 
-@media screen and (min-width: 1420px) {
-	.menu li:hover > a,
-	.menu li.focus > a {
-		border-bottom: 1px solid #F7F7F8;
-		color: #F7F7F8;
-	}
-}
-
 .menu li a {
 	display: block;
 	color: #EE3626;
@@ -866,13 +858,13 @@ a:hover, a:active {
 	-ms-flex-direction: column;
 	    flex-direction: column;
 	height: 100vh;
-	width: 250px;
+	width: 100vw;
 	background: #F7F7F8;
 	-ms-flex-pack: center;
 	    justify-content: center;
 	-ms-flex-align: center;
 	    align-items: center;
-	transform: translateX(-350px);
+	transform: translateX(-101vw);
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 	transition: transform 0.2s ease-in;
 }
@@ -1220,7 +1212,7 @@ a:hover, a:active {
 	}
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1023px) {
 	.search-icon--scrolled {
 		stroke: #413742;
 		fill: #413742;
@@ -1450,6 +1442,14 @@ a:hover, a:active {
 @media screen and (min-width: 1023px) {
 	.scrolled-menu-items li a {
 		color: black;
+		border-bottom: 1px solid rgba(255, 8, 8, 0);
+		transition: all 0.2s ease-in;
+	}
+	.scrolled-menu-items li a:hover,
+	.scrolled-menu-items li a:focus,
+	.scrolled-menu-items li a:active {
+		color: #EE3626;
+		border-bottom: 1px solid #ff0808;
 	}
 }
 
@@ -2056,7 +2056,7 @@ figcaption .wp-caption-text {
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
-	background-color: #EE3626;
+	background-color: #413742;
 	min-height: 400px;
 	color: #F7F7F8;
 	display: -ms-flexbox;
@@ -2092,12 +2092,12 @@ figcaption .wp-caption-text {
 }
 
 .footer-logo {
-	max-width: 380px;
+	max-width: 280px;
 }
 
 @media screen and (min-width: 768px) {
 	.footer-logo {
-		max-width: 420px;
+		max-width: 320px;
 	}
 }
 
@@ -2153,6 +2153,11 @@ figcaption .wp-caption-text {
 /*--------------------------------------------------------------
 # Hero Area
 --------------------------------------------------------------*/
+#post-2995,
+#post-3029 {
+	background-color: #413742;
+}
+
 #post-2995 .entry-header,
 #post-3029 .entry-header {
 	display: none;
@@ -2164,7 +2169,7 @@ figcaption .wp-caption-text {
 	min-height: 100vh;
 	display: -ms-flexbox;
 	display: flex;
-	min-height: 720px;
+	min-height: 650px;
 	-ms-flex-direction: column;
 	    flex-direction: column;
 	-ms-flex-align: center;
@@ -2256,7 +2261,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 282px) {
 	.hero-container {
-		max-width: 150px;
+		max-width: 190px;
 	}
 }
 
@@ -2296,6 +2301,7 @@ figcaption .wp-caption-text {
 	letter-spacing: 0.3rem;
 	line-height: unset;
 	margin: 0;
+	font-weight: bolder;
 	color: #F7F7F8;
 }
 
@@ -2402,7 +2408,7 @@ figcaption .wp-caption-text {
 /*--------------------------------------------------------------
 # Sex Work Area
 --------------------------------------------------------------*/
-.sexwork-container {
+.sexwork-area {
 	background: #413742;
 	padding-top: 1rem;
 }
@@ -2422,8 +2428,10 @@ figcaption .wp-caption-text {
 .sexwork__title {
 	margin: 2rem 1.4rem;
 	margin-bottom: 0;
-	text-align: center;
+	font-weight: normal;
 	color: #EE3626;
+	text-align: center;
+	letter-spacing: 0.1rem;
 	font-size: 1.5rem;
 }
 
@@ -2511,6 +2519,10 @@ figcaption .wp-caption-text {
 	margin-top: 2rem;
 }
 
+.mt-0 {
+	margin-top: 0;
+}
+
 /*--------------------------------------------------------------
 # About us Area
 --------------------------------------------------------------*/
@@ -2524,7 +2536,6 @@ figcaption .wp-caption-text {
 
 .about-us-container {
 	margin-top: 0;
-	padding: 2rem 0;
 	background-color: #F7F7F8;
 	display: -ms-flexbox;
 	display: flex;
@@ -2534,6 +2545,12 @@ figcaption .wp-caption-text {
 	    justify-content: center;
 	-ms-flex-align: center;
 	    align-items: center;
+}
+
+@media screen and (min-width: 1023px) {
+	.about-us-container {
+		padding: 2rem 0;
+	}
 }
 
 @media screen and (min-width: 1023px) {
@@ -2555,6 +2572,7 @@ figcaption .wp-caption-text {
 }
 
 .about-us-container__title {
+	font-weight: normal;
 	font-size: 1.5rem;
 	color: #273746;
 	margin: 0;
@@ -2568,8 +2586,13 @@ figcaption .wp-caption-text {
 	}
 }
 
+@media screen and (min-width: 1023px) {
+	.about-us-container__title {
+		line-height: 2rem;
+	}
+}
+
 .about-us-container__paragraph {
-	max-width: 340px;
 	background-color: #F7F7F8;
 	color: #413742;
 }
@@ -2585,7 +2608,11 @@ figcaption .wp-caption-text {
 
 .about-us-container__text {
 	margin: 1.5rem;
-	max-width: 400px;
+	max-width: 460px;
+}
+
+.font-yellow {
+	color: antiquewhite;
 }
 
 /*--------------------------------------------------------------
@@ -2595,8 +2622,8 @@ figcaption .wp-caption-text {
 .s-work {
 	background: #B62626;
 	background: linear-gradient(224.35deg, #B62626 20.34%, #EE3626 73.72%);
-	min-height: 720px;
 	padding-top: 3rem;
+	padding-bottom: 2rem;
 }
 
 .s-work {
@@ -2607,11 +2634,13 @@ figcaption .wp-caption-text {
 .aktuelno__title,
 .s-work__title {
 	margin: 0;
+	font-weight: normal;
 	text-align: center;
-	color: #F7F7F8;
+	color: #413742;
 	text-align: center;
 	font-size: 1.5rem;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
+	letter-spacing: 0.1rem;
 }
 
 @media screen and (min-width: 1023px) {
@@ -2622,8 +2651,22 @@ figcaption .wp-caption-text {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.aktuelno__title,
+	.s-work__title {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 1023px) {
+	.aktuelno__title,
+	.s-work__title {
+		font-size: 2.3rem;
+	}
+}
+
 .s-work__title {
-	color: #EE3626;
+	color: #B62626;
 }
 
 .aktuelno__posts,
@@ -2638,21 +2681,16 @@ figcaption .wp-caption-text {
 	    align-items: flex-start;
 }
 
-.kosa-crta-2 {
-	transform: translateY(5px);
-	width: 100%;
-}
-
-@media screen and (min-width: 1023px) {
-	.kosa-crta-2 {
-		transform: translateY(5px);
-	}
-}
-
 .news-card {
-	max-width: 320px;
-	margin: 1rem;
+	max-width: 300px;
+	margin: 0 0.5rem;
 	margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+	.news-card {
+		max-width: 380px;
+	}
 }
 
 .news-card img {
@@ -2663,7 +2701,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 768px) {
 	.news-card img {
-		min-width: 320px;
+		max-width: 380px;
 		filter: sepia(20%);
 		transition: all 0.2s ease-in;
 	}
@@ -2711,6 +2749,18 @@ figcaption .wp-caption-text {
 .news-card-title {
 	margin: unset;
 	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+	min-height: 20px;
+	line-height: 1.5rem;
+	font-weight: bold;
+	letter-spacing: 0.05rem;
+}
+
+@media screen and (min-width: 1023px) {
+	.news-card-title {
+		line-height: 1.8rem;
+		margin-top: 2rem;
+	}
 }
 
 .light-color {
@@ -2730,7 +2780,8 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 768px) {
 	.light-color img {
-		min-width: 320px;
+		height: 240px;
+		min-width: 380px;
 	}
 }
 
@@ -2739,11 +2790,11 @@ figcaption .wp-caption-text {
 }
 
 .large-title {
-	display: inline-block;
-	font-size: 2.5rem;
+	display: block;
+	font-size: 2rem;
 	line-height: 2.5rem;
 	margin-bottom: 1rem;
-	color: #413742;
+	color: antiquewhite;
 }
 
 .campagns {
@@ -2764,6 +2815,13 @@ figcaption .wp-caption-text {
 	display: flex;
 	-ms-flex-direction: column;
 	    flex-direction: column;
+}
+
+@media screen and (min-width: 1023px) {
+	.kampanja {
+		border-left: 1px solid antiquewhite;
+		padding-left: 2rem;
+	}
 }
 
 /*# sourceMappingURL=../star/sass/maps/style.css.map */

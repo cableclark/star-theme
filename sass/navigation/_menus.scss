@@ -24,13 +24,6 @@
 			padding: 0.6rem 0;
 		}
 
-		&:hover > a,
-		&.focus > a {
-			@media screen and (min-width: $larger_screen) { 
-				border-bottom: 1px solid $light_color;
-				color: $light_color;
-			}
-		}
 		a {
 			display: block;
 			color:  $red_main;
@@ -54,11 +47,11 @@
 	display:flex; 	
 	flex-direction: column; 
 	height:100vh;
-	width: 250px;
+	width: 100vw;
 	background:  $light_color;
 	justify-content: center;
 	align-items: center;
-	transform: translateX(-350px);
+	transform: translateX(-101vw);
 	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
 	transition: transform 0.2s ease-in;
 	@media screen and (min-width: $larger_screen) {

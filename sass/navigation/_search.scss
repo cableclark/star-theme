@@ -139,7 +139,7 @@
 
 
 .search-icon--scrolled {
-    @media screen and (min-width: $extra_large_screen) {
+    @media screen and (min-width: $large_screen) {
         stroke: $black_color; 
         fill: $black_color;
     } 

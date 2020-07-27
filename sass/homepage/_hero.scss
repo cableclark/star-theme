@@ -3,13 +3,14 @@
     .entry-header {
         display: none;
     }
+    background-color: $black_color;
 }
 
 .hero {
-   @include background;
+    @include background;
     min-height: 100vh;
     display: flex;
-    min-height: 720px;
+    min-height: 650px;
     flex-direction: column;
     align-items: center;
     border-bottom-left-radius: 54% 10%;
@@ -66,7 +67,7 @@
     max-width: 120px;
     color: $light_color;
     @media screen  and (min-width: 282px){
-        max-width: 150px;
+        max-width: 190px;
     }
     @media all and (orientation:landscape){
         align-self: center;
@@ -90,6 +91,7 @@
     letter-spacing: 0.3rem; 
     line-height: unset;
     margin:0;
+    font-weight: bolder;
     color: $light_color;
     @media screen  and (min-width: $smallest_screen){
         font-size: 2.4rem;

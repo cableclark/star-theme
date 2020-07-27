@@ -161,7 +161,16 @@
         li {
             a {
                 color: black;
+                border-bottom: 1px solid rgba(255, 8, 8, 0);
+                transition: all 0.2s ease-in;
             }
+            a:hover,
+            a:focus,
+            a:active {
+                color: $red_main;
+                border-bottom: 1px solid rgba(255, 8, 8, 1);
+            }
+            
         }
     }
  }

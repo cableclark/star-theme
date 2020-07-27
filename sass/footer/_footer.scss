@@ -1,5 +1,5 @@
 .site-footer {
-    background-color: $red_main;
+    background-color: $black_color;
     min-height: 400px;
     color: $light_color;
     display: flex;
@@ -25,10 +25,10 @@
 }
 
 .footer-logo {
-    max-width: 380px;
+    max-width: 280px;
 
     @media screen  and (min-width: $medium_screen){
-        max-width: 420px;
+        max-width: 320px;
     }
 }
 

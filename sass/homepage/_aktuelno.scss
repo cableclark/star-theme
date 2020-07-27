@@ -1,8 +1,8 @@
 .aktuelno,
 .s-work {
     @include background;
-    min-height: 720px; 
     padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 
 .s-work {
@@ -13,14 +13,24 @@
 .aktuelno__title,
 .s-work__title {
     margin: 0;
+    font-weight: normal;
     text-align: center;
-    color: $light_color; 
+    color: $black_color; 
     text-align: center;
     @include front-page-title; 
-    margin-bottom:2rem;   
+    margin-bottom:3rem;  
+    letter-spacing: 0.1rem; 
+    @media screen  and (min-width: $medium_screen){
+        font-size: 2rem;
+    }
+    @media screen  and (min-width: $large_screen){
+        font-size: 2.3rem;
+    }
 }
+
 .s-work__title {
-    color: $red_main; 
+    color: $red_dark;
+    
 }
 
 .aktuelno__posts,
@@ -31,24 +41,19 @@
     align-items: flex-start;  
 }
 
-.kosa-crta-2 {
-    transform: translateY(5px);
-    width: 100%;
-    @media screen  and (min-width: $large_screen){
-        transform: translateY(5px);
-    }
-}
-
 .news-card {
-    max-width: 320px;
-    margin:1rem;
+    max-width: 300px;
+    margin: 0 0.5rem;
     margin-bottom: 2rem;
+    @media screen  and (min-width: $medium_screen){
+        max-width: 380px;
+    }
     img {
         object-fit: cover; 
         margin: 0 auto;
         border-radius: 2%;
         @media screen  and (min-width: $medium_screen){
-            min-width: 320px;
+            max-width: 380px;
             filter: sepia(20%);
             transition: all 0.2s ease-in;
         }
@@ -90,6 +95,15 @@
 .news-card-title {
     margin:unset;
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    min-height: 20px; 
+    line-height: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+     @media screen  and (min-width: $large_screen){
+        line-height: 1.8rem;
+        margin-top: 2rem; 
+    }
  }
 
 .light-color {
@@ -103,21 +117,22 @@
         width: 320px;
         box-shadow: none;
         @media screen  and (min-width: $medium_screen){
-            min-width: 320px;           
+            height: 240px;
+            min-width: 380px;           
         }
     }
 }
 
 .font-white {
-    color:$light_color;
+    color: $light_color; 
 }
 
 .large-title {
-    display: inline-block;
-    font-size: 2.5rem;
+    display: block;
+    font-size: 2rem;
     line-height: 2.5rem;
     margin-bottom: 1rem;
-    color:$black_color;
+    color:antiquewhite;
 }
 
 .campagns {
@@ -134,4 +149,13 @@
 .news-card-content {
     display: flex;
     flex-direction: column;
+
+}
+
+.kampanja {
+    @media screen and (min-width: $large_screen) {
+        border-left: 1px solid antiquewhite;
+        padding-left: 2rem;
+    }  
+    
 }

@@ -1,4 +1,4 @@
-.sexwork-container {
+.sexwork-area {
     background: $black_color;
     padding-top: 1rem;
 }
@@ -14,8 +14,10 @@
 .sexwork__title {
     margin: 2rem 1.4rem;
     margin-bottom: 0;
+    font-weight: normal;
+    color:$red_main;
     text-align: center;
-    color: $red_main;
+    letter-spacing: 0.1rem;
     @include front-page-title; 
     @media screen and (min-width: $large_screen) {
         margin: 2rem 1.4rem;
@@ -82,6 +84,10 @@
 
 .pmt-2 {
     margin-top: 2rem;
+}
+
+.mt-0 {
+    margin-top: 0;
 }
 
 

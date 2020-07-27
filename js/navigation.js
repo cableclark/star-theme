@@ -163,9 +163,7 @@ window.onscroll = function() {scrollFunction();};
 
 let more = document.querySelectorAll(".red_link");
 let less = document.querySelectorAll(".less");
-let sexwork = document.querySelector(".sexwork-container");
-
-console.log (sexwork);
+let sexwork = document.querySelector(".sexwork-area");
 
 more.forEach(function toggleClass (item) {
     item.addEventListener('click', function () {
