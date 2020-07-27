@@ -91,7 +91,6 @@
  }
 
 .main-navigation {
-
     @media screen and (min-width: $medium_screen) {
         margin-right: 3rem;
     } 
@@ -158,7 +157,7 @@
 
 
  .scrolled-menu-items {
-    @media screen and (min-width: $extra_large_screen) {
+    @media screen and (min-width: $large_screen) {
         li {
             a {
                 color: black;

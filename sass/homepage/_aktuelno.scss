@@ -17,7 +17,7 @@
     color: $light_color; 
     text-align: center;
     @include front-page-title; 
-    margin-bottom:2.5rem;   
+    margin-bottom:2rem;   
 }
 .s-work__title {
     color: $red_main; 
@@ -30,7 +30,6 @@
     justify-content: space-evenly;
     align-items: flex-start;  
 }
-
 
 .kosa-crta-2 {
     transform: translateY(5px);
@@ -47,12 +46,15 @@
     img {
         object-fit: cover; 
         margin: 0 auto;
+        border-radius: 2%;
         @media screen  and (min-width: $medium_screen){
             min-width: 320px;
+            filter: sepia(20%);
             transition: all 0.2s ease-in;
         }
     }
     img:hover {
+        filter: sepia(0%);
         box-shadow: 1px 1px 13px rgba(0, 0, 3, 0.5);
     }
     @media screen  and (min-width: $small_screen){
@@ -86,7 +88,8 @@
 }
 
 .news-card-title {
-    margin: 0.5rem 0;
+    margin:unset;
+    margin-top: 1rem;
  }
 
 .light-color {
@@ -103,8 +106,6 @@
             min-width: 320px;           
         }
     }
-
-   
 }
 
 .font-white {
@@ -113,9 +114,10 @@
 
 .large-title {
     display: inline-block;
-    font-size: 3.4rem;
-    line-height: 3.4rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
     margin-bottom: 1rem;
+    color:$black_color;
 }
 
 .campagns {
@@ -126,8 +128,7 @@
 
     @media screen and (min-width: $large_screen) {
         background-image: url("http://localhost/star/wp-content/themes/star/images/campagn_large.png");
-    }
-    
+    }  
 }
 
 .news-card-content {

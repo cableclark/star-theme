@@ -1,9 +1,7 @@
-.sexwork_container {
+.sexwork-container {
     background: $black_color;
     padding-top: 1rem;
 }
-
-
 
 .sexwork {
     display:flex;
@@ -15,6 +13,7 @@
 
 .sexwork__title {
     margin: 2rem 1.4rem;
+    margin-bottom: 0;
     text-align: center;
     color: $red_main;
     @include front-page-title; 
@@ -25,7 +24,7 @@
 
 .card  {
     max-width: 340px;
-    margin: 1.5rem;
+    margin: 1rem 1.5rem;
     img {
         object-fit: unset;
         max-height: 200px;
@@ -44,26 +43,23 @@
     flex-direction: column;
     img {
         align-self: center;
-        transform: translateX(-15px);
-        max-width: 100px;   
-
+        max-width: 130px;   
         @media screen and (min-width: $large_screen) {
             max-width: unset;
-
+            transform: translateX(-15px);
         }
     }
     h3 {
         margin-top:2rem;
         color: $red_main;
-    }
-
-    
+    } 
 }
 
 @mixin transition-read-more {
     transition: all 0.3s ease-in;
     cursor: pointer;
 }
+
 .red_link,
 .less {
     color:$red_main;

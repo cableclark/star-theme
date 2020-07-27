@@ -49,26 +49,17 @@
     @media screen  and (min-width: $small_screen){
         max-width: 380px;
     }
-
     @media screen  and (min-width: $medium_large_screen) and (orientation:portrait){
         max-width: 540px;
     }
     @media screen  and (min-width: $large_screen){
         max-width: 540px;
     }
-    @media screen  and (min-width: $not_quite_larger_screen){
-        
-    }
-    @media screen  and (min-width: $larger_screen){
-       
-    }
     @media screen  and (min-width: $extra_large_screen){
         max-width: unset;
         width: 800px;
     }
-    @media screen  and (min-width:$fullHD_screen){
-        
-    }
+   
 }
 
 .hero-container {
@@ -106,11 +97,9 @@
     @media screen  and (min-width: $medium_screen){
         font-size: 3.4rem;
     }
-
     @media screen  and (min-width: $large_screen){
         font-size: 5rem;
     }
-
     @media screen  and (min-width: $extra_large_screen){
         font-size: 5.2rem;
     }
@@ -123,10 +112,6 @@
     color:$light_color; 
     @media screen  and (min-width: $smallest_screen){
         font-size: 1.1rem;    
-    }
-
-    @media screen  and (min-width: $small_screen){
-       
     }
 
     @media screen  and (min-width: $medium_screen){
@@ -148,9 +133,13 @@
     cursor: pointer; 
     height: 50px;
     max-width: 180px;
+    color: $red_main;
     @media screen  and (min-width: 282px){
         font-size: 0.8rem;
         max-width: 180px;
+    }
+    @media screen  and (min-width: $small_screen){
+        font-size: 0.9rem;
     }
     font-family: $font__main;
     @include box-shadow-normal;   
@@ -158,10 +147,9 @@
     border-radius: 30px;
     padding: 0.5rem;
     display: grid;
+    font-size: 1rem;
     place-items: center;
-    @media screen  and (min-width: $small_screen){
-        font-size: 0.8rem;
-    }
+   
 }
 
 .hero-container__call-to-action:hover {

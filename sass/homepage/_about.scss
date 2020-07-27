@@ -35,7 +35,7 @@
 
 .about-us-container__title {
     @include front-page-title; 
-    color:$light_gray;
+    color:$dark_color;
     margin:0;
     text-align: left;
 }
@@ -54,4 +54,5 @@
 
 .about-us-container__text {
     margin:1.5rem;
+    max-width: 400px;
 }

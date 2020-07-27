@@ -17,6 +17,13 @@
 	li {
 		position: relative;
 		padding: 0.6rem 0;
+		@media all and (orientation:landscape){
+			padding: 0.3rem 0;
+		}
+		@media all and (min-width:$large_screen) and (orientation:landscape){
+			padding: 0.6rem 0;
+		}
+
 		&:hover > a,
 		&.focus > a {
 			@media screen and (min-width: $larger_screen) { 
@@ -118,7 +125,6 @@
  {
     display:flex; 
  }
-
 
 .sub-menu {
     display:none;

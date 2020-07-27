@@ -820,6 +820,18 @@ a:hover, a:active {
 	padding: 0.6rem 0;
 }
 
+@media all and (orientation: landscape) {
+	.menu li {
+		padding: 0.3rem 0;
+	}
+}
+
+@media all and (min-width: 1023px) and (orientation: landscape) {
+	.menu li {
+		padding: 0.6rem 0;
+	}
+}
+
 @media screen and (min-width: 1420px) {
 	.menu li:hover > a,
 	.menu li.focus > a {
@@ -1435,7 +1447,7 @@ a:hover, a:active {
 	color: black;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1023px) {
 	.scrolled-menu-items li a {
 		color: black;
 	}
@@ -2348,6 +2360,7 @@ figcaption .wp-caption-text {
 	cursor: pointer;
 	height: 50px;
 	max-width: 180px;
+	color: #EE3626;
 	font-family: "Montserrat", sans-serif;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 	background-color: white;
@@ -2355,6 +2368,7 @@ figcaption .wp-caption-text {
 	padding: 0.5rem;
 	display: -ms-grid;
 	display: grid;
+	font-size: 1rem;
 	place-items: center;
 }
 
@@ -2367,7 +2381,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 576px) {
 	.hero-container__call-to-action {
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 	}
 }
 
@@ -2388,7 +2402,7 @@ figcaption .wp-caption-text {
 /*--------------------------------------------------------------
 # Sex Work Area
 --------------------------------------------------------------*/
-.sexwork_container {
+.sexwork-container {
 	background: #413742;
 	padding-top: 1rem;
 }
@@ -2407,6 +2421,7 @@ figcaption .wp-caption-text {
 
 .sexwork__title {
 	margin: 2rem 1.4rem;
+	margin-bottom: 0;
 	text-align: center;
 	color: #EE3626;
 	font-size: 1.5rem;
@@ -2427,7 +2442,7 @@ figcaption .wp-caption-text {
 
 .card {
 	max-width: 340px;
-	margin: 1.5rem;
+	margin: 1rem 1.5rem;
 }
 
 .card img {
@@ -2453,13 +2468,13 @@ figcaption .wp-caption-text {
 	-ms-flex-item-align: center;
 	    -ms-grid-row-align: center;
 	    align-self: center;
-	transform: translateX(-15px);
-	max-width: 100px;
+	max-width: 130px;
 }
 
 @media screen and (min-width: 1023px) {
 	.sexwork__card img {
 		max-width: unset;
+		transform: translateX(-15px);
 	}
 }
 
@@ -2541,7 +2556,7 @@ figcaption .wp-caption-text {
 
 .about-us-container__title {
 	font-size: 1.5rem;
-	color: #E5E5E5;
+	color: #273746;
 	margin: 0;
 	text-align: left;
 }
@@ -2570,6 +2585,7 @@ figcaption .wp-caption-text {
 
 .about-us-container__text {
 	margin: 1.5rem;
+	max-width: 400px;
 }
 
 /*--------------------------------------------------------------
@@ -2595,7 +2611,7 @@ figcaption .wp-caption-text {
 	color: #F7F7F8;
 	text-align: center;
 	font-size: 1.5rem;
-	margin-bottom: 2.5rem;
+	margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 1023px) {
@@ -2642,16 +2658,19 @@ figcaption .wp-caption-text {
 .news-card img {
 	object-fit: cover;
 	margin: 0 auto;
+	border-radius: 2%;
 }
 
 @media screen and (min-width: 768px) {
 	.news-card img {
 		min-width: 320px;
+		filter: sepia(20%);
 		transition: all 0.2s ease-in;
 	}
 }
 
 .news-card img:hover {
+	filter: sepia(0%);
 	box-shadow: 1px 1px 13px rgba(0, 0, 3, 0.5);
 }
 
@@ -2690,7 +2709,8 @@ figcaption .wp-caption-text {
 }
 
 .news-card-title {
-	margin: 0.5rem 0;
+	margin: unset;
+	margin-top: 1rem;
 }
 
 .light-color {
@@ -2720,9 +2740,10 @@ figcaption .wp-caption-text {
 
 .large-title {
 	display: inline-block;
-	font-size: 3.4rem;
-	line-height: 3.4rem;
+	font-size: 2.5rem;
+	line-height: 2.5rem;
 	margin-bottom: 1rem;
+	color: #413742;
 }
 
 .campagns {
