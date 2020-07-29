@@ -7,7 +7,7 @@
  * @package Miss Albini
  */
 ?>
-<article id="article-<?php the_ID(); ?>" class="news-card">
+<article id="article-<?php the_ID(); ?>" class="news-card is-visible">
 	<a class="light-color" href="<?php the_permalink();?>" rel="bookmark"><?php the_post_thumbnail('large'); ?>
 	 </a>
 	<div class="news-card__text">

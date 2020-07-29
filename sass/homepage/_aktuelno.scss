@@ -6,7 +6,7 @@
 }
 
 .s-work {
-    background: $light_color;
+    @include background-light;
     padding-bottom: 2rem;
 }
 
@@ -30,7 +30,6 @@
 
 .s-work__title {
     color: $red_dark;
-    
 }
 
 .aktuelno__posts,
@@ -45,6 +44,8 @@
     max-width: 300px;
     margin: 0 0.5rem;
     margin-bottom: 2rem;
+    opacity: 0;
+    @include slide-from-animation;
     @media screen  and (min-width: $medium_screen){
         max-width: 380px;
     }
@@ -77,21 +78,6 @@
     }
 }
 
-.cat-links {
-	a {
-        text-transform: uppercase;
-        color:$black_color;
-        font-size: 0.7rem;
-        @media screen and (min-width: $large_screen) {
-            font-size: 0.9rem;
-        }
-    }
-    a:hover {
-        color: $mid_orange;
-        text-decoration: underline;
-    }
-}
-
 .news-card-title {
     margin:unset;
     margin-top: 1rem;
@@ -121,6 +107,11 @@
             min-width: 380px;           
         }
     }
+}
+
+.selected {
+    background-color: antiquewhite;
+    color:$black_color;
 }
 
 .font-white {
@@ -159,3 +150,18 @@
     }  
     
 }
+
+@for $i from 1 through 9 {
+	.news-card {
+		&:nth-of-type(#{$i}) {
+			// Delay the animation. Delay increases as items loop.
+			transition-delay: $i * (0.1s);
+			}
+	}
+}
+
+.is-visible {
+    opacity: 1;
+    transform: translateY(0) rotateZ(0deg); 
+} 
+

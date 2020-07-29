@@ -22,7 +22,12 @@
 
 @mixin background {
 	background:#B62626;
-    background:linear-gradient(224.35deg, #B62626 20.34%, #EE3626 73.72%);
+    background:linear-gradient(224.35deg, #942323 20.34%, #ff4433 73.72%);
+}
+
+@mixin background-light {
+	background-color: $light_color;
+    background:linear-gradient(224.35deg, #fff9f9 20.34%, #ffffff 73.72%);
 }
 
 @mixin front-page-title {
@@ -30,8 +35,7 @@
 	@media screen  and (min-width: $large_screen){
 		letter-spacing: 0.2rem;
 		font-size: 2rem;
-    }
-	
+    }	
 }
 
 @mixin border {
@@ -40,7 +44,7 @@
 }
 
 @mixin box-shadow-normal {
-	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 

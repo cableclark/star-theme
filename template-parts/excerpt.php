@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 /**
  * Template part for displaying posts
  *
@@ -37,4 +37,4 @@
 		<a href="<?php esc_url( the_permalink()) ?>"><button class="read-more"> Read more...</button></a>
 		</div>
 	</div>	
-</article>
+</article> -->

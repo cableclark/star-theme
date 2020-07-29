@@ -123,6 +123,16 @@ removeClass(menuElement, menuUL, 'open-menu-items');
  *
  */
 
+const title = document.querySelector(".site-title");
+
+const navbar = document.querySelector(".site-header");
+
+const menuItems = document.querySelector(".menu");
+
+const logoBlock = document.querySelector(".custom-logo-link");
+
+const siteBranding = document.querySelector(".site-branding");
+
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     title.classList.add("smaller-navbar");
@@ -132,6 +142,7 @@ function scrollFunction() {
     menuItems.classList.add('scrolled-menu-items'); 
     siteBranding.classList.add('site-branding--scrolled'); 
     search.classList.add('search-icon--scrolled'); 
+    console.log("hey debounced")
   } else {
     title.classList.remove("smaller-navbar");
     navbar.classList.remove("smaller-header");
@@ -143,17 +154,10 @@ function scrollFunction() {
   }
 } 
 
-const title = document.querySelector(".site-title");
 
-const navbar = document.querySelector(".site-header");
-
-const menuItems = document.querySelector(".menu");
-
-const logoBlock = document.querySelector(".custom-logo-link");
-
-const siteBranding = document.querySelector(".site-branding");
-
-window.onscroll = function() {scrollFunction();};
+window.onscroll = debounce(function() {
+    scrollFunction();
+}, 1000/60)
 
 
 /**
@@ -168,8 +172,8 @@ let sexwork = document.querySelector(".sexwork-area");
 more.forEach(function toggleClass (item) {
     item.addEventListener('click', function () {
         this.previousElementSibling.classList.toggle('hide');
-        this.classList.toggle('hide');
-        this.nextElementSibling.classList.toggle('hide');
+        this.classList.toggle('hide-button');
+        this.nextElementSibling.classList.toggle('hide-button');
 
     });
 })
@@ -178,9 +182,62 @@ less.forEach(function toggleClass (item) {
     item.addEventListener('click', function () {
         sexwork.scrollIntoView();
         this.previousElementSibling.previousElementSibling.classList.toggle('hide');
-        this.classList.toggle('hide');
-        this.previousElementSibling.classList.toggle('hide');
+        this.classList.toggle('hide-button');
+        this.previousElementSibling.classList.toggle('hide-button');
     });
 })
 
 
+/**
+ *  Animate on scroll
+ *
+ */
+
+const callback = function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+        } else {
+            entry.target.classList.remove("is-visible");
+        }
+    });
+  };
+  
+  const observer = new IntersectionObserver(callback);
+  
+  const sexworkCards = document.querySelectorAll(".sexwork__card");
+
+  sexworkCards.forEach(function(target) {
+    observer.observe(target);
+  });
+
+  
+  const observer2 = new IntersectionObserver(callback);
+
+  const newsCards = document.querySelectorAll(".news-card");
+
+    newsCards.forEach(function(target) {
+    observer2.observe(target);
+  });
+
+
+/**
+* Returns a function, that, as long as it continues to be invoked, will not
+* be triggered. The function will be called after it stops being called for
+* N milliseconds. If `immediate` is passed, trigger the function on the
+* leading edge, instead of the trailing.
+ */
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};

@@ -4,27 +4,28 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Miss Albini
+ * @package Star star
  */
 
 ?>
-<div id="app" class="card margin-2">
+<div id="app" class="archive-card margin-2">
 	<article id="post-<?php the_ID(); ?>">
-		<header class="entry-header">
-			<?php 
-			miss_albini_post_thumbnail('medium'); 
-			miss_albini_entry_footer(); 
+		<header>
+			<div class="archive-image-wrapper">
+				<?php the_post_thumbnail('medium'); ?>
+			</div> 
+	        <?php
 			if ( is_singular() ) :
-				the_title( '<h1 class="entry-title archive-h2">', '</h1>' );
+				the_title( '<h1 class="">', '</h1>' );
 			else :
-				the_title( '<h2 class="entry-title archive-h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 class=""><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 			?>
-			<div class="entry-meta">
+			<div>
 				<?php miss_albini_posted_on();?>
-			</div><!-- .entry-meta -->
-		</header><!-- .entry-header -->
-		<div class="entry-content">
+			</div>
+		</header>
+		<div >
 			<?php
 			the_excerpt(
 				sprintf(
@@ -40,12 +41,7 @@
 					wp_kses_post( get_the_title() )
 				)
 			);
-
 			?>
-		</div><!-- .entry-content -->
-		<footer class="entry-footer">
-			<?php if ( 'post' === get_post_type() ) :
-			 endif; ?>
-		</footer><!-- .entry-footer -->
+		</div>	
 	</article><!-- #post-<?php the_ID(); ?> -->
-</div> <!-- Container ends -->
+</div> 

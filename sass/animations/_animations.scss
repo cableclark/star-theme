@@ -1,6 +1,6 @@
 @keyframes slideInFromLeft {
   0% {
-    transform: translateX(20%);
+    transform: translateY(-50%);
     opacity: 0;
   }
   100% {
@@ -11,54 +11,34 @@
 
 @keyframes slideInFromRight {
     0% {
-      transform: translateX(-20%);
-      opacity: 0;
+      transform: translateX(100%) scale(3);
+      
     }
     100% {
-      transform: translateX(0);
-      opacity: 1;
+      transform: translateX(0) scale(1); 
     }
   }
 
 
+  .hero-container__heading {
 
-.excerpt:first-of-type { 
-  .post-thumbnail:first-of-type {
-
-      animation: 0.3s ease-out 0.6s 1 slideInFromRight;
+      animation: 0.2s ease-out 0.5s 1 slideInFromLeft;
       animation-fill-mode: both;
   }
 
-  .excerpt-title:first-of-type {
-      animation: 0.5s ease-out 0.1s 1 slideInFromLeft;
+  .hero-container__slogan {
+      animation: 0.2s ease-out 0.7s 1 slideInFromLeft;
       animation-fill-mode: both;
   }
 
-
-  .excerpt-meta:first-of-type {
-      animation: 0.5s ease-out 0.2s 1 slideInFromLeft;
+  .hero-container__call-to-action  {
+      animation: 0.2s ease-out 0.9s 1 slideInFromLeft;
       animation-fill-mode: both;
   }
 
-  .excerpt-content:first-of-type {
-      animation: 0.5s ease-out 0.3s 1 slideInFromLeft;
-      animation-fill-mode: both;
-  }
-
-  .read-more:first-of-type {
-      animation: 0.5s ease-out 0.4s 1 slideInFromLeft;
+  .hero__image{
+      animation: 0.5s ease-out 0s 1 slideInFromRight;
       animation-fill-mode: both;
   }
 
 
-  .excerpt-header:first-of-type {  
-    .cat-links:first-of-type {  
-        display: block;
-        /* This section calls the slideInFromLeft animation we defined above */
-        animation: 0.5s ease-out 0s 1 slideInFromLeft;
-        animation-fill-mode: both;
-    }
-    
-  }
-
-}

@@ -53,7 +53,13 @@
 	align-items: center;
 	transform: translateX(-101vw);
 	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
-	transition: transform 0.2s ease-in;
+	@media screen and (min-width: $large_screen) {
+		transition: transform 0.2s ease-in;
+	}
+	@media screen and (min-width: $large_screen) {
+		transform: translateX(-21vw);
+		width: 20vw;
+    } 
 	@media screen and (min-width: $larger_screen) {
 		box-shadow: unset;
 		position: static;
@@ -75,6 +81,25 @@
 		position: unset;
     }    
 }
+
+.scrolled-menu-items {
+    @media screen and (min-width: $larger_screen) {
+        li {
+            a {
+                color: black;
+                border-bottom: 1px solid rgba(255, 8, 8, 0);
+                transition: all 0.2s ease-in;
+            }
+            a:hover,
+            a:focus,
+            a:active {
+                color: $red_main;
+                border-bottom: 1px solid rgba(255, 8, 8, 1);
+            }
+            
+        }
+    }
+ }
 
 .posts-navigation,
 .post-navigation {
