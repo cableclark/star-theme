@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Miss Albini
+ * @package Star Star 
  */
 ?>
-<article id="article-<?php the_ID(); ?>" class="news-card is-visible">
+<article id="article-<?php the_ID(); ?>" class="publication-card is-visible">
 	<a href="<?php the_permalink();?>" rel="bookmark"><?php the_post_thumbnail('large'); ?>
 	</a>
 	<div class="news-card__text">

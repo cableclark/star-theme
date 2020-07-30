@@ -1,5 +1,5 @@
 @mixin header-transition {
-    transition: all 0.2s ease-out;
+    transition: all 0.4s ease-in;
   }
 
 .site-header {
@@ -10,10 +10,9 @@
     width: 100%;
     top:0;
     position:fixed; 
-    will-change: background-color;
     img {
-        width: 43px;
-        height: 43px;  
+        width: 47px;
+        height: 47px;  
     }
     @media screen and (min-width: $small_screen) {
         img {
@@ -22,33 +21,29 @@
         }
     }
     @media screen and (min-width: $large_screen) {
-        @include header-transition;
+        background-color: unset;
+        will-change: background-color;
+        padding: 0 50px;
+        height: 80px;
         img {
             width: 70px;
             height: 70px;  
         }
-    }   
-    @media screen and (min-width: $large_screen) {
-        height: 80px;
-        justify-content: space-between;
         p {
             font-size: 0.8rem;
         }  
-    }  
-    @media screen and (min-width: $extra_large_screen) {
-        justify-content: space-between;
-    }  
+    }   
 }
 
 .smaller-header,
 .smaller-header-nothomed
 {
-   @include box-shadow-normal;
-   background-color: $light_color;
-   opacity: 0.95;
-   @media screen and (min-width: $large_screen) {
-        justify-content: space-around;
-   }
+    background-color: $light_color;
+    @media screen and (min-width: $large_screen) {
+        @include box-shadow-normal;
+       
+    }
+    
 }
 
 /*
@@ -71,18 +66,24 @@
 
 .site-branding {
     display:flex;
-    opacity:0;
     align-content:center;   
     flex-wrap: wrap;
-    @include header-transition;
+    opacity:1;
+    @media screen and (min-width: $large_screen) {
+        opacity:0;
+        will-change: opacity;
+        @include header-transition;
+    }
 }
 
 .site-branding--scrolled {
     opacity:1;
+    will-change: opacity;
 }
 
 .site-branding--nothomed {
     opacity:1;
+    will-change: opacity;
 }
 
 .site-description,

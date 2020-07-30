@@ -49,6 +49,7 @@ const toggler = document.querySelector('.toggler');
 
 const menuElement = document.querySelector('.main-menu');
 
+
 const menuUL = document.querySelector('.menu');
 
 const menuHider = document.querySelector('.menu-hider');
@@ -146,13 +147,13 @@ function scrollFunction() {
     menuItems.classList.remove('scrolled-menu-items'); 
     siteBranding.classList.remove('site-branding--scrolled'); 
     search.classList.remove('search-icon--scrolled'); 
+    topButton.classList.remove("top-active");
   }
 } 
 
-
 window.onscroll = debounce(function() {
     scrollFunction();
-}, 1000/60)
+}, 1000/120)
 
 
 /**
@@ -197,30 +198,57 @@ const callback = function(entries) {
     });
   };
   
-  let observerOptions = {
+let observerOptions = {
     root: null,
     rootMargin: "0px",
     threshold: [0.0, 0.75]
   };
 
-  const observer = new IntersectionObserver(callback, observerOptions);
+
+const observer = new IntersectionObserver(callback, observerOptions);
   
-  const sexworkCards = document.querySelectorAll(".sexwork__card");
+const sexworkCards = document.querySelectorAll(".sexwork__card");
   
-  const observation = function(target) {
+const observation = function(target) {
     observer.observe(target);
 } 
   
-  sexworkCards.forEach(observation);
+sexworkCards.forEach(observation);
 
-  
-  const observer2 = new IntersectionObserver(callback);
 
-  const newsCards = document.querySelectorAll(".news-card");
+const observer2 = new IntersectionObserver(callback);
+
+const newsCards = document.querySelectorAll(".news-card");
 
     newsCards.forEach(function(target) {
         observer2.observe(target);
   });
+
+const publicationCards = document.querySelectorAll(".publication-card");
+
+const publicationCardsobserver = new IntersectionObserver(callback);
+      publicationCards.forEach(function(target) {
+        publicationCardsobserver.observe(target);
+    });
+    
+
+/**
+* Triger the top button
+ */
+
+const topButton = document.querySelector(".top");
+
+const addTopActive = function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("top-active");
+        }
+    });
+  };
+
+const observerTopButton = new IntersectionObserver(addTopActive, observerOptions);
+
+observerTopButton.observe(topButton);
 
 
 /**

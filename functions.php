@@ -185,8 +185,10 @@ function miss_albini_scripts() {
 	wp_enqueue_style( 'miss_albini-fonts', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
 	wp_enqueue_style( 'miss_albini-fonts-2', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap');
 	wp_enqueue_style( 'miss_albini-style', get_stylesheet_uri(), array(), _S_VERSION );
-    wp_style_add_data( 'miss_albini-style', 'rtl', 'replace' );
-    wp_enqueue_script( 'miss_albini-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	
+	wp_style_add_data( 'miss_albini-style', 'rtl', 'replace' );
+	
+    wp_enqueue_script( 'miss_albini-navigation', get_template_directory_uri() . '/js/index.js', array(), _S_VERSION, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'miss_albini_scripts' );
@@ -223,13 +225,13 @@ function itsme_disable_feed() {
 
    add_filter('nav_menu_item_id', 'clear_nav_menu_item_id', 10, 3);
    
-   function clear_nav_menu_item_id($id, $item, $args) {
+function clear_nav_menu_item_id($id, $item, $args) {
 	   return "";
    }
    
    add_filter('nav_menu_css_class', 'clear_nav_menu_item_class', 10, 3);
    
-   function clear_nav_menu_item_class($classes, $item, $args) {
+function clear_nav_menu_item_class($classes, $item, $args) {
 	return array();
 	}
 
@@ -239,7 +241,7 @@ function itsme_disable_feed() {
 
 	remove_action ('wp_head', 'rsd_link');
 
-	function crunchify_remove_version() {
+function crunchify_remove_version() {
 		return '';
 	}
 
@@ -334,7 +336,6 @@ function my_search_form_text($text) {
 add_filter('get_search_form', 'my_search_form_text');
 
 
-
 /**
  * Custom template tags for this theme.
  */
@@ -355,7 +356,6 @@ function tn_custom_excerpt_length( $length ) {
 	add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
 
 
-
 /**
  * Loads a customized Recent Posts widget
  */
@@ -374,12 +374,6 @@ add_action( 'widgets_init', 'my_recent_posts_widget_register' );
  */
 require get_template_directory() . '/inc/customizer.php';
 
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
 
 require get_template_directory() . '/inc/shortcodes.php';

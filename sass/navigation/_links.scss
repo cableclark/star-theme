@@ -50,6 +50,22 @@ a {
     }
 } 
 
+.posts-navigation,
+.post-navigation {
+	max-width:900px; 
+	margin: 3em auto;
+	.nav-links {
+		display: flex;
+		margin: 0 auto;
+		font-size: 1rem;
+		@media screen and (min-width: $large_screen) { 
+			font-size: 1.2rem;
+		}
+		@media screen and (min-width: $extra_large_screen) {  
+			font-size: 1.3rem;
+		}
+	}	
+}
 
 .page-links {
 	clear: both;

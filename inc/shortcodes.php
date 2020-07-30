@@ -10,8 +10,8 @@ function get_cat_posts( $atts , $content = null ) {
 		),
 		$atts
     );
+    
     // The query
-
     $args = array (
         'cat'              => $argument["cat"],
         'posts_per_page'   => 3,

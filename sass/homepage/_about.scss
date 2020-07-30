@@ -1,4 +1,5 @@
 .about-us {
+    transition: all .3s ease-in;
     @media screen  and (min-width: $large_screen){
         display:flex;
         height: 100%;
@@ -25,8 +26,7 @@
     }
 }
 
-.about-us__image {
-    background-color: $light_color;
+.about-us__image {  
     img {
         object-fit: cover; 
         width: 100%;
@@ -63,3 +63,4 @@
 .font-yellow {
     color: antiquewhite;
 }
+

@@ -6,7 +6,6 @@
  *
  * @package Star star
  */
-
 ?>
 <div id="app" class="archive-card margin-2">
 	<article id="post-<?php the_ID(); ?>">

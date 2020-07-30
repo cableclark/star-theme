@@ -1,0 +1,70 @@
+.publication-card {
+    max-width: 300px;
+    margin: 0 0.5rem;
+    margin-bottom: 2rem;
+    opacity: 1; 
+    @media screen and (min-width: $large_screen) {
+        opacity: 0; 
+        @include slide-from-animation;
+    }
+    @media screen  and (min-width: $medium_screen){
+        max-width: 380px;
+    }
+    img {
+        object-fit: cover; 
+        margin: 0 auto;
+        border-radius: 2%;
+        @media screen  and (min-width: $medium_screen){
+            max-width: 380px;
+            filter: sepia(20%);
+            transition: all 0.2s ease-in;
+            &:hover {
+                filter: sepia(0%);
+                box-shadow: 1px 1px 13px rgba(0, 0, 3, 0.5);
+            }
+        }
+    }
+    
+    @media screen  and (min-width: $small_screen){
+        margin: 0 1em;
+        margin-bottom: 2rem;
+    }
+    
+}
+
+.publication-card-content {
+    p {
+        display:none;
+        @media screen  and (min-width: $medium_screen){
+            display: block;
+        }
+    }
+}
+
+.publication-card-title {
+    margin:unset;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    min-height: 20px; 
+    line-height: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    @media screen  and (min-width: $large_screen){
+        line-height: 1.8rem;
+        margin-top: 2rem; 
+    }
+ }
+
+ .is-visible {
+    opacity: 1;
+    transform: translateY(0) rotateZ(0deg); 
+} 
+
+@for $i from 1 through 9 {
+	.publication-card {
+		&:nth-of-type(#{$i}) {
+			// Delay the animation. Delay increases as items loop.
+			transition-delay: $i * (0.1s);
+			}
+	}
+}

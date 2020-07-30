@@ -1,3 +1,33 @@
+.main-menu {
+	position: absolute;
+	left: 0px;
+	top:0px; 
+	display:flex; 	
+	flex-direction: column; 
+	height:100vh;
+	width: 100vw;
+	background:  $light_color;
+	justify-content: center;
+	align-items: center;
+	transform: translateX(-101vw);
+	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+	@media screen and (min-width: $large_screen) {
+		transition: transform 0.2s ease-in;
+	}
+	@media screen and (min-width: $larger_screen) {
+		box-shadow: unset;
+		position: static;
+		flex-direction: row; 
+		height:unset;
+		width: unset;
+		background: unset;
+		min-width: 350px;
+		transition: unset;
+		transform: translateX(0px);
+		top:0;
+    }    
+}
+
 .menu {	
 	color: $black_color;
 	margin: 0;
@@ -34,44 +64,10 @@
 				border-bottom: 1px solid rgba(1, 1, 1, 0);
 				padding: 0.4em 0.6em;
 				border-width: 1px;
-				transition: all 0.3s ease-in;
+
 			}
 		}
 	}	
-}
-
-.main-menu {
-	position: absolute;
-	left: 0px;
-	top:0px; 
-	display:flex; 	
-	flex-direction: column; 
-	height:100vh;
-	width: 100vw;
-	background:  $light_color;
-	justify-content: center;
-	align-items: center;
-	transform: translateX(-101vw);
-	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
-	@media screen and (min-width: $large_screen) {
-		transition: transform 0.2s ease-in;
-	}
-	@media screen and (min-width: $large_screen) {
-		transform: translateX(-21vw);
-		width: 20vw;
-    } 
-	@media screen and (min-width: $larger_screen) {
-		box-shadow: unset;
-		position: static;
-		flex-direction: row; 
-		height:unset;
-		width: unset;
-		background: unset;
-		min-width: 350px;
-		transition: unset;
-		transform: translateX(0px);
-		top:0;
-    }    
 }
 
 .menu-active {
@@ -88,7 +84,6 @@
             a {
                 color: black;
                 border-bottom: 1px solid rgba(255, 8, 8, 0);
-                transition: all 0.2s ease-in;
             }
             a:hover,
             a:focus,
@@ -100,23 +95,6 @@
         }
     }
  }
-
-.posts-navigation,
-.post-navigation {
-	max-width:900px; 
-	margin: 3em auto;
-	.nav-links {
-		display: flex;
-		margin: 0 auto;
-		font-size: 1rem;
-		@media screen and (min-width: $large_screen) { 
-			font-size: 1.2rem;
-		}
-		@media screen and (min-width: $extra_large_screen) {  
-			font-size: 1.3rem;
-		}
-	}	
-}
 
 .toggler {
     padding:auto 10px;

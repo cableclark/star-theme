@@ -4,60 +4,43 @@ input[type="reset"],
 input[type="submit"] {
 		border: none;
 		@include background;
-		color: $light_color;
+		color: $light_gray;
 		height: 45px;
-		width: 200px;
+		width: 150px;
+		font-size: 13px;
+		letter-spacing: 0.1rem;
+		font-family: $font__main;
+		opacity:1;
+		text-align: center;
 		cursor: pointer;
-		@include box-shadow-normal;
-		transition: all 0.2s ease-in;
-		font-size: 1rem;
+    	border-radius: 2px;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	@media screen and (min-width: $large_screen) {
+		box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
+	}
 }
 
 @mixin transition-read-more {
-    transition: opacity .3s ease-in;  
-}
-
-@mixin red_button ($color) {
-    border: 1px solid $color;
-    width: 200px;
-    border-radius: 2px;
+    transition: all .1s ease-in;  
 }
 
 .red_link,
 .less {
-    font-family: $font__main;
-	opacity:1;
-	text-align: center;
-	@include red_button($red_main);
 	@media screen and (min-width: $large_screen) {
-		cursor: pointer;
 		@include transition-read-more;
 		will-change: background-color, color, opacity;
 	}	
 }
 
-.white-text:visited{
-		color: white;
-}
-
 .red_link--more {
-    @include red_button($red_main);
-    font-family: $font__main;
-    text-align: center;
-	margin:0 auto; 
 	@media screen and (min-width: $large_screen) {
 		@include transition-read-more;
-		cursor: pointer;
 		will-change: opacity;
-	}
-}
-
-.red_link:hover,
-.less:hover,
-.red_link--more:hover {
-	@media screen and (min-width: $large_screen) {
-    	background-color:$red_main;
-		color:$light_color;
 	}
 }
 
@@ -79,12 +62,14 @@ input[type="submit"] {
     opacity:0;
 }
 
-.border-yellow {
-    border:1px solid antiquewhite;
+.yellow-button {
+	border:1px solid antiquewhite;
+	background: antiquewhite;
+	color: $red_main;
 }
 
-.border-yellow:hover {
-    background-color: antiquewhite;
-    color:$red_main;   
+.white-text:visited{
+	color: white;
 }
+
 
