@@ -73,7 +73,6 @@ function removeClassOnTarget (item, searchElement, className) {
     item.addEventListener('click', function (event) {
         if (event.target === searchElement) {
             searchElement.classList.remove(className);
-            console.log(event.target);
         }
         return false; 
     });
@@ -97,11 +96,8 @@ removeClassOnTarget(menuHiderActive, menuHiderActive, "menu-hider-active");
  */
 
 function removeClass (item, targetElement, className) {
-    
     item.addEventListener('click', function (event) {
-
             targetElement.classList.remove(className);
-            console.log(event.target)
     });
 }
 
@@ -142,7 +138,6 @@ function scrollFunction() {
     menuItems.classList.add('scrolled-menu-items'); 
     siteBranding.classList.add('site-branding--scrolled'); 
     search.classList.add('search-icon--scrolled'); 
-    console.log("hey debounced")
   } else {
     title.classList.remove("smaller-navbar");
     navbar.classList.remove("smaller-header");
@@ -161,13 +156,13 @@ window.onscroll = debounce(function() {
 
 
 /**
- *  A function to toggle less adn more content
+ *  A function to toggle less and more content
  *
  */
 
 let more = document.querySelectorAll(".red_link");
 let less = document.querySelectorAll(".less");
-let sexwork = document.querySelector(".sexwork-area");
+
 
 more.forEach(function toggleClass (item) {
     item.addEventListener('click', function () {
@@ -180,7 +175,6 @@ more.forEach(function toggleClass (item) {
 
 less.forEach(function toggleClass (item) {
     item.addEventListener('click', function () {
-        sexwork.scrollIntoView();
         this.previousElementSibling.previousElementSibling.classList.toggle('hide');
         this.classList.toggle('hide-button');
         this.previousElementSibling.classList.toggle('hide-button');
@@ -203,13 +197,21 @@ const callback = function(entries) {
     });
   };
   
-  const observer = new IntersectionObserver(callback);
+  let observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: [0.0, 0.75]
+  };
+
+  const observer = new IntersectionObserver(callback, observerOptions);
   
   const sexworkCards = document.querySelectorAll(".sexwork__card");
-
-  sexworkCards.forEach(function(target) {
+  
+  const observation = function(target) {
     observer.observe(target);
-  });
+} 
+  
+  sexworkCards.forEach(observation);
 
   
   const observer2 = new IntersectionObserver(callback);
@@ -217,7 +219,7 @@ const callback = function(entries) {
   const newsCards = document.querySelectorAll(".news-card");
 
     newsCards.forEach(function(target) {
-    observer2.observe(target);
+        observer2.observe(target);
   });
 
 
@@ -240,4 +242,4 @@ function debounce(func, wait, immediate) {
 		timeout = setTimeout(later, wait);
 		if (callNow) func.apply(context, args);
 	};
-};
+}

@@ -9,7 +9,7 @@
 ?>
 <article id="article-<?php the_ID(); ?>" class="news-card is-visible">
 	<a href="<?php the_permalink();?>" rel="bookmark"><?php the_post_thumbnail('large'); ?>
-	 </a>
+	</a>
 	<div class="news-card__text">
 		<header class="news-card__header">
 		<?php
@@ -22,7 +22,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'Miss Albini' ),
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'Star Star' ),
 						array(
 							'span' => array(
 								'class' => array(),

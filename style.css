@@ -646,60 +646,69 @@ input[type="submit"] {
 
 .red_link,
 .less {
-	color: #EE3626;
-	cursor: pointer;
-	font-size: 1.2rem;
 	font-family: "Montserrat", sans-serif;
 	opacity: 1;
+	text-align: center;
 	border: 1px solid #EE3626;
-	padding: 1rem;
 	width: 200px;
 	border-radius: 2px;
-	transition: all .3s ease-in;
-	text-align: center;
+}
+
+@media screen and (min-width: 1023px) {
+	.red_link,
+	.less {
+		cursor: pointer;
+		transition: opacity .3s ease-in;
+		will-change: background-color, color, opacity;
+	}
+}
+
+.white-text:visited {
+	color: white;
 }
 
 .red_link--more {
-	color: #EE3626;
 	border: 1px solid #EE3626;
-	padding: 1rem;
 	width: 200px;
 	border-radius: 2px;
-	font-size: 1.2rem;
 	font-family: "Montserrat", sans-serif;
 	text-align: center;
-	cursor: pointer;
 	margin: 0 auto;
-	transition: all .3s ease-in;
 }
 
-.red_link:hover,
-.less:hover,
-.red_link--more:hover {
-	background-color: #EE3626;
-	color: #F7F7F8;
+@media screen and (min-width: 1023px) {
+	.red_link--more {
+		transition: opacity .3s ease-in;
+		cursor: pointer;
+		will-change: opacity;
+	}
+}
+
+@media screen and (min-width: 1023px) {
+	.red_link:hover,
+	.less:hover,
+	.red_link--more:hover {
+		background-color: #EE3626;
+		color: #F7F7F8;
+	}
 }
 
 .start {
-	transition: all .3s ease-in;
 	opacity: 1;
 	height: 100%;
+	transition: all 0.2s ease-in;
 }
 
 .hide-button {
-	transition: all .3s ease-in;
+	transition: opacity .3s ease-in;
 	display: none;
 	margin: 0;
 }
 
 .hide {
+	z-index: -100;
+	height: 0;
 	opacity: 0;
-	transition: all .3s ease-in;
-	height: 0px;
-	width: 0px;
-	text-align: center;
-	overflow: hidden;
-	margin: 0;
 }
 
 .border-yellow {
@@ -775,6 +784,7 @@ textarea {
 	width: 100%;
 	top: 0;
 	position: fixed;
+	will-change: background-color;
 }
 
 .site-header img {
@@ -791,7 +801,7 @@ textarea {
 
 @media screen and (min-width: 1023px) {
 	.site-header {
-		transition: background-color 0.2s ease-out;
+		transition: all 0.2s ease-out;
 	}
 	.site-header img {
 		width: 70px;
@@ -820,12 +830,13 @@ textarea {
 .smaller-header,
 .smaller-header-nothomed {
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+	background-color: #F7F7F8;
+	opacity: 0.95;
 }
 
 @media screen and (min-width: 1023px) {
 	.smaller-header,
 	.smaller-header-nothomed {
-		background-color: #F7F7F8;
 		-ms-flex-pack: distribute;
 		    justify-content: space-around;
 	}
@@ -848,6 +859,7 @@ textarea {
 	    align-content: center;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
+	transition: all 0.2s ease-out;
 }
 
 .site-branding--scrolled {
@@ -2410,25 +2422,33 @@ figcaption .wp-caption-text {
 	color: white;
 }
 
+#more {
+	transform: translateY(-100px);
+}
+
+@media screen and (min-width: 1023px) {
+	#more {
+		transform: translateY(0px);
+	}
+}
+
 .down {
-	width: 40px;
-	position: absolute;
-	cursor: pointer;
-	right: 20px;
-	bottom: 20px;
-	border-radius: 50%;
-	background-color: #EE3626;
-	animation: 2s ease-out 0.5s infinite downer;
+	display: none;
 }
 
 @media screen and (min-width: 1023px) {
 	.down {
+		display: block;
+		cursor: pointer;
+		border-radius: 50%;
+		background-color: #EE3626;
 		width: 60px;
 		position: unset;
 		background-color: unset;
 		display: block;
 		margin: 0 auto;
 		transform: translateY(-150px);
+		animation: 2s ease-out 0.5s infinite downer;
 	}
 }
 
@@ -2726,11 +2746,12 @@ figcaption .wp-caption-text {
 	max-width: 300px;
 	margin: 0 0.5rem;
 	margin-bottom: 2rem;
-	opacity: 0;
+	opacity: 1;
 }
 
 @media screen and (min-width: 1023px) {
 	.news-card {
+		opacity: 0;
 		opacity: 0;
 		transform: translateY(6em);
 		transition: transform 1s 1s cubic-bezier(0, 1, 0.3, 1), opacity 1s 1s ease-out;
@@ -2756,11 +2777,10 @@ figcaption .wp-caption-text {
 		filter: sepia(20%);
 		transition: all 0.2s ease-in;
 	}
-}
-
-.news-card img:hover {
-	filter: sepia(0%);
-	box-shadow: 1px 1px 13px rgba(0, 0, 3, 0.5);
+	.news-card img:hover {
+		filter: sepia(0%);
+		box-shadow: 1px 1px 13px rgba(0, 0, 3, 0.5);
+	}
 }
 
 @media screen and (min-width: 576px) {

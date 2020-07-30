@@ -5,12 +5,15 @@
         <a href="#aktuelno"><div class="hero-container__call-to-action call-to-action">Информирај се</div> </a>
     </div>
 </div>
-<div> <img  class="down" src= "http://localhost/star/wp-content/themes/star/images/down.png"> </div>
+<div id="more"> </div>
+<div> <a href="#more"> <img  class="down" src= "http://localhost/star/wp-content/themes/star/images/down.png"> </a>
+
+</div>
 <div class="sexwork-area"><!-- wp:heading -->
-    <h2 class="sexwork__title">СЕКСУАЛНА РАБОТА</h2>
+    <h2 class="sexwork__title">ЗА СЕКСУАЛНАТА РАБОТА</h2>
 <!-- /wp:heading -->
     <div class="sexwork">
-        <div class="sexwork__card card"><img class="card__image" src="http://localhost/star/wp-content/themes/star/images/two_hearts.svg" alt="two hearts" /> <!-- wp:heading {"level":3} -->
+        <div class="sexwork__card card" ><img class="card__image" src="http://localhost/star/wp-content/themes/star/images/two_hearts.svg" alt="two hearts" /> <!-- wp:heading {"level":3} -->
             <h3>Што преставува сексуалната работа?</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
@@ -18,10 +21,10 @@
             <div class="start hide">
                 <p class="card__paragraph ">Во таа смисла, сексуални работници претсавуваат сите лица, мажи, жени или трансродни лица, кои се занимаваат со сексуална работа од лични, економски и социјални причини. Тоа се луѓе чии човекови права мораат да бидат почитувани</p>
             </div>
-            <p class="red_link">ПОВЕЌЕ...</p>
-            <p class="less hide-button ">ЗАТВОРИ...</p>
+            <button class="red_link">ПОВЕЌЕ...</button>
+            <button class="less hide-button ">ЗАТВОРИ...</button>
 <!-- /wp:paragraph --></div>
-        <div class="sexwork__card card "><img class="card__image" src="http://localhost/star/wp-content/themes/star/images/transparent_umbrella.svg" alt="transparent_umbrella" />
+        <div class="sexwork__card card" id="up" ><img class="card__image" src="http://localhost/star/wp-content/themes/star/images/transparent_umbrella.svg" alt="transparent_umbrella" />
             <h3>Црвениот чадор - глобален симбол на сексуалната работа</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
@@ -33,12 +36,12 @@
                 <p class="card__paragraph ">Една од активностите беше маршот на црвениот чадор. Сексуалните работници маршираа по улиците на Венеција и користеа мегафони и цврени чадори, со што укажуваа на лошите услови за работа и злоупотребата на човековите права со кои тие се соочуваат.</p>
                 <p class="card__paragraph ">Маршот започна пред шаторот на павиљонот движејќи се кон центарот на градот. Меѓународниот комитет за правата на сексуалните работници го усвои црвениот чадор како симбол за отпор против дискриминацијата. Сите знаеме какво глобално значење има црвената панделка, црвениот чадор би можел да го има истото.</p>
             </div>
-            <p class="red_link">ПОВЕЌЕ...</p>
-            <p class="less  hide-button">ЗАТВОРИ...</p>
-            <p class="card__paragraph"><!-- /wp:paragraph --></p>
+            <button class="red_link">ПОВЕЌЕ...</button>
+            <button class="less hide-button"><a  class= "white-text" href="#more">ЗАТВОРИ... </a> </button>
+            
         </div>
-        <div class="sexwork__card card "><img class="card__image" src="http://localhost/star/wp-content/themes/star/images/declaration.svg" alt="declaration" />
-            <h3>Декларација на сексуалние работници</h3>
+        <div class="sexwork__card card"><img class="card__image" src="http://localhost/star/wp-content/themes/star/images/declaration.svg" alt="declaration" />
+            <h3>Декларација на сексуалните работници</h3>
             <!-- /wp:heading -->
             <!-- wp:paragraph -->
             <p class="card__paragraph">Декларацијата на сексуалните работници е изготвена од сексуални работници и организации посветени на промовирање на нивните човекови права и благососотојба.</p>
@@ -46,9 +49,8 @@
                 <p class="card__paragraph ">Декларацијата ги наведува правата кои сите граѓани на Европа, вклучувајќи ги и сексуалните работници ги имаат согласно Меѓународниот закон за човекови права.</p>
                 <p class="card__paragraph ">Декларацијата ги опишува мерките и праксите кои потписниците на Декларацијата веруваат дека се потребни за осигурување на минимална почит и заштита на овие права. Овие права мораат да се почитуваат и штитат во развојот и воведувањето на политиките и програмите креирани за справување со трговијата со луѓе, нередовна миграција и тероризам.</p>
             </div>
-            <p class="red_link">ПОВЕЌЕ...</p>
-            <p class="less hide-button ">ЗАТВОРИ...</p>
-            <p class="card__paragraph"><!-- /wp:paragraph --></p>
+            <button class="red_link">ПОВЕЌЕ...</button>
+            <button class="less hide-button"><a  class= "white-text" href="#more">ЗАТВОРИ... </a> </button>
         </div>
     </div>
 </div>
@@ -59,14 +61,14 @@
                 <h2 class="about-us-container__title">ШТО ПРЕТСТАВУВА СТАР?</h2>
                 <p class="about-us-container__paragraph">Од 2007 до 2010 година, СТАР-СТАР претставуваше активистичко движење на група млади луѓе кои имаа една заедничка цел – унапредување и промоција на правата на сексуалните работници во Македонија, притоа активно вклучувајќи ги лицата од сексуалната индустрија во имплементација на своите активности.</p>
                 <p class="about-us-container__paragraph">Со намера да ја промовира важноста на цивилниот сектор во процесот на демократското управување, кон средината на 2010 година СТАР-СТАР поднесе иницијатива за влез во Централниот регистар на РМ. На 25.05.2010 година СТАР-СТАР беше заведен во Централниот регистар како Здружение за поддршка на маргинализирани работници СТАР-СТАР</p>
-                <p class="red_link--more">ПОВЕЌЕ...</p>
+                <button id="aktuelno" class="red_link--more">ПОВЕЌЕ...</button>
             </div>
         </div>
     </div>
-<div id="aktuelno" class="aktuelno">
+<div  class="aktuelno">
     <h3 class="aktuelno__title font-white">АКТУЕЛНО</h3>
     <div class="aktuelno__posts">[cat_posts cat="3" post_type="vesti"]</div>
-        <a href="/aktuelno"><p class="red_link--more font-yellow border-yellow">ПОВЕЌЕ...</p> </a>
+        <a href="/aktuelno"><button class="red_link--more font-yellow border-yellow">ПОВЕЌЕ...</button> </a>
 </div>
 <div class="s-work">
         <h3 class="s-work__title">S-WORK МАГАЗИН</h3>

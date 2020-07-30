@@ -10,7 +10,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Miss Albini
+ * @package Star Star
  */
 get_header();
 ?>

@@ -120,6 +120,7 @@ function miss_albini_content_width() {
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters( 'miss_albini_content_width', 740 );
 }
+
 add_action( 'after_setup_theme', 'miss_albini_content_width', 0 );
 
 /**
@@ -211,14 +212,13 @@ function itsme_disable_feed() {
 /**
  * Remove Emojis
  */
-
    remove_action('wp_head', 'print_emoji_detection_script', 7);
    remove_action('wp_print_styles', 'print_emoji_styles');
    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
    remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 /**
- * Clean emnus from classes
+ * Clean menus from classes
  */
 
    add_filter('nav_menu_item_id', 'clear_nav_menu_item_id', 10, 3);

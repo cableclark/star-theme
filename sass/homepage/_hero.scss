@@ -156,24 +156,28 @@
     color: white;
 }
 
+#more {
+    transform: translateY(-100px); 
+    @media screen  and (min-width: $large_screen){
+        transform: translateY(0px); 
+    }
+} 
 
 .down {
-    width: 40px;
-    position: absolute;
-    cursor: pointer;
-    right: 20px;
-    bottom: 20px;  
-    border-radius: 50%;
-    background-color: $red_main;
-    animation: 2s ease-out 0.5s infinite downer;
+    display:none;
     @media screen  and (min-width: $large_screen){
+
+        display: block;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: $red_main;
         width: 60px;
         position: unset;
         background-color: unset;
         display: block;
         margin: 0 auto;
         transform: translateY(-150px);
-
+        animation: 2s ease-out 0.5s infinite downer;
     }
     @media screen  and (min-width: $extra_large_screen){
         transform: translateY(-180px);

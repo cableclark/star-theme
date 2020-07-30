@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Miss Albini
+ * @package Star Star
  */
 
 ?>
@@ -20,9 +20,9 @@
 			endif;
 			?>
 			<div class="entry-meta">
-					<?php
-					miss_albini_posted_on();
-					?>
+				<?php
+				miss_albini_posted_on();
+				?>
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
 		<div class="entry-content">
@@ -42,9 +42,8 @@
 				)
 			);
 			?>
-			<p> <?php miss_albini_posted_by(); ?> </p>
 			<?php 
-			miss_albini_get_tags(); 
+				miss_albini_get_tags(); 
 			?>
 		</div><!-- .entry-content -->
 	</article><!-- #post-<?php the_ID(); ?> -->

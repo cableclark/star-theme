@@ -1,5 +1,5 @@
 @mixin header-transition {
-    transition: background-color 0.2s ease-out;
+    transition: all 0.2s ease-out;
   }
 
 .site-header {
@@ -10,6 +10,7 @@
     width: 100%;
     top:0;
     position:fixed; 
+    will-change: background-color;
     img {
         width: 43px;
         height: 43px;  
@@ -43,9 +44,9 @@
 .smaller-header-nothomed
 {
    @include box-shadow-normal;
-   
+   background-color: $light_color;
+   opacity: 0.95;
    @media screen and (min-width: $large_screen) {
-        background-color: $light_color;
         justify-content: space-around;
    }
 }
@@ -73,6 +74,7 @@
     opacity:0;
     align-content:center;   
     flex-wrap: wrap;
+    @include header-transition;
 }
 
 .site-branding--scrolled {

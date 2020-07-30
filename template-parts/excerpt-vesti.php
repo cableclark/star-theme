@@ -33,8 +33,7 @@
 					wp_kses_post( get_the_title() )
 				)
 			);
-	 ?>
-		
+	 	?>
 		</div>
 	</div>	
 </article>

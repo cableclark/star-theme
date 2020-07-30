@@ -44,8 +44,11 @@
     max-width: 300px;
     margin: 0 0.5rem;
     margin-bottom: 2rem;
-    opacity: 0;
-    @include slide-from-animation;
+    opacity: 1; 
+    @media screen and (min-width: $large_screen) {
+        opacity: 0; 
+        @include slide-from-animation;
+    }
     @media screen  and (min-width: $medium_screen){
         max-width: 380px;
     }
@@ -57,16 +60,18 @@
             max-width: 380px;
             filter: sepia(20%);
             transition: all 0.2s ease-in;
+            &:hover {
+                filter: sepia(0%);
+                box-shadow: 1px 1px 13px rgba(0, 0, 3, 0.5);
+            }
         }
     }
-    img:hover {
-        filter: sepia(0%);
-        box-shadow: 1px 1px 13px rgba(0, 0, 3, 0.5);
-    }
+    
     @media screen  and (min-width: $small_screen){
         margin: 0 1em;
         margin-bottom: 2rem;
     }
+    
 }
 
 .news-card-content {
@@ -86,7 +91,7 @@
     line-height: 1.5rem;
     font-weight: bold;
     letter-spacing: 0.05rem;
-     @media screen  and (min-width: $large_screen){
+    @media screen  and (min-width: $large_screen){
         line-height: 1.8rem;
         margin-top: 2rem; 
     }

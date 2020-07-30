@@ -14,67 +14,69 @@ input[type="submit"] {
 }
 
 @mixin transition-read-more {
-    transition: all .3s ease-in;  
+    transition: opacity .3s ease-in;  
 }
 
 @mixin red_button ($color) {
     border: 1px solid $color;
-    padding: 1rem;
     width: 200px;
     border-radius: 2px;
 }
 
 .red_link,
 .less {
-    color:$red_main;
-    cursor: pointer;
-    font-size: 1.2rem;
     font-family: $font__main;
-    opacity:1;
-    @include red_button($red_main);
-    @include transition-read-more;
-    text-align: center;
+	opacity:1;
+	text-align: center;
+	@include red_button($red_main);
+	@media screen and (min-width: $large_screen) {
+		cursor: pointer;
+		@include transition-read-more;
+		will-change: background-color, color, opacity;
+	}	
+}
+
+.white-text:visited{
+		color: white;
 }
 
 .red_link--more {
-    color:$red_main;
     @include red_button($red_main);
-    font-size: 1.2rem;
     font-family: $font__main;
     text-align: center;
-    cursor: pointer;
-    margin:0 auto;
-    @include transition-read-more;
+	margin:0 auto; 
+	@media screen and (min-width: $large_screen) {
+		@include transition-read-more;
+		cursor: pointer;
+		will-change: opacity;
+	}
 }
 
 .red_link:hover,
 .less:hover,
 .red_link--more:hover {
-    background-color:$red_main;
-    color:$light_color;
+	@media screen and (min-width: $large_screen) {
+    	background-color:$red_main;
+		color:$light_color;
+	}
 }
 
 .start {
-    @include transition-read-more;
-    opacity:1;
-    height: 100%;
+	opacity:1;
+	height: 100%;
+	transition: all 0.2s ease-in;
 }
 
 .hide-button {
-    @include transition-read-more;
-    display: none;
-    margin:0;
+	@include transition-read-more;
+	display:none;
+	margin:0;
 }
 
-
 .hide {
-    opacity: 0;
-    @include transition-read-more;
-    height: 0px;
-    width: 0px;
-    text-align: center;
-    overflow: hidden;
-    margin:0;
+	z-index: -100;
+	height: 0;
+    opacity:0;
 }
 
 .border-yellow {
