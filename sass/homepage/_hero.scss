@@ -182,19 +182,23 @@
 
 .top {
     border-radius: 50%;
-    display: block;
+    position: relative;
+    opacity: 0;
     bottom: 12px;
     right:12px;
     background-color: $red_main;
     width: 60px;
     cursor: pointer;
+    z-index: -100;
     transform:rotate(180deg);
-   
+    will-change: opacity;
+    transition: opacity 0.2s ease-in;    
 }
 
 .top-active {
-    display: block;
+    opacity:1;
     position: fixed;
+    will-change: opacity;
     z-index: 1000000;
 }
 

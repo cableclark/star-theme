@@ -184,11 +184,16 @@ less.forEach(function toggleClass (item) {
 
 
 /**
- *  Animate on scroll
- *
+ *  Animate on scroll usign Intersection Observer API
  */
 
-const callback = function(entries) {
+let observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: [0.0, 0.75]
+  };
+
+const scrollTrigger = function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
@@ -198,39 +203,41 @@ const callback = function(entries) {
     });
   };
   
-let observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: [0.0, 0.75]
-  };
 
-
-const observer = new IntersectionObserver(callback, observerOptions);
+const cardObserver = new IntersectionObserver(scrollTrigger, observerOptions);
   
 const sexworkCards = document.querySelectorAll(".sexwork__card");
   
-const observation = function(target) {
-    observer.observe(target);
-} 
-  
-sexworkCards.forEach(observation);
+sexworkCards.forEach(function(target) {
+    cardObserver.observe(target);
+});
 
-
-const observer2 = new IntersectionObserver(callback);
+const newsCardsObserver = new IntersectionObserver(scrollTrigger);
 
 const newsCards = document.querySelectorAll(".news-card");
 
-    newsCards.forEach(function(target) {
-        observer2.observe(target);
-  });
+newsCards.forEach(function(target) {
+    newsCardsObserver.observe(target);
+    });
 
 const publicationCards = document.querySelectorAll(".publication-card");
 
-const publicationCardsobserver = new IntersectionObserver(callback);
-      publicationCards.forEach(function(target) {
+const publicationCardsobserver = new IntersectionObserver(scrollTrigger);
+
+publicationCards.forEach(function(target) {
         publicationCardsobserver.observe(target);
     });
-    
+
+const aboutUsImage = document.querySelector(".about-us__image");
+
+const aboutUsContainer = document.querySelector(".about-us-container__text");
+
+const aboutUsObserver = new IntersectionObserver(scrollTrigger, observerOptions);
+
+aboutUsObserver.observe(aboutUsImage); 
+
+aboutUsObserver.observe(aboutUsContainer); 
+
 
 /**
 * Triger the top button

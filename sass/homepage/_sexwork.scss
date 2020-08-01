@@ -1,5 +1,9 @@
 .sexwork-area {
     padding-top: 1rem;
+    transition: all .3s ease-in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sexwork {
@@ -7,7 +11,10 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    min-height: 670px;  
+    min-height: 670px; 
+    @media screen and (min-width: $large_screen) {
+        padding-top: 100px;
+    }
 }
 
 .sexwork__title {
@@ -36,15 +43,13 @@
 
 .card__paragraph {
     margin-top: 0;
-    
 }
-
  
 .sexwork__card {
     display:flex;
     flex-direction: column;
     @media screen and (min-width: $large_screen) {
-        @include slide-from-animation;
+    @include slide-from-animation;
     }
     h3 {
         margin-top:2rem;
@@ -61,7 +66,7 @@
     margin: 1rem;
     max-width: 130px;   
     @media screen and (min-width: $large_screen) {
-        max-width: unset;
+        max-width: 200px;
         transform: translateX(-15px);
     }
 }
@@ -72,7 +77,7 @@
 		&:nth-of-type(#{$i}) {
 			// Delay the animation. Delay increases as items loop.
 			transition-delay: $i * (0.1s);
-			}
+		}
 	}
 }
 

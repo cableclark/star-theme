@@ -85,17 +85,19 @@
     <div>
         <a href="#hero"><img class="top" src= "http://localhost/star/wp-content/themes/star/images/down.png"> </a>
     </div>
-    <div class="about-us__image">
-        <img class="card__image" src="http://localhost/star/wp-content/themes/star/images/about-us.jpg" alt="declaration" /></div>
-        <div class="about-us-container">
-            <div class="about-us-container__text">
-                <h2 class="about-us-container__title">ШТО ПРЕТСТАВУВА СТАР?</h2>
-                <p class="about-us-container__paragraph">Од 2007 до 2010 година, СТАР-СТАР претставуваше активистичко движење на група млади луѓе кои имаа една заедничка цел – унапредување и промоција на правата на сексуалните работници во Македонија, притоа активно вклучувајќи ги лицата од сексуалната индустрија во имплементација на своите активности.</p>
-                <p class="about-us-container__paragraph">Со намера да ја промовира важноста на цивилниот сектор во процесот на демократското управување, кон средината на 2010 година СТАР-СТАР поднесе иницијатива за влез во Централниот регистар на РМ. На 25.05.2010 година СТАР-СТАР беше заведен во Централниот регистар како Здружение за поддршка на маргинализирани работници СТАР-СТАР</p>
-                <button  class="red_link--more">ПОВЕЌЕ...</button>
+    <div class="flexed">
+        <div class="about-us__image">
+            <img class="card__image" src="http://localhost/star/wp-content/themes/star/images/about-us.jpg" alt="declaration" /></div>
+            <div class="about-us-container">
+                <div class="about-us-container__text">
+                    <h2 class="about-us-container__title">ШТО ПРЕТСТАВУВА СТАР?</h2>
+                    <p class="about-us-container__paragraph">Од 2007 до 2010 година, СТАР-СТАР претставуваше активистичко движење на група млади луѓе кои имаа една заедничка цел – унапредување и промоција на правата на сексуалните работници во Македонија, притоа активно вклучувајќи ги лицата од сексуалната индустрија во имплементација на своите активности.</p>
+                    <p class="about-us-container__paragraph">Со намера да ја промовира важноста на цивилниот сектор во процесот на демократското управување, кон средината на 2010 година СТАР-СТАР поднесе иницијатива за влез во Централниот регистар на РМ. На 25.05.2010 година СТАР-СТАР беше заведен во Централниот регистар како Здружение за поддршка на маргинализирани работници СТАР-СТАР</p>
+                    <button  class="red_link--more">ПОВЕЌЕ...</button>
+                </div>
             </div>
-        </div>
-    </div>    
+        </div>  
+    </div>      
 <div id="aktuelno" class="aktuelno">
     <h3 class="aktuelno__title font-white">АКТУЕЛНО</h3>
     <div class="aktuelno__posts">[cat_posts cat="3" post_type="vesti"]</div>

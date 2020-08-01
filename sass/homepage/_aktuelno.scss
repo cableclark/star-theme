@@ -1,10 +1,11 @@
 .aktuelno,
 .s-work {
-    @include background;
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
-
+.aktuelno {
+    background: $black_color;
+}
 .s-work {
     @include background-light;
     padding-bottom: 2rem;

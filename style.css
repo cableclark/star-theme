@@ -477,10 +477,10 @@ big {
 
 @keyframes fadeIn {
 	0% {
-		filter: drop-shadow(15px 0px 15px #EE3626);
+		opacity: 0;
 	}
 	100% {
-		filter: drop-shadow(15px 0px 5px #B62626);
+		opacity: 1;
 	}
 }
 
@@ -499,11 +499,9 @@ big {
 	animation-fill-mode: both;
 }
 
-@media screen and (min-width: 1023px) {
-	.hero__image {
-		animation: 2s ease-out 0s 1 fadeIn;
-		animation-fill-mode: both;
-	}
+.hero__image {
+	animation: 2s ease-out 0s 1 fadeIn;
+	animation-fill-mode: both;
 }
 
 /*--------------------------------------------------------------
@@ -648,12 +646,13 @@ input[type="submit"] {
 	z-index: -100;
 	height: 0;
 	opacity: 0;
+	transition: all 0.2s ease-in;
 }
 
 .yellow-button {
 	border: 1px solid antiquewhite;
 	background: antiquewhite;
-	color: #EE3626;
+	color: #413742;
 }
 
 .white-text:visited {
@@ -782,14 +781,14 @@ textarea {
 	    align-content: center;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	opacity: 1;
+	opacity: 0;
 }
 
 @media screen and (min-width: 1023px) {
 	.site-branding {
 		opacity: 0;
 		will-change: opacity;
-		transition: all 0.4s ease-in;
+		transition: all 0.1s ease-in;
 	}
 }
 
@@ -2377,18 +2376,23 @@ figcaption .wp-caption-text {
 
 .top {
 	border-radius: 50%;
-	display: block;
+	position: relative;
+	opacity: 0;
 	bottom: 12px;
 	right: 12px;
 	background-color: #EE3626;
 	width: 60px;
 	cursor: pointer;
+	z-index: -100;
 	transform: rotate(180deg);
+	will-change: opacity;
+	transition: opacity 0.2s ease-in;
 }
 
 .top-active {
-	display: block;
+	opacity: 1;
 	position: fixed;
+	will-change: opacity;
 	z-index: 1000000;
 }
 
@@ -2406,6 +2410,13 @@ figcaption .wp-caption-text {
 --------------------------------------------------------------*/
 .sexwork-area {
 	padding-top: 1rem;
+	transition: all .3s ease-in;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
 }
 
 .sexwork {
@@ -2418,6 +2429,12 @@ figcaption .wp-caption-text {
 	-ms-flex-align: start;
 	    align-items: flex-start;
 	min-height: 670px;
+}
+
+@media screen and (min-width: 1023px) {
+	.sexwork {
+		padding-top: 100px;
+	}
 }
 
 .sexwork__title {
@@ -2470,8 +2487,8 @@ figcaption .wp-caption-text {
 	.sexwork__card {
 		opacity: 0;
 		transform: translateY(6em);
-		transition: transform 1s 1s cubic-bezier(0, 1, 0.3, 1), opacity 1s 1s ease-out;
-		will-change: opacity transform;
+		transition: transform 0.9s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 0.9s 0.5s ease-in;
+		will-change: opacity;
 	}
 }
 
@@ -2494,7 +2511,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1023px) {
 	.sexwork_svg__image {
-		max-width: unset;
+		max-width: 200px;
 		transform: translateX(-15px);
 	}
 }
@@ -2528,22 +2545,33 @@ figcaption .wp-caption-text {
 /*--------------------------------------------------------------
 # About us Area
 --------------------------------------------------------------*/
-.about-us {
-	transition: all .3s ease-in;
-}
-
 @media screen and (min-width: 1023px) {
 	.about-us {
 		display: -ms-flexbox;
 		display: flex;
-		height: 100%;
+		height: 100vh;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.flexed {
+		margin: 0 auto;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: space-evenly;
+		    justify-content: space-evenly;
+	}
+}
+
+@media screen and (min-width: 1023px) {
+	.flexed {
+		-ms-flex-pack: justify;
+		    justify-content: space-between;
 	}
 }
 
 .about-us-container {
 	margin-top: 0;
-	background-color: #F7F7F8;
-	background: linear-gradient(224.35deg, #fff9f9 20.34%, #ffffff 73.72%);
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-direction: column;
@@ -2564,14 +2592,25 @@ figcaption .wp-caption-text {
 	.about-us__image,
 	.about-us-container {
 		width: 50%;
+		margin-left: 2rem;
 	}
 }
 
-.about-us__image img {
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-	margin-top: 0;
+.about-us__image {
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+}
+
+@media screen and (min-width: 1023px) {
+	.about-us__image {
+		opacity: 0;
+		transform: translateY(6em);
+		transition: transform 0.9s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 0.9s 0.5s ease-in;
+		will-change: opacity;
+		object-fit: cover;
+		max-width: 600px;
+	}
 }
 
 .about-us-container__title {
@@ -2597,20 +2636,22 @@ figcaption .wp-caption-text {
 
 .about-us-container__paragraph {
 	color: #413742;
-}
-
-@media screen and (min-width: 1023px) {
-	.about-us-container__paragraph {
-		display: -ms-grid;
-		display: grid;
-		place-items: center;
-		max-width: 500px;
-	}
+	place-items: center;
+	max-width: 500px;
 }
 
 .about-us-container__text {
 	margin: 1.5rem;
 	max-width: 460px;
+}
+
+@media screen and (min-width: 1023px) {
+	.about-us-container__text {
+		opacity: 0;
+		transform: translateY(6em);
+		transition: transform 0.9s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 0.9s 0.5s ease-in;
+		will-change: opacity;
+	}
 }
 
 .font-yellow {
@@ -2622,10 +2663,12 @@ figcaption .wp-caption-text {
 --------------------------------------------------------------*/
 .aktuelno,
 .s-work {
-	background: #B62626;
-	background: linear-gradient(224.35deg, #942323 20.34%, #ff4433 73.72%);
 	padding-top: 3rem;
 	padding-bottom: 2rem;
+}
+
+.aktuelno {
+	background: #413742;
 }
 
 .s-work {
@@ -2696,8 +2739,8 @@ figcaption .wp-caption-text {
 		opacity: 0;
 		opacity: 0;
 		transform: translateY(6em);
-		transition: transform 1s 1s cubic-bezier(0, 1, 0.3, 1), opacity 1s 1s ease-out;
-		will-change: opacity transform;
+		transition: transform 0.9s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 0.9s 0.5s ease-in;
+		will-change: opacity;
 	}
 }
 
@@ -2876,8 +2919,8 @@ figcaption .wp-caption-text {
 		opacity: 0;
 		opacity: 0;
 		transform: translateY(6em);
-		transition: transform 1s 1s cubic-bezier(0, 1, 0.3, 1), opacity 1s 1s ease-out;
-		will-change: opacity transform;
+		transition: transform 0.9s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 0.9s 0.5s ease-in;
+		will-change: opacity;
 	}
 }
 
