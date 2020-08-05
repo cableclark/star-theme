@@ -1,8 +1,8 @@
 <?php
 /**
- * miss_albini Theme Customizer
+ * Star Star Theme Customizer
  *
- * @package Miss Albini
+ * @package Star Star
  */
 
 /**

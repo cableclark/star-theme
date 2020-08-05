@@ -21,14 +21,12 @@
 @mixin slide-from-animation  {
     opacity: 0;
     transform: translateY(6em);
-    transition: transform 0.9s .5s cubic-bezier(0,1,.3,1),
-    opacity 0.9s .5s ease-in;
+    transition: transform 0.3s .5s cubic-bezier(0,1,.3,1),
+    opacity 0.3s .5s ease-out;
     will-change: opacity;
 }
 
-
   .hero-container__heading {
-
       animation: 0.2s ease-out 0.5s 1 slideInFromLeft;
       animation-fill-mode: both;
   }
@@ -46,7 +44,19 @@
   .hero__image{
         animation: 2s ease-out 0s 1 fadeIn;
         animation-fill-mode: both;
-    
   }
 
+ .animatable { 
+  @media screen and (min-width: $large_screen) {
+    @include slide-from-animation;
+    }
+}
 
+@for $i from 1 through 12 {
+	.stagered {
+		&:nth-of-type(#{$i}) {
+			// Delay the animation. Delay increases as items loop.
+			transition-delay: $i * (0.05s);
+			}
+	}
+}

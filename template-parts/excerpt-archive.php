@@ -7,8 +7,7 @@
  * @package Star star
  */
 ?>
-<div id="app" class="archive-card margin-2">
-	<article id="post-<?php the_ID(); ?>">
+	<article id="post-<?php the_ID(); ?>" class="archive-card margin-2 stagered animatable">
 		<header>
 			<div class="archive-image-wrapper">
 				<?php the_post_thumbnail('medium'); ?>
@@ -42,5 +41,5 @@
 			);
 			?>
 		</div>	
+		<a href="<?php the_permalink() ?>" class="flex-end hide-on-small-screen"><button class="red_link--more">ПОВЕЌЕ...</button> </a>
 	</article><!-- #post-<?php the_ID(); ?> -->
-</div> 

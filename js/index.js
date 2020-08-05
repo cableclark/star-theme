@@ -130,6 +130,8 @@ const logoBlock = document.querySelector(".custom-logo-link");
 
 const siteBranding = document.querySelector(".site-branding");
 
+const topButton = document.querySelector(".top");
+
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     title.classList.add("smaller-navbar");
@@ -147,7 +149,9 @@ function scrollFunction() {
     menuItems.classList.remove('scrolled-menu-items'); 
     siteBranding.classList.remove('site-branding--scrolled'); 
     search.classList.remove('search-icon--scrolled'); 
-    topButton.classList.remove("top-active");
+    if (topButton !== 'undefined') {
+        topButton.classList.remove("top-active");
+    }
   }
 } 
 
@@ -155,107 +159,6 @@ window.onscroll = debounce(function() {
     scrollFunction();
 }, 1000/120)
 
-
-/**
- *  A function to toggle less and more content
- *
- */
-
-let more = document.querySelectorAll(".red_link");
-let less = document.querySelectorAll(".less");
-
-
-more.forEach(function toggleClass (item) {
-    item.addEventListener('click', function () {
-        this.previousElementSibling.classList.toggle('hide');
-        this.classList.toggle('hide-button');
-        this.nextElementSibling.classList.toggle('hide-button');
-
-    });
-})
-
-less.forEach(function toggleClass (item) {
-    item.addEventListener('click', function () {
-        this.previousElementSibling.previousElementSibling.classList.toggle('hide');
-        this.classList.toggle('hide-button');
-        this.previousElementSibling.classList.toggle('hide-button');
-    });
-})
-
-
-/**
- *  Animate on scroll usign Intersection Observer API
- */
-
-let observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: [0.0, 0.75]
-  };
-
-const scrollTrigger = function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-        } else {
-            entry.target.classList.remove("is-visible");
-        }
-    });
-  };
-  
-
-const cardObserver = new IntersectionObserver(scrollTrigger, observerOptions);
-  
-const sexworkCards = document.querySelectorAll(".sexwork__card");
-  
-sexworkCards.forEach(function(target) {
-    cardObserver.observe(target);
-});
-
-const newsCardsObserver = new IntersectionObserver(scrollTrigger);
-
-const newsCards = document.querySelectorAll(".news-card");
-
-newsCards.forEach(function(target) {
-    newsCardsObserver.observe(target);
-    });
-
-const publicationCards = document.querySelectorAll(".publication-card");
-
-const publicationCardsobserver = new IntersectionObserver(scrollTrigger);
-
-publicationCards.forEach(function(target) {
-        publicationCardsobserver.observe(target);
-    });
-
-const aboutUsImage = document.querySelector(".about-us__image");
-
-const aboutUsContainer = document.querySelector(".about-us-container__text");
-
-const aboutUsObserver = new IntersectionObserver(scrollTrigger, observerOptions);
-
-aboutUsObserver.observe(aboutUsImage); 
-
-aboutUsObserver.observe(aboutUsContainer); 
-
-
-/**
-* Triger the top button
- */
-
-const topButton = document.querySelector(".top");
-
-const addTopActive = function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("top-active");
-        }
-    });
-  };
-
-const observerTopButton = new IntersectionObserver(addTopActive, observerOptions);
-
-observerTopButton.observe(topButton);
 
 
 /**

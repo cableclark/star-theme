@@ -180,18 +180,22 @@ add_action( 'widgets_init', 'miss_albini_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function miss_albini_scripts() {
+function star_scripts() {
 	//Enqueue Google fonts
-	wp_enqueue_style( 'miss_albini-fonts', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
-	wp_enqueue_style( 'miss_albini-fonts-2', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap');
-	wp_enqueue_style( 'miss_albini-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'star-fonts', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+	wp_enqueue_style( 'star-fonts-2', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap');
+	wp_enqueue_style( 'star-style', get_stylesheet_uri(), array(), _S_VERSION );
 	
-	wp_style_add_data( 'miss_albini-style', 'rtl', 'replace' );
+	wp_enqueue_script( 'star-index', get_template_directory_uri() . '/js/index.js', array(), _S_VERSION, true );
 	
-    wp_enqueue_script( 'miss_albini-navigation', get_template_directory_uri() . '/js/index.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'star-frontpage', get_template_directory_uri() . '/js/frontpage.js', array(), _S_VERSION, true );
+    
+	wp_style_add_data( 'star-style', 'rtl', 'replace' );
+	
+;
 }
 
-add_action( 'wp_enqueue_scripts', 'miss_albini_scripts' );
+add_action( 'wp_enqueue_scripts', 'star_scripts' );
 
 /**
  * Disable RSS

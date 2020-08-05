@@ -17,14 +17,14 @@
 }
 
 .widget {
-	padding: 0em 1em;
 	min-width: 300px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 2rem;
+    margin-bottom: 2rem;
+    @include background-light;
 	@media screen and(min-width: $large_screen)  {
-		padding: 2em 2em;
+        padding: 2em 2em;
 	}
 	// Make sure select elements fit in widgets.
 	select {
@@ -60,9 +60,6 @@
     height: 100vh;
     margin: 0;
     padding-left: 0;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, $light_color 100%);
-    transform: translateY(-200px);
     opacity:0;
     transition: all 0.3s ease-in;
     z-index: -150000;
@@ -79,16 +76,14 @@
 	    justify-content: flex-end;
         align-content: center; 
     }
-    @media screen and (min-width: $large_screen) {
-        background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, $light_color 100%);
-    }
+    
 }
 
 .search-active {
     z-index: 150000;
     opacity:1; 
     @media screen and (min-width: $large_screen) {
-        transform: translateY(100px);
+        transform: translateY(80px);
     } 
 }
 
@@ -107,12 +102,6 @@
 .menu-scroller {
     @media screen and (min-width: $large_screen) {
         transform: translateY(80px);
-    }  
-}
-
-.menu-scroller2 {
-    @media screen and (min-width: $large_screen) {
-        transform: translateY(100px);
     }  
 }
 
@@ -145,13 +134,17 @@
     color: $light_color;
     border-radius: 0;  	
     text-align: center; 
+    @include box-shadow-normal;
     @media screen and(max-width: 425px) {
         height: 35px;
         width: 100%;
     }
-
 }
 
+
+.search-submit {
+    @include box-shadow-normal;
+}
 .search-form  {
     input[type="submit"] {
         @include background;
@@ -186,6 +179,7 @@
     margin-top: 15px;
     padding: 10px;
     border: 1px solid $red_main;
+    
     @media screen and (min-width: $larger_screen) {
         margin-top: 0;
         border: none;  
@@ -196,14 +190,12 @@
 }
 
 .search-icon--scrolled {
-    @media screen and (min-width: $larger_screen) {
         stroke: $black_color; 
         fill: $black_color;
-    } 
 }
 
 .search-icon--white{
-    @media screen and (min-width: $extra_large_screen) {
+    @media screen and (min-width: $large_screen) {
         stroke: $black_color; 
         fill: $black_color;
     } 
@@ -211,9 +203,9 @@
 
 .search-x {
     align-self: center;
-    width:20px;
+    width:25px;
     stroke: $black_color;
-    height:20px;
+    height:25px;
     margin: 10px 15px;
     cursor: pointer;
     display: none;

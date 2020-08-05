@@ -1,5 +1,17 @@
 <?php 
-// Add Shortcode
+
+/**
+ * Frontpage post listing shortcode
+ *
+ * @package Star Star
+ */
+
+/**
+ * Add three posts to the front page section of categories 
+ * @param array 
+ * @return srting
+ */
+
 function get_cat_posts( $atts , $content = null ) {
 
 	// Attributes
@@ -24,10 +36,10 @@ function get_cat_posts( $atts , $content = null ) {
         ob_start();
         while ( $the_query->have_posts() ) : $the_query->the_post();
             get_template_part( 'template-parts/excerpt', $argument["post_type"]);
-    
         endwhile;
         $ob_str=ob_get_contents();
         ob_end_clean();
+
         return $ob_str;
    
     wp_reset_postdata();

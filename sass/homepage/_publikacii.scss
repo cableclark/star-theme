@@ -1,27 +1,30 @@
 .publication-card {
-    max-width: 300px;
     margin: 0 0.5rem;
     margin-bottom: 2rem;
-    opacity: 1; 
-    @media screen and (min-width: $large_screen) {
-        opacity: 0; 
-        @include slide-from-animation;
-    }
-    @media screen  and (min-width: $medium_screen){
-        max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: $light_color;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 1rem;
+    width: 260px;
+    @media screen  and (min-width: $small_screen){
+        width: 280px;
+    }    
+    @media screen and (min-width: $medium_screen) {
+        flex-direction: row;
+        min-width: 540px;
     }
     img {
         object-fit: cover; 
         margin: 0 auto;
         border-radius: 2%;
+        min-width: 230px;
+        min-height: 310px;
         @media screen  and (min-width: $medium_screen){
-            max-width: 380px;
-            filter: sepia(20%);
             transition: all 0.2s ease-in;
-            &:hover {
-                filter: sepia(0%);
-                box-shadow: 1px 1px 13px rgba(0, 0, 3, 0.5);
-            }
         }
     }
     
@@ -32,13 +35,36 @@
     
 }
 
-.publication-card-content {
-    p {
-        display:none;
-        @media screen  and (min-width: $medium_screen){
-            display: block;
-        }
+.publication-card-wider {
+    @media screen  and (min-width: $medium_screen){
+        min-width: 740px;
     }
+   
+}
+
+.flex-end {
+    align-self: flex-end;
+     margin-top:auto;
+}
+
+.publication-image-container {
+    @media screen and (min-width: $medium_screen) {
+        margin-right: 1rem; 
+    }   
+}
+
+.publication-card__text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hide-on-small-screen {
+    display: none;
+    @media screen and (min-width: $medium_screen) {
+        display: block;
+    } 
 }
 
 .publication-card-title {
@@ -47,11 +73,12 @@
     margin-bottom: 0.5rem;
     min-height: 20px; 
     line-height: 1.5rem;
-    font-weight: bold;
     letter-spacing: 0.05rem;
-    @media screen  and (min-width: $large_screen){
+    text-align: center;
+    @media screen  and (min-width: $medium_screen){
         line-height: 1.8rem;
-        margin-top: 2rem; 
+        text-align: unset; 
+        margin-top: unset;
     }
  }
 
@@ -59,12 +86,3 @@
     opacity: 1;
     transform: translateY(0) rotateZ(0deg); 
 } 
-
-@for $i from 1 through 9 {
-	.publication-card {
-		&:nth-of-type(#{$i}) {
-			// Delay the animation. Delay increases as items loop.
-			transition-delay: $i * (0.1s);
-			}
-	}
-}

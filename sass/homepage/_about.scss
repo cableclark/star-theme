@@ -1,12 +1,12 @@
 .about-us {
     @media screen  and (min-width: $large_screen){
         display:flex;
-        height: 100vh;
+         min-height: 100vh;
     }
 }
 
 .flexed {
-    @media screen  and (min-width: $medium_screen){
+    @media screen  and (min-width: $large_screen){
         margin: 0 auto;
         display:flex;
         justify-content: space-evenly;
@@ -24,6 +24,7 @@
     align-items: center;
     @media screen  and (min-width: $large_screen){
         padding: 2rem 0;
+       
     }
 }
    
@@ -35,11 +36,11 @@
     }
 }
 
+
 .about-us__image { 
     display: grid;
     place-items: center; 
     @media screen  and (min-width: $large_screen){
-        @include slide-from-animation;
         object-fit: cover;
         max-width: 600px;
     };  
@@ -66,9 +67,6 @@
 .about-us-container__text {
     margin:1.5rem;
     max-width: 460px;
-    @media screen  and (min-width: $large_screen){
-        @include slide-from-animation;
-    };
 }
 
 .font-yellow {

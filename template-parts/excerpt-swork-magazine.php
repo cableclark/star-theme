@@ -7,15 +7,14 @@
  * @package Star Star 
  */
 ?>
-<article id="article-<?php the_ID(); ?>" class="publication-card stagered animatable publication-card-wider">
+<article id="article-<?php the_ID(); ?>" class="publication-card stagered animatable">
 	<a href="<?php the_permalink();?>" class="publication-image-container" rel="bookmark"><?php the_post_thumbnail('large'); ?>
 	</a>
 	<div class="publication-card__text">
-		<header class="publication-card__header hide-on-small-screen">
+		<header class="publication-card__header">
 		<?php
 			the_title( '<h3 class="publication-card-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );	
 		?>
-
 		</header>
 		<div class="publication-card-content hide-on-small-screen">
 			<?php
@@ -35,7 +34,7 @@
 			);
 	 ?>
 		</div>
-		<a href="<?php the_permalink() ?>" class="flex-end hide-on-small-screen"><button class="red_link--more">ПОВЕЌЕ...</button> </a>
+	<a href="<?php the_permalink() ?>" class="flex-end hide-on-small-screen"><button class="red_link--more">ПОВЕЌЕ...</button> </a>
 	</div>	
 </article>
 

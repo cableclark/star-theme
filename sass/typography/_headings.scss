@@ -7,29 +7,45 @@ h6 {
 	font-family: $font__main;
 	line-height: unset;
 	color:$black_color;
-	line-height: 1.8rem;
+	line-height: 1.6rem;
 	font-weight: normal;
+	@media screen and (min-width: $medium_screen) {
+        line-height: 1.7rem;
+    } 
 }
 
 h1 {
 	font-size: $extra_large_heading;
+	@media screen and (min-width: $medium_screen) {
+        font-size: $extra_large_heading + 0.2rem ;
+    } 
 }
 
 
 h2,
 .search-title {
 	font-size:  $large_heading;
+	@media screen and (min-width: $medium_screen) {
+        font-size: $large_heading + 0.2rem ;
+    } 
 
 }
 
 h3 {
-	font-size: $medium_heading;
+	@media screen and (min-width: $medium_screen) {
+        font-size: $medium_heading + 0.2rem ;
+    } 
 }
+
 
 
 h4 {
-	font-size:$smaller_heading
+	font-size: $smaller_heading;
+	@media screen and (min-width: $medium_screen) {
+        font-size: $smaller_heading + 0.2rem ;
+    } 
 }
+
 
 
 h5 {

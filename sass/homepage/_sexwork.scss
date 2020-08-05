@@ -48,9 +48,6 @@
 .sexwork__card {
     display:flex;
     flex-direction: column;
-    @media screen and (min-width: $large_screen) {
-    @include slide-from-animation;
-    }
     h3 {
         margin-top:2rem;
         color: $red_main;
@@ -94,3 +91,5 @@
     width: 150px;
     margin: 0 auto;
 }
+
+

@@ -7,7 +7,7 @@
  * @package Miss Albini
  */
 ?>
-<article id="article-<?php the_ID(); ?>" class="news-card is-visible">
+<article id="article-<?php the_ID(); ?>" class="news-card stagered animatable is-visible">
 	<a class="light-color" href="<?php the_permalink();?>" rel="bookmark"><?php the_post_thumbnail('large'); ?>
 	 </a>
 	<div class="news-card__text">
@@ -35,6 +35,7 @@
 			);
 	 	?>
 		</div>
+		<a href="<?php the_permalink() ?>" class="flex-end hide-on-small-screen"><button class="red_link--more">ПОВЕЌЕ...</button> </a>
 	</div>	
 </article>
 

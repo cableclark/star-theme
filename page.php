@@ -12,7 +12,7 @@
  * @package Miss Albini
  */
 get_header();
-?>
+?> hey
 	<main id="primary" class="site-main site-container">
 		<?php
 		while ( have_posts() ) :
