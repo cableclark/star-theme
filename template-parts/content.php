@@ -11,7 +11,7 @@
 <div id="app" class="container">
 	<article id="post-<?php the_ID(); ?>">
 		<header class="entry-header">
-			<?php miss_albini_entry_footer(); ?>
+		
 			<?php
 			if ( is_singular() ) :
 				the_title( '<h1 class="content-title">', '</h1>' );

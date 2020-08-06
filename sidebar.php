@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Miss Albini
+ * @package Star Star
  */
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;

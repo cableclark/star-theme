@@ -10,14 +10,14 @@ h6 {
 	line-height: 1.6rem;
 	font-weight: normal;
 	@media screen and (min-width: $medium_screen) {
-        line-height: 1.7rem;
+        line-height: 2rem;
     } 
 }
 
 h1 {
 	font-size: $extra_large_heading;
 	@media screen and (min-width: $medium_screen) {
-        font-size: $extra_large_heading + 0.2rem ;
+        font-size: $extra_large_heading + 0.3rem ;
     } 
 }
 

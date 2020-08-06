@@ -35,6 +35,13 @@
     
 }
 
+.publication-card:hover {
+    @media screen  and (min-width: $medium_screen){
+        transition: all 0.2s ease-in; 
+        @include box-shadow-hover;
+    }
+}
+
 .publication-card-wider {
     @media screen  and (min-width: $medium_screen){
         min-width: 740px;
@@ -86,3 +93,7 @@
     opacity: 1;
     transform: translateY(0) rotateZ(0deg); 
 } 
+
+.issuuembed  {
+    max-width: 300px;
+}

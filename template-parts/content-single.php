@@ -10,21 +10,20 @@
 ?>
 <div id="app">
 	<article id="post-<?php the_ID(); ?>" class="single-article">
-		<header class="entry-header">
-			<div class="p-1">
-				<?php miss_albini_entry_footer(); ?>
-			</div>
+		<header>
+		<div class="thumb-container"><?php the_post_thumbnail();?></div>	
+
 			<?php
 			if ( is_singular() ) :
-				the_title( '<h1 class="content-title">', '</h1>' );
+				the_title( '<h1 >', '</h1>' );
 			else :
-				the_title( '<h2 class="content-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 			?>
 			<div class="entry-meta">
-					<?php
+				<?php
 					miss_albini_posted_on();
-					?>
+				?>
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
 		<div class="entry-content">
@@ -45,9 +44,9 @@
 				)
 			);
 			?>
-			<p> <?php miss_albini_posted_by(); ?> </p>
+			<p> <?php star_posted_by(); ?> </p>
 			<?php 
-			miss_albini_get_tags(); 
+			star_get_tags(); 
 			?>
 		</div><!-- .entry-content -->
 	</article><!-- #post-<?php the_ID(); ?> -->

@@ -4,11 +4,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Miss Albini
+ * @package Star Star
  */
 
 get_header();
-?><div class="thumb-container"><?php the_post_thumbnail();?></div>	
+?>
 	<main id="primary" class="site-main white-bg ">
 		<div class="site-container">
 			<?php

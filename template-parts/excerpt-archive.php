@@ -5,25 +5,26 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Star star
- */
+ */ 
+
 ?>
 	<article id="post-<?php the_ID(); ?>" class="archive-card margin-2 stagered animatable">
 		<header>
 			<div class="archive-image-wrapper">
-				<?php the_post_thumbnail('medium'); ?>
+				<?php the_post_thumbnail('large_medium'); ?>
 			</div> 
-	        <?php
+		</header>
+		<div class="flexed-column ">
+		<?php
 			if ( is_singular() ) :
-				the_title( '<h1 class="">', '</h1>' );
+				the_title( '<h1 class="archive-article-title">', '</h1>' );
 			else :
-				the_title( '<h2 class=""><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 class="archive-article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 			?>
-			<div>
+			<div class="margined">
 				<?php miss_albini_posted_on();?>
 			</div>
-		</header>
-		<div >
 			<?php
 			the_excerpt(
 				sprintf(
@@ -40,6 +41,7 @@
 				)
 			);
 			?>
+			<a href="<?php the_permalink() ?>" class="flex-end hide-on-small-screen"><button class="red_link--more">ПОВЕЌЕ...</button> </a>
 		</div>	
-		<a href="<?php the_permalink() ?>" class="flex-end hide-on-small-screen"><button class="red_link--more">ПОВЕЌЕ...</button> </a>
+		
 	</article><!-- #post-<?php the_ID(); ?> -->

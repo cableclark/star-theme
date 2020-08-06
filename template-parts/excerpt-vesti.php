@@ -10,11 +10,11 @@
 <article id="article-<?php the_ID(); ?>" class="news-card stagered animatable is-visible">
 	<a class="light-color" href="<?php the_permalink();?>" rel="bookmark"><?php the_post_thumbnail('large'); ?>
 	 </a>
-	<div class="news-card__text">
+	<div class="news-card__text flexed-column flexed-align-bottom-fix">
 		<header class="news-card__header light-color">
-		<?php
-			the_title( '<h3 class="news-card-title light-color"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-		?>
+			<?php
+				the_title( '<h3 class="news-card-title light-color"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+			?>
 			<div class="news-card-meta light-color"><?php miss_albini_posted_on();?></div>
 		</header>
 		<div class="news-card-content light-color">

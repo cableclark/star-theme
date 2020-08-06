@@ -2,11 +2,10 @@
 /**
  * The header for our theme
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Miss Albini
+ * @package Star Star
  */
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
@@ -43,8 +42,8 @@
 				?><p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 			endif;
-			$miss_albini_description = get_bloginfo( 'description', 'display' );
-			if ( $miss_albini_description || is_customize_preview() ) :
+			$star_description = get_bloginfo( 'description', 'display' );
+			if ( $star_description || is_customize_preview() ) :
 				?><p class="site-description"><?php echo $miss_albini_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?></div>
 		<nav id="site-navigation" class="main-navigation">
@@ -59,8 +58,7 @@
 					return;
 				}
 				?>  
-				 <?php echo search_icon_svg();?> 
-				
+				<?php echo search_icon_svg();?> 
 			</div>
 			<div class="toggler" aria-controls="primary-menu" aria-expanded="false"> 
 				<div></div>

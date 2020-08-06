@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Miss Albini
+ * @package Star Star
  */
 get_header();
 ?>
@@ -14,6 +14,9 @@ get_header();
 		</div>
 		<div class="archives-container">
 		<?php
+		global $query_string;
+		query_posts( $query_string . '&posts_per_page=10' );
+
 		if ( have_posts() ) :
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -39,6 +42,5 @@ get_header();
 	</main><!-- #main -->
 <?php
 get_sidebar();
-get_sidebar( 'latest' );
 get_footer();
 ?>

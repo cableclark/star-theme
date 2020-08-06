@@ -16,6 +16,7 @@ html {
 body {
 	 // Fallback for when there is no custom background color defined.
 	overflow-y: hidden;
+	background-color: $light_color;
 }
 
 hr {

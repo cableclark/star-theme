@@ -75,7 +75,6 @@
     } 
 }
 
-
 .news-card-content {
     p {
         display:none;
@@ -139,12 +138,6 @@
     @media screen and (min-width: $large_screen) {
         background-image: url("http://localhost/star/wp-content/themes/star/images/campagn_large.png");
     }  
-}
-
-.news-card-content {
-    display: flex;
-    flex-direction: column;
-
 }
 
 .kampanja {

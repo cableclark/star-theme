@@ -13,9 +13,7 @@ if ( ! function_exists( 'miss_albini_posted_on' ) ) :
 	 */
 	function miss_albini_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-		}
+
 		$time_string = sprintf(
 			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
@@ -33,11 +31,11 @@ if ( ! function_exists( 'miss_albini_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'miss_albini_posted_by' ) ) :
+if ( ! function_exists( 'star_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function miss_albini_posted_by() {
+	function star_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x( 'Author: %s', 'post author', 'miss-albini' ),
@@ -48,24 +46,24 @@ if ( ! function_exists( 'miss_albini_posted_by' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'miss_albini_entry_footer' ) ) :
+if ( ! function_exists( 'star_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function miss_albini_entry_footer() {
+	function star_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'miss-albini' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'star-star' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__('%1$s', 'miss-albini' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="cat-links">' . esc_html__('%1$s', 'star-star' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 	}
 endif;
 
-function miss_albini_get_tags () {
+function star_get_tags () {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'miss-albini' ) );
 		if ( $tags_list ) {
