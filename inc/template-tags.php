@@ -7,11 +7,11 @@
  * @package miss-albini
  */
 
-if ( ! function_exists( 'miss_albini_posted_on' ) ) :
+if ( ! function_exists( 'star_star_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function miss_albini_posted_on() {
+	function star_star_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
 		$time_string = sprintf(
@@ -46,11 +46,11 @@ if ( ! function_exists( 'star_posted_by' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'star_entry_footer' ) ) :
+if ( ! function_exists( 'star_star_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function star_entry_footer() {
+	function star_star_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
@@ -72,14 +72,14 @@ function star_get_tags () {
 		}
 }
 
-if ( ! function_exists( 'miss_albini_post_thumbnail' ) ) :
+if ( ! function_exists( 'star_star_post_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
 	 *
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function miss_albini_post_thumbnail($size="large_medium") {
+	function star_star_post_thumbnail($size="large_medium") {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}

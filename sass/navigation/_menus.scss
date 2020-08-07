@@ -120,12 +120,10 @@
             }
          
         }
-    }
-   
+    }  
 }
 
 .toggler {
-    padding:auto 10px;
     display: flex;
     flex-direction:column;
 	margin: 5px 5px;
@@ -140,8 +138,8 @@
 		}   
         height: 2px;
         width: 30px;
-        margin: 4px 0;
-        background-color: $black_color;
+		margin: 4px 0;
+		background-color: $black_color;
     }  
 }  
 
@@ -195,7 +193,6 @@
 	0% {
 		transform: translateX(-75px);
 	}
-	
 	100% {
 	  ttransform: translateX(0px);
 	}

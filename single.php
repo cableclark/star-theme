@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-	<main id="primary" class="site-main white-bg ">
+	<main id="primary" class="site-main white-bg">
 		<div class="site-container">
 			<?php
 			while ( have_posts() ) :

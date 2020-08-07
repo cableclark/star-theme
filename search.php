@@ -14,7 +14,7 @@ get_header();
 				<h1 class="search-title ">
 					<?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Results: %s', 'Miss Albini' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Results: %s', 'Star-star' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
 			</header><!-- .page-header -->
@@ -36,11 +36,9 @@ get_header();
 			) );
 		else :
 			get_template_part( 'template-parts/content', 'none' );
-
 		endif;
 		?>
 	</main><!-- #main -->
 <?php
 get_sidebar();
-get_sidebar( 'singlebar' );
 get_footer();

@@ -25,22 +25,68 @@ input[type="submit"]:hover {
 	}
 }
 
+.hide-on-small-screen {
+    display: none;
+    @media screen and (min-width: $medium_screen) {
+        display: block;
+    } 
+}
+
+.middle {
+    width: 150px;
+    margin: 0 auto;
+}
+
+
+
 @mixin transition-read-more {
-    transition: all .1s ease-in;  
+    transition: all 0.2s ease-in;  
 }
 
 .red_link,
-.less {
+.less,
+.red_link--more {
+	display: grid;
+	place-items: center;
+	border: 1px solid $red_main;
+	background-color:rgba(0, 0,0, 0);
+	border-radius: 5px;
+	height: 45px;
+	width: 150px;
+	font-size: 13px;
+	letter-spacing: 0.1rem;
+	font-family: $font__main;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 2px;
+	margin-top: 1rem;
 	@media screen and (min-width: $large_screen) {
 		@include transition-read-more;
-		will-change: background-color, color, opacity;
+		will-change: background, color, opacity;
 	}	
 }
 
+.red_link:visited,
+.less:visited,
+.red_link--more:visited {
+		color: $red_main;
+}
+
+.red_link:hover,
+.less:hover,
+.red_link--more:hover {
+	background-color:$red_main;
+	color: $light_gray;
+}
+	
+
+
 .red_link--more {
-	@media screen and (min-width: $large_screen) {
+	display: none;
+	@media screen and (min-width: $medium_large_screen) {
+		display: grid;
+		place-items: center;
 		@include transition-read-more;
-		will-change: opacity;
 	}
 }
 
@@ -50,7 +96,7 @@ input[type="submit"]:hover {
 	transition: all 0.2s ease-in;
 }
 
-.hide-button {
+.hide-a {
 	@include transition-read-more;
 	display:none;
 	margin:0;
@@ -63,7 +109,7 @@ input[type="submit"]:hover {
 	transition: all 0.2s ease-in;
 }
 
-.yellow-button {
+.yellow-a {
 	border:1px solid antiquewhite;
 	background: antiquewhite;
 	color: $black_color;
@@ -72,5 +118,4 @@ input[type="submit"]:hover {
 .white-text:visited{
 	color: white;
 }
-
 

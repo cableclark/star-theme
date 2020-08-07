@@ -11,17 +11,12 @@
 <div id="app" class="container">
 	<article id="post-<?php the_ID(); ?>">
 		<header class="entry-header">
-		
 			<?php
-			if ( is_singular() ) :
-				the_title( '<h1 class="content-title">', '</h1>' );
-			else :
-				the_title( '<h2 class="content-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			endif;
+				the_title( '<h2 class="content-title single__title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			?>
 			<div class="entry-meta">
 				<?php
-				miss_albini_posted_on();
+				star_posted_on();
 				?>
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
@@ -43,7 +38,7 @@
 			);
 			?>
 			<?php 
-				miss_albini_get_tags(); 
+				star_get_tags(); 
 			?>
 		</div><!-- .entry-content -->
 	</article><!-- #post-<?php the_ID(); ?> -->

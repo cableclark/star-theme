@@ -16,21 +16,17 @@
 		</header>
 		<div class="flexed-column ">
 		<?php
-			if ( is_singular() ) :
-				the_title( '<h1 class="archive-article-title">', '</h1>' );
-			else :
-				the_title( '<h2 class="archive-article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			endif;
-			?>
+			the_title( '<h2 class="archive-article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		?>
 			<div class="margined">
-				<?php miss_albini_posted_on();?>
+				<?php star_star_posted_on();?>
 			</div>
 			<?php
 			the_excerpt(
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'miss_albini' ),
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'star_star' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -41,7 +37,7 @@
 				)
 			);
 			?>
-			<a href="<?php the_permalink() ?>" class="flex-end hide-on-small-screen"><button class="red_link--more">ПОВЕЌЕ...</button> </a>
+			<a href="<?php the_permalink() ?>" class="red_link--more flex-end hide-on-small-screen">ПОВЕЌЕ... </a>
 		</div>	
 		
 	</article><!-- #post-<?php the_ID(); ?> -->

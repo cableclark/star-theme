@@ -34,7 +34,7 @@
 			);
 	 ?>
 		</div>
-	<a href="<?php the_permalink() ?>" class="flex-end hide-on-small-screen"><button class="red_link--more">ПОВЕЌЕ...</button> </a>
+	<a href="<?php the_permalink() ?>" class="red_link--more flex-end hide-on-small-screen">ПОВЕЌЕ...</a>
 	</div>	
 </article>
 

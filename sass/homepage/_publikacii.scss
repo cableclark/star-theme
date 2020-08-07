@@ -35,12 +35,6 @@
     
 }
 
-.publication-card:hover {
-    @media screen  and (min-width: $medium_screen){
-        transition: all 0.2s ease-in; 
-        @include box-shadow-hover;
-    }
-}
 
 .publication-card-wider {
     @media screen  and (min-width: $medium_screen){
@@ -51,7 +45,12 @@
 
 .flex-end {
     align-self: flex-end;
-     margin-top:auto;
+   
+    @media screen and (min-width: $large_screen){
+        margin-top:auto;
+    }
+
+    
 }
 
 .publication-image-container {
@@ -65,13 +64,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.hide-on-small-screen {
-    display: none;
-    @media screen and (min-width: $medium_screen) {
-        display: block;
-    } 
 }
 
 .publication-card-title {

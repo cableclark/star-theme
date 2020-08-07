@@ -15,14 +15,14 @@
 
 			<?php
 			if ( is_singular() ) :
-				the_title( '<h1 >', '</h1>' );
+				the_title( '<h1 class="single__title">', '</h1>' );
 			else :
-				the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" class="single__title">', '</a></h2>' );
 			endif;
 			?>
 			<div class="entry-meta">
 				<?php
-					miss_albini_posted_on();
+					star_star_posted_on();
 				?>
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->

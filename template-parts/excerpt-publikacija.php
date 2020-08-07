@@ -15,7 +15,6 @@
 		<?php
 			the_title( '<h3 class="publication-card-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );	
 		?>
-
 		</header>
 		<div class="publication-card-content hide-on-small-screen">
 			<?php
@@ -35,7 +34,7 @@
 			);
 	 ?>
 		</div>
-		<a href="<?php the_permalink() ?>" class="flex-end hide-on-small-screen"><button class="red_link--more">ПОВЕЌЕ...</button> </a>
+		<a href="<?php the_permalink() ?>" class="red_link--more flex-end hide-on-small-screen">ПОВЕЌЕ...</a>
 	</div>	
 </article>
 

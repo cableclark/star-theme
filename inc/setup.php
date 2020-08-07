@@ -7,7 +7,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 
 add_filter('show_admin_bar', '__return_false');
 
-if ( ! function_exists( 'miss_albini_setup' ) ) :
+if ( ! function_exists( 'star_star_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,11 +15,11 @@ if ( ! function_exists( 'miss_albini_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function miss_albini_setup() {
+	function star_star_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on miss_albini, use a find and replace
+		 * If you're building a theme based on star_star, use a find and replace
 		 * to change 'Miss-Albini' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'star-star', get_template_directory() . '/languages' );
@@ -98,7 +98,7 @@ if ( ! function_exists( 'miss_albini_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'miss_albini_setup' );
+add_action( 'after_setup_theme', 'star_star_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -115,3 +115,14 @@ function star_star_content_width() {
 }
 
 add_action( 'after_setup_theme', 'star_star_content_width', 0 );
+
+
+/** 
+* Filter except length to 35 words.
+*/
+  
+function tn_custom_excerpt_length( $length ) {
+	return 35;
+}
+
+add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );

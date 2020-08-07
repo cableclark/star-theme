@@ -4,7 +4,6 @@
  * Clean menus from classes
  */
 
-
 function clear_nav_menu_item_id($id, $item, $args) {
 	   return "";
    }
@@ -32,10 +31,13 @@ function wpdocs_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 
+/**
+ * Change the label of the search button
+ */
 
 function wpforo_search_form( $html ) {
 
-	$html = str_replace( 'Пребарувај', '', $html );
+	$html = str_replace( 'Пребарувај', 'Барај', $html );
 
 
 	return $html;
@@ -47,6 +49,7 @@ add_filter( 'get_search_form', 'wpforo_search_form' );
 /**
  * Load svg icons variables
  */
+
 require get_template_directory() . '/inc/svg-icons.php';
 
 

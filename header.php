@@ -31,7 +31,7 @@
 <body>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'Miss Albini' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'Star-star' ); ?></a>
 	<header id="masthead" class="site-header <?php if (!is_front_page()) {echo "smaller-header-nothomed smaller-header-dark";}?>">
 		<div class="site-branding <?php if (!is_front_page()) {echo "site-branding--nothomed";}?>"><?php
 			the_custom_logo();

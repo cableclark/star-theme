@@ -15,7 +15,7 @@
 			<?php
 				the_title( '<h3 class="news-card-title light-color"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 			?>
-			<div class="news-card-meta light-color"><?php miss_albini_posted_on();?></div>
+			<div class="news-card-meta light-color"><?php star_star_posted_on();?></div>
 		</header>
 		<div class="news-card-content light-color">
 			<?php
@@ -35,7 +35,7 @@
 			);
 	 	?>
 		</div>
-		<a href="<?php the_permalink() ?>" class="flex-end hide-on-small-screen"><button class="red_link--more">ПОВЕЌЕ...</button> </a>
+		<a href="<?php the_permalink() ?>" class="red_link--more flex-end hide-on-small-screen">ПОВЕЌЕ...</a>
 	</div>	
 </article>
 

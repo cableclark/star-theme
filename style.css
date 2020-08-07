@@ -391,45 +391,45 @@ h6 {
 	h4,
 	h5,
 	h6 {
-		line-height: 2rem;
+		line-height: 1.8rem;
 	}
 }
 
 h1 {
-	font-size: 1.4641rem;
+	font-size: 1.12551rem;
 }
 
 @media screen and (min-width: 768px) {
 	h1 {
-		font-size: 1.7641rem;
+		font-size: 1.42551rem;
 	}
 }
 
 h2,
 .search-title {
-	font-size: 1.331rem;
+	font-size: 1.09273rem;
 }
 
 @media screen and (min-width: 768px) {
 	h2,
 	.search-title {
-		font-size: 1.531rem;
+		font-size: 1.29273rem;
 	}
 }
 
 @media screen and (min-width: 768px) {
 	h3 {
-		font-size: 1.41rem;
+		font-size: 1.2609rem;
 	}
 }
 
 h4 {
-	font-size: 1.1rem;
+	font-size: 1.03rem;
 }
 
 @media screen and (min-width: 768px) {
 	h4 {
-		font-size: 1.3rem;
+		font-size: 1.23rem;
 	}
 }
 
@@ -451,6 +451,10 @@ li {
 		line-height: 1.6rem;
 		font-size: 1.1rem;
 	}
+}
+
+p {
+	margin: 1rem 0;
 }
 
 dfn,
@@ -660,7 +664,6 @@ dd {
 img {
 	height: auto;
 	max-width: 100%;
-	margin-top: 1.2em;
 }
 
 .wp-block-cover {
@@ -713,18 +716,73 @@ input[type="submit"] {
 	}
 }
 
-@media screen and (min-width: 1023px) {
-	.red_link,
-	.less {
-		transition: all .1s ease-in;
-		will-change: background-color, color, opacity;
+.hide-on-small-screen {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.hide-on-small-screen {
+		display: block;
 	}
 }
 
+.middle {
+	width: 150px;
+	margin: 0 auto;
+}
+
+.red_link,
+.less,
+.red_link--more {
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+	border: 1px solid #EE3626;
+	background-color: transparent;
+	border-radius: 5px;
+	height: 45px;
+	width: 150px;
+	font-size: 13px;
+	letter-spacing: 0.1rem;
+	font-family: "Montserrat", sans-serif;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 2px;
+	margin-top: 1rem;
+}
+
 @media screen and (min-width: 1023px) {
+	.red_link,
+	.less,
 	.red_link--more {
-		transition: all .1s ease-in;
-		will-change: opacity;
+		transition: all 0.2s ease-in;
+		will-change: background, color, opacity;
+	}
+}
+
+.red_link:visited,
+.less:visited,
+.red_link--more:visited {
+	color: #EE3626;
+}
+
+.red_link:hover,
+.less:hover,
+.red_link--more:hover {
+	background-color: #EE3626;
+	color: #E5E5E5;
+}
+
+.red_link--more {
+	display: none;
+}
+
+@media screen and (min-width: 800px) {
+	.red_link--more {
+		display: -ms-grid;
+		display: grid;
+		place-items: center;
+		transition: all 0.2s ease-in;
 	}
 }
 
@@ -734,8 +792,8 @@ input[type="submit"] {
 	transition: all 0.2s ease-in;
 }
 
-.hide-button {
-	transition: all .1s ease-in;
+.hide-a {
+	transition: all 0.2s ease-in;
 	display: none;
 	margin: 0;
 }
@@ -747,7 +805,7 @@ input[type="submit"] {
 	transition: all 0.2s ease-in;
 }
 
-.yellow-button {
+.yellow-a {
 	border: 1px solid antiquewhite;
 	background: antiquewhite;
 	color: #413742;
@@ -824,8 +882,8 @@ textarea {
 }
 
 .site-header img {
-	width: 47px;
-	height: 47px;
+	width: 53px;
+	height: 53px;
 }
 
 @media screen and (min-width: 576px) {
@@ -1335,7 +1393,6 @@ a:hover, a:active {
 }
 
 .toggler {
-	padding: auto 10px;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-direction: column;
@@ -1461,6 +1518,14 @@ a:hover, a:active {
 	margin: 0 1rem;
 }
 
+.margin-2 .pmt-2 {
+	margin-top: 2rem;
+}
+
+.margin-2 .mt-0 {
+	margin-top: 0;
+}
+
 @media screen and (min-width: 1023px) {
 	.margin-2 {
 		margin: 0 2rem;
@@ -1487,6 +1552,14 @@ a:hover, a:active {
 	    justify-content: center;
 	-ms-flex-align: center;
 	    align-items: center;
+}
+
+.pmt-2 {
+	margin-top: 2rem;
+}
+
+.mt-0 {
+	margin-top: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1808,9 +1881,11 @@ a:hover, a:active {
 	}
 }
 
-.search-icon--scrolled {
-	stroke: #413742;
-	fill: #413742;
+@media screen and (min-width: 1023px) {
+	.search-icon--scrolled {
+		stroke: #413742;
+		fill: #413742;
+	}
 }
 
 @media screen and (min-width: 1023px) {
@@ -2056,7 +2131,7 @@ figcaption .wp-caption-text {
 		-ms-flex-direction: row;
 		    flex-direction: row;
 		min-height: 400px;
-		padding: 3em;
+		padding: 1em;
 	}
 }
 
@@ -2102,11 +2177,8 @@ figcaption .wp-caption-text {
 	display: flex;
 	-ms-flex-direction: column;
 	    flex-direction: column;
-	height: 100%;
-}
-
-.flexed-align-bottom-fix {
-	height: 63%;
+	-ms-flex-positive: 4;
+	    flex-grow: 4;
 }
 
 .thumb-container img {
@@ -2508,7 +2580,7 @@ figcaption .wp-caption-text {
 }
 
 .sexwork__card h3 {
-	margin-top: 2rem;
+	margin: 1rem 0rem;
 	color: #EE3626;
 }
 
@@ -2531,6 +2603,21 @@ figcaption .wp-caption-text {
 	}
 }
 
+.single__title {
+	margin: 2rem 0rem;
+	font-weight: normal;
+	color: #EE3626;
+	letter-spacing: 0.1rem;
+	font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1023px) {
+	.single__title {
+		letter-spacing: 0.2rem;
+		font-size: 2rem;
+	}
+}
+
 .sexwork__card:nth-of-type(1) {
 	transition-delay: 0.1s;
 }
@@ -2541,20 +2628,6 @@ figcaption .wp-caption-text {
 
 .sexwork__card:nth-of-type(3) {
 	transition-delay: 0.3s;
-}
-
-.pmt-2 {
-	margin-top: 2rem;
-}
-
-.mt-0 {
-	margin-top: 0;
-}
-
-.middle {
-	display: block;
-	width: 150px;
-	margin: 0 auto;
 }
 
 /*--------------------------------------------------------------
@@ -2731,6 +2804,12 @@ figcaption .wp-caption-text {
 }
 
 .news-card {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-align: stretch;
+	    align-items: stretch;
 	box-sizing: content-box;
 	max-width: 300px;
 	margin: 0 0.5rem;
@@ -2788,13 +2867,6 @@ figcaption .wp-caption-text {
 	margin-bottom: 0.5rem;
 	min-height: 20px;
 	letter-spacing: 0.05rem;
-}
-
-@media screen and (min-width: 1023px) {
-	.news-card-title {
-		line-height: 1.8rem;
-		margin-top: 2rem;
-	}
 }
 
 .light-color {
@@ -2920,13 +2992,6 @@ figcaption .wp-caption-text {
 }
 
 @media screen and (min-width: 768px) {
-	.publication-card:hover {
-		transition: all 0.2s ease-in;
-		box-shadow: 0 0px 7px #273746;
-	}
-}
-
-@media screen and (min-width: 768px) {
 	.publication-card-wider {
 		min-width: 740px;
 	}
@@ -2935,7 +3000,12 @@ figcaption .wp-caption-text {
 .flex-end {
 	-ms-flex-item-align: end;
 	    align-self: flex-end;
-	margin-top: auto;
+}
+
+@media screen and (min-width: 1023px) {
+	.flex-end {
+		margin-top: auto;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -2952,16 +3022,6 @@ figcaption .wp-caption-text {
 	    flex-direction: column;
 	-ms-flex-pack: justify;
 	    justify-content: space-between;
-}
-
-.hide-on-small-screen {
-	display: none;
-}
-
-@media screen and (min-width: 768px) {
-	.hide-on-small-screen {
-		display: block;
-	}
 }
 
 .publication-card-title {

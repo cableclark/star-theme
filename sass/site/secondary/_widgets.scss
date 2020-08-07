@@ -190,8 +190,10 @@
 }
 
 .search-icon--scrolled {
+    @media screen and (min-width: $large_screen) {
         stroke: $black_color; 
         fill: $black_color;
+    } 
 }
 
 .search-icon--white{

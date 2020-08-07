@@ -76,16 +76,15 @@ let less = document.querySelectorAll(".less");
 more.forEach(function toggleClass (item) {
     item.addEventListener('click', function () {
         this.previousElementSibling.classList.toggle('hide');
-        this.classList.toggle('hide-button');
-        this.nextElementSibling.classList.toggle('hide-button');
-
+        this.classList.toggle('hide-a');
+        this.nextElementSibling.classList.toggle('hide-a');
     });
 })
 
 less.forEach(function toggleClass (item) {
     item.addEventListener('click', function () {
         this.previousElementSibling.previousElementSibling.classList.toggle('hide');
-        this.classList.toggle('hide-button');
-        this.previousElementSibling.classList.toggle('hide-button');
+        this.classList.toggle('hide-a');
+        this.previousElementSibling.classList.toggle('hide-a');
     });
 })

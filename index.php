@@ -46,6 +46,5 @@ get_header();
 		?>
 	</main>
 <?php
-dynamic_sidebar( 'album-of-the-week' );
 get_sidebar();
 get_footer();
