@@ -13,6 +13,8 @@
     img {
         width: 53px;
         height: 53px;  
+        margin:0.3rem;
+        margin-right:unset;
     }
     @media screen and (min-width: $small_screen) {
         img {
@@ -50,11 +52,14 @@
 */
 
 .smaller-header-dark {
-    @media screen and (min-width: $extra_large_screen) {
+    @media screen and (min-width: $large_screen) {
         .menu {
             li {
                 a {
-                 color: black;
+                    color: black;
+                }
+                a:hover {
+                    border-bottom: 1px solid $black_main;
                 }
             }
          
@@ -122,16 +127,15 @@
         display: block;
         width: 194px; 
       }   
-
-      @media screen and (min-width: 370px) {
-        width: 240px; 
+      @media screen and (min-width: 385px) {
+        width: 235px; 
       }   
    
     @media screen and (min-width: $small_screen) {
-        width: 260px;  
+        width: 235px;  
       }    
     @media screen and (min-width: $large_screen) {
-        width: 300px;  
+        width: 275px;  
       }  
     a {
         font-size: unset;
@@ -144,7 +148,7 @@
         @media screen and (min-width: $smaller_screen) {
             font-size: 11rem;  
           }  
-        @media screen and (min-width: 370px) {
+        @media screen and (min-width: 385px) {
             font-size: 12px;
           }    
     
@@ -157,8 +161,6 @@
         color: black;
     }
  }
-
-
 
  .custom-logo {
     height: 50px;

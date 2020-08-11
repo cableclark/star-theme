@@ -14,8 +14,10 @@ function star_scripts() {
 	//Enqueue JS
 	wp_enqueue_script( 'star-index', get_template_directory_uri() . '/js/index.js', array(), _S_VERSION, true );
 	
-	wp_enqueue_script( 'star-frontpage', get_template_directory_uri() . '/js/frontpage.js', array(), _S_VERSION, true );
-    
+    if (is_front_page( )) {
+		wp_enqueue_script( 'star-frontpage', get_template_directory_uri() . '/js/frontpage.js', array(), _S_VERSION, true );
+	}	
+
 	wp_style_add_data( 'star-style', 'rtl', 'replace' );
 	
 }

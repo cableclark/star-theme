@@ -1,5 +1,5 @@
-#post-2995,
-#post-3029 {
+#post-3038,
+#post-3043 {
     .entry-header {
         display: none;
     }
@@ -14,7 +14,7 @@
     align-items: center;
     border-bottom-left-radius: 54% 10%;
     border-bottom-right-radius: 54% 10%;
-    box-shadow: box-shadow-normal;
+    @include smooth-shadow;
     @media all and (orientation:landscape){
         align-items: unset;
         flex-direction: row;  
@@ -28,13 +28,13 @@
         align-items: unset;
     }
     @media screen  and (min-width: $large_screen){
-        min-height: 100vh;
-        max-height: 100vh;
+        min-height: 95vh;
+        max-height: 95vh;
     }
-    @media screen  and (min-width: $extra_large_screen){
-        min-height: 1020px;
-        max-height: unset;
-    }
+    // @media screen  and (min-width: $extra_large_screen){
+    //     min-height: 1020px;
+    //     max-height: unset;
+    // }
 }
 
 .hero__image {
@@ -141,7 +141,7 @@
     font-family: $font__main;
     @include box-shadow-normal;   
     background-color: white;
-    border-radius: 30px;
+    border-radius: 5px;
     padding: 0.5rem;
     display: grid;
     font-size: 1rem;
@@ -156,11 +156,9 @@
 }
 
 #more {
-    transform: translateY(-100px); 
-    @media screen  and (min-width: $large_screen){
-        transform: translateY(0px); 
-    }
-} 
+    position: absolute;
+    top: 89vh;
+}
 
 .down {
     display: none;
@@ -169,14 +167,14 @@
         background-color: unset;
         display: block;
         margin: 0 auto;
-        transform: translateY(-150px);
+        transform: translateY(-110px);
         border-radius: 50%;
         background-color: $red_main;
         width: 60px;
         animation: 2s ease-out 0.5s infinite downer;
     }
     @media screen  and (min-width: $extra_large_screen){
-        transform: translateY(-180px);
+        transform: translateY(-120px);
     }
 }
 
@@ -200,6 +198,15 @@
     position: fixed;
     will-change: opacity;
     z-index: 1000000;
+}
+
+#aktuelno {
+    position:relative;
+    top: -120px;
+    @media screen  and (min-width: $large_screen){ 
+        top: -50px;
+
+    }
 }
 
 @keyframes downer {

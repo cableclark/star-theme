@@ -8,7 +8,7 @@
         margin-top: 1rem;
         text-transform: uppercase;
         @media screen and(min-width: $large_screen)  {
-        margin-bottom: 3rem;
+            margin-bottom: 3rem;
         }
     }
 }
@@ -22,63 +22,77 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    @include smooth-shadow;
     @media screen and(min-width: $large_screen)  {
-
-        max-width: 380px;
+        max-width: 320px;
     }
-    @media screen and(min-width: $extra_large_screen)  {
-        max-width: 420px;
-    }
-
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         margin:unset;   
-
     } 
 }
 
+.hidden {
+    display: none;
+}
 
 .archive-image-wrapper {
-    height: 250px;    
-}   
+    height: 200px;   
+    @media screen and(min-width: $medium_screen)  {
+        height: 600px; 
+    } 
+    @media screen and(min-width: $large_screen)  {
+        height: 200px; 
+    } 
+}  
+
+.archive-article-title {
+    margin-bottom: 0.5rem;
+    @media screen and(min-width: $large_screen)  {
+        font-size:1.1rem;
+        line-height: 1.3rem;
+    }
+}
 
 .archive-card:first-of-type {
-    @media screen and(min-width: 1246px)  {
-        max-width: 1168px;
+    @media screen and(min-width: $large_screen)  {
+       max-width: unset;
         flex-direction: row;
-        min-height: 400px;
+        min-height: 300px;
         padding: 1em;
     }
     @media screen and(min-width: $extra_large_screen)  {
-        max-width: 1290px; 
+        // width: 1290px; 
     }
     header {
-        @media screen and(min-width: 1246px)  {
+        @media screen and(min-width: $large_screen)  {
             min-width: 500px;
             margin-right: 2rem;
         }
-        @media screen and(min-width: $extra_large_screen)  {
-            min-width: 700px;
-        }   
-}
-
-.margined {
-    @media screen and(min-width: 1246px)  {
-        margin-top: 0.5rem;
+     
     }
-} 
+    .margined {
+        @media screen and(min-width: 1246px)  {
+            margin-top: 0.5rem;
+            }
+        } 
     .archive-article-title {
         @media screen and(min-width: 1246px)  {
             margin: unset; 
+            font-size: 1.8rem;
+            line-height: 2.3rem;
+            }
+        }
+    .archive-image-wrapper {
+        @media screen and(min-width: $large_screen)  {
+                height: 100%; 
+                max-height: 380px;
         }
     }
-
-    .archive-image-wrapper {
-        @media screen and(min-width: 1246px)  {
-            height: 400px; 
-        }
+    .hidden {
+        display: block;
     }
 }
 
@@ -88,12 +102,21 @@
     flex-grow: 4;
 }
 
-
 .thumb-container {
     img {
-        max-height: 500px;
         object-fit: cover;
         width: 100%;
         border-radius: 5px;
+      
     }
+}
+
+.posted-on {
+    color: $light_orange;
+    font-family: $font__main;
+    font-size: 0.9rem;
+}
+
+.entry-meta {
+    margin-bottom: 1rem;
 }

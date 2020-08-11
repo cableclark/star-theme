@@ -52,15 +52,16 @@
     background: $black_color;
     padding: 1rem;
     border-radius: 5px;
+    @include smooth-shadow;
     @media screen  and (min-width: $medium_screen){
-        max-width: 420px;
+        max-width: 350px;
     }
     img {
         object-fit: cover; 
         margin: 0 auto;
         border-radius: 2%;
         @media screen  and (min-width: $medium_screen){
-            max-width: 420px;
+            max-width: 350px;
         }
     }
     
@@ -71,17 +72,11 @@
     
 }
 
-.news-card:hover {
-    @media screen  and (min-width: $medium_screen){
-        @include box-shadow-hover;
-        transition: box-shadow 0.1s ease;
-    } 
-}
 
 .news-card-content {
     p {
         display:none;
-        @media screen  and (min-width: $medium_screen){
+        @media screen  and (min-width: $extra_large_screen){
             display: block;
         }
     }
@@ -93,6 +88,14 @@
     margin-bottom: 0.5rem;
     min-height: 20px; 
     letter-spacing: 0.05rem;
+    @media screen  and (min-width: $medium_screen){
+        font-size:1.1rem;
+        line-height: 1.3rem;
+    }
+    @media screen  and (min-width: $extra_large_screen){
+        font-size:1.3rem;
+        line-height: 1.5rem;
+    }
  }
 
 .light-color {
@@ -107,7 +110,7 @@
         box-shadow: none;
         @media screen  and (min-width: $medium_screen){
             height: 240px;
-            min-width: 420px;           
+            min-width: 350px;           
         }
     }
 }

@@ -14,15 +14,13 @@ get_header();
 			<?php
 			while ( have_posts() ) :
 				the_post();
-				get_template_part( 'template-parts/content', 'single' );
+				get_template_part( 'template-parts/content', 'single-publication' );
 				?>
 			<?php	
 			endwhile; // End of the loop.
-			get_sidebar('latest');
 			?>
-		</div>	
+		</div>
 	</main><!-- #main -->
 <?php
 get_sidebar();
-
 get_footer();

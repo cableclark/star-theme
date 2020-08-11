@@ -25,8 +25,8 @@
     text-align: center;
     letter-spacing: 0.1rem;
     @include front-page-title; 
-    @media screen and (min-width: $large_screen) {
-        margin: 2rem 1.4rem;
+    @media screen and (min-width: $larger_screen) {
+        margin: 0rem 1.4rem;
     }
 }
 
@@ -69,11 +69,14 @@
 }
 
 .single__title {
-    margin: 2rem 0rem;
+    margin: 1rem 0rem;
     font-weight: normal;
     color:$red_main;
-    letter-spacing: 0.1rem;
-    @include front-page-title; 
+    font-size: 1.4rem;
+    @media screen and (min-width: $large_screen) {
+        font-size: 2rem;
+        line-height:2.5rem;
+    }
 }
 
 

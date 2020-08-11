@@ -1,18 +1,17 @@
 /*!
-Theme Name: star
+Theme Name: Star-Star
 Author: Igor Stojanovski
+Version: 1.6
 Author URI: https://www.github.com/cableclark
-Description: A theme made a macedonian NGO
+Description: A theme for a sex work NGO
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain:  star
+Text Domain: star
+Domain Path: /languages
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
-
-STAR-STAR is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+Use it to make something cool, have fun, and share what you've learned..
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
@@ -359,15 +358,6 @@ template {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
-	color: #413742;
-}
-
 /**
 * Type sizes
 */
@@ -391,7 +381,7 @@ h6 {
 	h4,
 	h5,
 	h6 {
-		line-height: 1.8rem;
+		line-height: 1.7rem;
 	}
 }
 
@@ -440,16 +430,16 @@ h5 {
 p,
 li {
 	font-family: "Playfair Display", serif;
-	font-size: 1rem;
+	font-size: 15px;
 	line-height: 1.5rem;
-	color: #413742;
+	overflow-wrap: break-all;
 }
 
 @media screen and (min-width: 1023px) {
 	p,
 	li {
-		line-height: 1.6rem;
-		font-size: 1.1rem;
+		line-height: 26px;
+		font-size: 16px;
 	}
 }
 
@@ -529,17 +519,17 @@ big {
 }
 
 .hero-container__heading {
-	animation: 0.2s ease-out 0.5s 1 slideInFromLeft;
+	animation: 0.2s ease 0.5s 1 slideInFromLeft;
 	animation-fill-mode: both;
 }
 
 .hero-container__slogan {
-	animation: 0.2s ease-out 0.7s 1 slideInFromLeft;
+	animation: 0.2s ease 0.7s 1 slideInFromLeft;
 	animation-fill-mode: both;
 }
 
 .hero-container__call-to-action {
-	animation: 0.2s ease-out 0.9s 1 slideInFromLeft;
+	animation: 0.2s ease 0.9s 1 slideInFromLeft;
 	animation-fill-mode: both;
 }
 
@@ -552,7 +542,7 @@ big {
 	.animatable {
 		opacity: 0;
 		transform: translateY(6em);
-		transition: transform 0.3s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 0.3s 0.5s ease-out;
+		transition: transform 0.4s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 0.4s 0.5s ease;
 		will-change: opacity;
 	}
 }
@@ -624,7 +614,6 @@ html {
 
 body {
 	overflow-y: hidden;
-	background-color: #F7F7F8;
 }
 
 hr {
@@ -664,6 +653,7 @@ dd {
 img {
 	height: auto;
 	max-width: 100%;
+	margin: 1rem 0;
 }
 
 .wp-block-cover {
@@ -683,6 +673,7 @@ figure {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+	font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -733,7 +724,8 @@ input[type="submit"] {
 
 .red_link,
 .less,
-.red_link--more {
+.red_link--more,
+.red_link_extra {
 	display: -ms-grid;
 	display: grid;
 	place-items: center;
@@ -754,7 +746,8 @@ input[type="submit"] {
 @media screen and (min-width: 1023px) {
 	.red_link,
 	.less,
-	.red_link--more {
+	.red_link--more,
+	.red_link_extra {
 		transition: all 0.2s ease-in;
 		will-change: background, color, opacity;
 	}
@@ -762,28 +755,24 @@ input[type="submit"] {
 
 .red_link:visited,
 .less:visited,
-.red_link--more:visited {
+.red_link--more:visited,
+.red_link_extra:visited {
 	color: #EE3626;
 }
 
 .red_link:hover,
 .less:hover,
-.red_link--more:hover {
+.red_link--more:hover,
+.red_link_extra:visited {
 	background-color: #EE3626;
 	color: #E5E5E5;
 }
 
 .red_link--more {
-	display: none;
-}
-
-@media screen and (min-width: 800px) {
-	.red_link--more {
-		display: -ms-grid;
-		display: grid;
-		place-items: center;
-		transition: all 0.2s ease-in;
-	}
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+	transition: all 0.2s ease-in;
 }
 
 .start {
@@ -806,8 +795,8 @@ input[type="submit"] {
 }
 
 .yellow-a {
-	border: 1px solid antiquewhite;
-	background: antiquewhite;
+	border: 1px solid white;
+	background: white;
 	color: #413742;
 }
 
@@ -884,6 +873,8 @@ textarea {
 .site-header img {
 	width: 53px;
 	height: 53px;
+	margin: 0.3rem;
+	margin-right: unset;
 }
 
 @media screen and (min-width: 576px) {
@@ -924,9 +915,12 @@ textarea {
 /*
 * Do you know the song "Such a Shame"? Well, this is it..
 */
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1023px) {
 	.smaller-header-dark .menu li a {
 		color: black;
+	}
+	.smaller-header-dark .menu li a:hover {
+		border-bottom: 1px solid #282626;
 	}
 }
 
@@ -1003,21 +997,21 @@ textarea {
 	}
 }
 
-@media screen and (min-width: 370px) {
+@media screen and (min-width: 385px) {
 	.site-title {
-		width: 240px;
+		width: 235px;
 	}
 }
 
 @media screen and (min-width: 576px) {
 	.site-title {
-		width: 260px;
+		width: 235px;
 	}
 }
 
 @media screen and (min-width: 1023px) {
 	.site-title {
-		width: 300px;
+		width: 275px;
 	}
 }
 
@@ -1037,7 +1031,7 @@ textarea {
 	}
 }
 
-@media screen and (min-width: 370px) {
+@media screen and (min-width: 385px) {
 	.site-title a {
 		font-size: 12px;
 	}
@@ -1098,11 +1092,11 @@ textarea {
 
 @media screen and (min-width: 1023px) {
 	.archives-container {
-		max-width: 1400px;
+		max-width: 1009px;
 		-ms-flex-direction: row;
 		    flex-direction: row;
-		-ms-flex-pack: space-evenly;
-		    justify-content: space-evenly;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
 		-ms-flex-align: stretch;
 		    align-items: stretch;
 		-ms-flex-wrap: wrap;
@@ -1126,6 +1120,37 @@ textarea {
 	.container {
 		padding: unset;
 		margin: 0 auto;
+	}
+}
+
+.swork-container {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-align: center;
+	    align-items: center;
+}
+
+@media screen and (min-width: 1023px) {
+	.swork-container {
+		max-width: 1240px;
+		-ms-flex-direction: row;
+		    flex-direction: row;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+		-ms-flex-align: stretch;
+		    align-items: stretch;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 1246px) {
+	.swork-container {
+		-ms-flex-pack: center;
+		    justify-content: center;
 	}
 }
 
@@ -1174,6 +1199,7 @@ a:hover, a:active {
 	    justify-content: center;
 	line-height: 1rem;
 	margin: 1.3rem;
+	font-family: "Montserrat", sans-serif;
 }
 
 .nav-links .page-numbers {
@@ -1221,7 +1247,8 @@ a:hover, a:active {
 }
 
 .tags-links {
-	font-size: 0.9rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 }
 
 .edit-link {
@@ -1244,6 +1271,10 @@ a:hover, a:active {
 .cat-links a:hover {
 	color: #CC1F38;
 	text-decoration: underline;
+}
+
+.post-date {
+	display: block;
 }
 
 /*--------------------------------------------------------------
@@ -1354,8 +1385,8 @@ a:hover, a:active {
 	.menu li a:hover,
 	.menu li a:focus,
 	.menu li a:active {
-		color: #282626;
-		border-bottom: 1px solid #282626;
+		color: #E5E5E5;
+		border-bottom: 1px solid #E5E5E5;
 	}
 }
 
@@ -1379,6 +1410,7 @@ a:hover, a:active {
 	.scrolled-menu-items li a:hover,
 	.scrolled-menu-items li a:focus,
 	.scrolled-menu-items li a:active {
+		color: #413742;
 		border-bottom: 1px solid #282626;
 	}
 }
@@ -1536,10 +1568,6 @@ a:hover, a:active {
 	padding-top: 1rem;
 }
 
-.white-bg {
-	background-color: #F7F7F8;
-}
-
 .cat-title {
 	font-size: 1.6em;
 }
@@ -1560,6 +1588,14 @@ a:hover, a:active {
 
 .mt-0 {
 	margin-top: 0;
+}
+
+.margin-1 {
+	margin: 0 1rem;
+}
+
+.mt-1 {
+	margin-top: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -1638,7 +1674,6 @@ a:hover, a:active {
 	    justify-content: center;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	background-color: #F7F7F8;
 	color: #413742;
 }
 
@@ -1669,8 +1704,6 @@ a:hover, a:active {
 	-ms-flex-align: center;
 	    align-items: center;
 	margin-bottom: 2rem;
-	background-color: #F7F7F8;
-	background: linear-gradient(224.35deg, #fff9f9 20.34%, #ffffff 73.72%);
 }
 
 @media screen and (min-width: 1023px) {
@@ -1864,11 +1897,11 @@ a:hover, a:active {
 	-ms-flex-item-align: center;
 	    -ms-grid-row-align: center;
 	    align-self: center;
-	stroke: #EE3626;
-	fill: #EE3626;
+	stroke: #413742;
+	fill: #413742;
 	margin-top: 15px;
 	padding: 10px;
-	border: 1px solid #EE3626;
+	border: 1px solid #413742;
 }
 
 @media screen and (min-width: 1420px) {
@@ -1916,6 +1949,22 @@ a:hover, a:active {
 .svg-icons {
 	height: 30px;
 	margin-right: 1rem;
+}
+
+.latest {
+	margin: unset;
+	padding: 1rem 0;
+}
+
+.latest ul {
+	margin: 0;
+	padding: 0;
+}
+
+.latest ul li {
+	font-family: "Montserrat", sans-serif;
+	list-style-type: none;
+	margin: 1rem 0;
 }
 
 /*--------------------------------------------------------------
@@ -2014,13 +2063,13 @@ figcaption .wp-caption-text {
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
-	background-color: #413742;
+	background-color: black;
 	min-height: 400px;
 	color: #F7F7F8;
 	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-direction: row;
-	    flex-direction: row;
+	-ms-flex-direction: column;
+	    flex-direction: column;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 	-ms-flex-pack: center;
@@ -2041,17 +2090,27 @@ figcaption .wp-caption-text {
 }
 
 .footer-text-container {
-	max-width: 320px;
+	max-width: 280px;
+	margin-top: 1rem;
+}
+
+.social-icons-container {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	    justify-content: center;
 }
 
 .footer-text-container__paragraph {
 	color: #F7F7F8;
 	font-family: "Montserrat", sans-serif;
+	font-size: 0.9rem;
+	margin: 0;
 }
 
 .footer-logo {
 	max-width: 280px;
-	margin: 1rem;
+	margin: 1rem 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -2104,13 +2163,13 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1023px) {
 	.archive-card {
-		max-width: 380px;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
 	}
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1023px) {
 	.archive-card {
-		max-width: 420px;
+		max-width: 320px;
 	}
 }
 
@@ -2121,36 +2180,51 @@ figcaption .wp-caption-text {
 	margin: unset;
 }
 
-.archive-image-wrapper {
-	height: 250px;
+.hidden {
+	display: none;
 }
 
-@media screen and (min-width: 1246px) {
+.archive-image-wrapper {
+	height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+	.archive-image-wrapper {
+		height: 600px;
+	}
+}
+
+@media screen and (min-width: 1023px) {
+	.archive-image-wrapper {
+		height: 200px;
+	}
+}
+
+.archive-article-title {
+	margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 1023px) {
+	.archive-article-title {
+		font-size: 1.1rem;
+		line-height: 1.3rem;
+	}
+}
+
+@media screen and (min-width: 1023px) {
 	.archive-card:first-of-type {
-		max-width: 1168px;
+		max-width: unset;
 		-ms-flex-direction: row;
 		    flex-direction: row;
-		min-height: 400px;
+		min-height: 300px;
 		padding: 1em;
 	}
 }
 
-@media screen and (min-width: 1600px) {
-	.archive-card:first-of-type {
-		max-width: 1290px;
-	}
-}
-
-@media screen and (min-width: 1246px) {
+@media screen and (min-width: 1023px) {
 	.archive-card:first-of-type header {
 		min-width: 500px;
 		margin-right: 2rem;
-	}
-}
-
-@media screen and (min-width: 1600px) {
-	.archive-card:first-of-type header {
-		min-width: 700px;
 	}
 }
 
@@ -2163,13 +2237,20 @@ figcaption .wp-caption-text {
 @media screen and (min-width: 1246px) {
 	.archive-card:first-of-type .archive-article-title {
 		margin: unset;
+		font-size: 1.8rem;
+		line-height: 2.3rem;
 	}
 }
 
-@media screen and (min-width: 1246px) {
+@media screen and (min-width: 1023px) {
 	.archive-card:first-of-type .archive-image-wrapper {
-		height: 400px;
+		height: 100%;
+		max-height: 380px;
 	}
+}
+
+.archive-card:first-of-type .hidden {
+	display: block;
 }
 
 .flexed-column {
@@ -2182,10 +2263,19 @@ figcaption .wp-caption-text {
 }
 
 .thumb-container img {
-	max-height: 500px;
 	object-fit: cover;
 	width: 100%;
 	border-radius: 5px;
+}
+
+.posted-on {
+	color: #7B6A7F;
+	font-family: "Montserrat", sans-serif;
+	font-size: 0.9rem;
+}
+
+.entry-meta {
+	margin-bottom: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -2194,8 +2284,8 @@ figcaption .wp-caption-text {
 /*--------------------------------------------------------------
 # Hero Area
 --------------------------------------------------------------*/
-#post-2995 .entry-header,
-#post-3029 .entry-header {
+#post-3038 .entry-header,
+#post-3043 .entry-header {
 	display: none;
 }
 
@@ -2212,7 +2302,12 @@ figcaption .wp-caption-text {
 	    align-items: center;
 	border-bottom-left-radius: 54% 10%;
 	border-bottom-right-radius: 54% 10%;
-	box-shadow: box-shadow-normal;
+}
+
+@media screen and (min-width: 1023px) {
+	.hero {
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+	}
 }
 
 @media all and (orientation: landscape) {
@@ -2242,15 +2337,8 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1023px) {
 	.hero {
-		min-height: 100vh;
-		max-height: 100vh;
-	}
-}
-
-@media screen and (min-width: 1600px) {
-	.hero {
-		min-height: 1020px;
-		max-height: unset;
+		min-height: 95vh;
+		max-height: 95vh;
 	}
 }
 
@@ -2408,7 +2496,7 @@ figcaption .wp-caption-text {
 	font-family: "Montserrat", sans-serif;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 	background-color: white;
-	border-radius: 30px;
+	border-radius: 5px;
 	padding: 0.5rem;
 	display: -ms-grid;
 	display: grid;
@@ -2437,13 +2525,8 @@ figcaption .wp-caption-text {
 }
 
 #more {
-	transform: translateY(-100px);
-}
-
-@media screen and (min-width: 1023px) {
-	#more {
-		transform: translateY(0px);
-	}
+	position: absolute;
+	top: 89vh;
 }
 
 .down {
@@ -2456,7 +2539,7 @@ figcaption .wp-caption-text {
 		background-color: unset;
 		display: block;
 		margin: 0 auto;
-		transform: translateY(-150px);
+		transform: translateY(-110px);
 		border-radius: 50%;
 		background-color: #EE3626;
 		width: 60px;
@@ -2466,7 +2549,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1600px) {
 	.down {
-		transform: translateY(-180px);
+		transform: translateY(-120px);
 	}
 }
 
@@ -2490,6 +2573,17 @@ figcaption .wp-caption-text {
 	position: fixed;
 	will-change: opacity;
 	z-index: 1000000;
+}
+
+#aktuelno {
+	position: relative;
+	top: -120px;
+}
+
+@media screen and (min-width: 1023px) {
+	#aktuelno {
+		top: -50px;
+	}
 }
 
 @keyframes downer {
@@ -2550,9 +2644,9 @@ figcaption .wp-caption-text {
 	}
 }
 
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1420px) {
 	.sexwork__title {
-		margin: 2rem 1.4rem;
+		margin: 0rem 1.4rem;
 	}
 }
 
@@ -2604,17 +2698,16 @@ figcaption .wp-caption-text {
 }
 
 .single__title {
-	margin: 2rem 0rem;
+	margin: 1rem 0rem;
 	font-weight: normal;
 	color: #EE3626;
-	letter-spacing: 0.1rem;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 }
 
 @media screen and (min-width: 1023px) {
 	.single__title {
-		letter-spacing: 0.2rem;
 		font-size: 2rem;
+		line-height: 2.5rem;
 	}
 }
 
@@ -2714,7 +2807,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1023px) {
 	.about-us-container__title {
-		line-height: 2rem;
+		line-height: 2.4rem;
 	}
 }
 
@@ -2819,9 +2912,15 @@ figcaption .wp-caption-text {
 	border-radius: 5px;
 }
 
+@media screen and (min-width: 1023px) {
+	.news-card {
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.news-card {
-		max-width: 420px;
+		max-width: 350px;
 	}
 }
 
@@ -2833,7 +2932,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 768px) {
 	.news-card img {
-		max-width: 420px;
+		max-width: 350px;
 	}
 }
 
@@ -2844,18 +2943,11 @@ figcaption .wp-caption-text {
 	}
 }
 
-@media screen and (min-width: 768px) {
-	.news-card:hover {
-		box-shadow: 0 0px 7px #273746;
-		transition: box-shadow 0.1s ease;
-	}
-}
-
 .news-card-content p {
 	display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1600px) {
 	.news-card-content p {
 		display: block;
 	}
@@ -2867,6 +2959,20 @@ figcaption .wp-caption-text {
 	margin-bottom: 0.5rem;
 	min-height: 20px;
 	letter-spacing: 0.05rem;
+}
+
+@media screen and (min-width: 768px) {
+	.news-card-title {
+		font-size: 1.1rem;
+		line-height: 1.3rem;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.news-card-title {
+		font-size: 1.3rem;
+		line-height: 1.5rem;
+	}
 }
 
 .light-color {
@@ -2887,7 +2993,7 @@ figcaption .wp-caption-text {
 @media screen and (min-width: 768px) {
 	.light-color img {
 		height: 240px;
-		min-width: 420px;
+		min-width: 350px;
 	}
 }
 
@@ -2956,6 +3062,12 @@ figcaption .wp-caption-text {
 	width: 260px;
 }
 
+@media screen and (min-width: 1023px) {
+	.publication-card {
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+	}
+}
+
 @media screen and (min-width: 576px) {
 	.publication-card {
 		width: 280px;
@@ -3010,12 +3122,14 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 768px) {
 	.publication-image-container {
+		max-width: 240px;
 		margin-right: 1rem;
 	}
 }
 
 .publication-card__text {
 	height: 100%;
+	width: 100%;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-direction: column;
@@ -3049,6 +3163,28 @@ figcaption .wp-caption-text {
 
 .issuuembed {
 	max-width: 300px;
+}
+
+@media screen and (min-width: 1023px) {
+	.flexed-publication {
+		display: -ms-flexbox;
+		display: flex;
+	}
+}
+
+@media screen and (min-width: 1023px) {
+	.flexed-publication header {
+		margin-right: 2rem;
+		min-width: 300px;
+	}
+}
+
+@media screen and (min-width: 1023px) {
+	.flexed-publication header h1 {
+		font-size: 24px;
+		line-height: 28px;
+		margin-top: 1.2rem;
+	}
 }
 
 /*# sourceMappingURL=../star/sass/maps/style.css.map */

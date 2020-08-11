@@ -1,35 +1,4 @@
 /**
- *  Animate on scroll usign Intersection Observer API
- */
-
-let observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: [0.0, 0.75]
-  };
-
-const scrollTrigger = function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-        } else {
-            entry.target.classList.remove("is-visible");
-        }
-    });
-  };
-  
-
-const animatedElements = document.querySelectorAll(".animatable");
-
-
-const cardObserver = new IntersectionObserver(scrollTrigger, observerOptions);
-  
-animatedElements.forEach(function(target) {
-    cardObserver.observe(target);
-});
-
-
-/**
 * Triger the top button
  */
 
@@ -63,7 +32,6 @@ aboutUsObserver.observe(aboutUsImage);
 aboutUsObserver.observe(aboutUsContainer); 
 
 
-
 /**
  *  A function to toggle less and more content
  *
@@ -71,7 +39,6 @@ aboutUsObserver.observe(aboutUsContainer);
 
 let more = document.querySelectorAll(".red_link");
 let less = document.querySelectorAll(".less");
-
 
 more.forEach(function toggleClass (item) {
     item.addEventListener('click', function () {

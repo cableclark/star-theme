@@ -21,23 +21,23 @@
 @mixin slide-from-animation  {
     opacity: 0;
     transform: translateY(6em);
-    transition: transform 0.3s .5s cubic-bezier(0,1,.3,1),
-    opacity 0.3s .5s ease-out;
+    transition: transform 0.4s .5s cubic-bezier(0,1,.3,1),
+    opacity 0.4s .5s ease;
     will-change: opacity;
 }
 
   .hero-container__heading {
-      animation: 0.2s ease-out 0.5s 1 slideInFromLeft;
+      animation: 0.2s ease 0.5s 1 slideInFromLeft;
       animation-fill-mode: both;
   }
 
   .hero-container__slogan {
-      animation: 0.2s ease-out 0.7s 1 slideInFromLeft;
+      animation: 0.2s ease 0.7s 1 slideInFromLeft;
       animation-fill-mode: both;
   }
 
   .hero-container__call-to-action  {
-      animation: 0.2s ease-out 0.9s 1 slideInFromLeft;
+      animation: 0.2s ease 0.9s 1 slideInFromLeft;
       animation-fill-mode: both;
   }
 

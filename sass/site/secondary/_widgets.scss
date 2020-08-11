@@ -2,7 +2,6 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap; 
-	background-color: $light_color;	
 	color: $black_color;
 	@media screen and(min-width: $large_screen)  {
 		justify-content: space-evenly;
@@ -22,7 +21,6 @@
 	flex-direction: column;
 	align-items: center;
     margin-bottom: 2rem;
-    @include background-light;
 	@media screen and(min-width: $large_screen)  {
         padding: 2em 2em;
 	}
@@ -174,12 +172,11 @@
     height:44px;
     cursor: pointer;
     align-self: center;
-    stroke:$red_main;
-    fill: $red_main;
+    stroke: $black_color; 
+    fill: $black_color;
     margin-top: 15px;
     padding: 10px;
-    border: 1px solid $red_main;
-    
+    border: 1px solid $black_color;
     @media screen and (min-width: $larger_screen) {
         margin-top: 0;
         border: none;  
@@ -193,7 +190,7 @@
     @media screen and (min-width: $large_screen) {
         stroke: $black_color; 
         fill: $black_color;
-    } 
+    }   
 }
 
 .search-icon--white{
@@ -216,10 +213,22 @@
    }    
 }
 
-
-
 .svg-icons {
 	height: 30px;
 	margin-right: 1rem;
+}
+
+.latest {
+    margin: unset;
+    padding: 1rem 0;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            font-family: $font__main;
+            list-style-type: none;
+            margin: 1rem 0;
+        }
+    }
 }
 

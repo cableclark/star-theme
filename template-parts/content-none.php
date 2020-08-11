@@ -10,7 +10,7 @@
 ?>
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="search-title"><?php esc_html_e( 'Ништо не беше пронајдено...', 'Star Star' ); ?></h1>
+		<h1 class="search-title"><?php esc_html_e( 'Ништо не беше пронајдено...', 'star' ); ?></h1>
 	</header><!-- .page-header -->
 	<div class="page-content no-results-container">
 		<?php
@@ -18,7 +18,7 @@
 			printf(
 				'<p>' . wp_kses(
 					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'Miss Albini' ),
+					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'star' ),
 					array(
 						'a' => array(
 							'href' => array(),
@@ -29,7 +29,7 @@
 			);
 		elseif ( is_search() ) :
 			?>
-			<p><?php esc_html_e( 'Барајте повторно...', 'Star Star' ); ?></p>
+			<p><?php esc_html_e( 'Барајте повторно...', 'star' ); ?></p>
 		<?php
 		endif;
 		?>

@@ -10,7 +10,7 @@ get_header();
 ?>
 	<main id="primary" class="site-main margin-top">
 		<div class="archive-title">
-			<h1 style="display:none"><?php echo get_cat_name(get_queried_object_id());?></h1>
+			<h1><?php echo single_tag_title();?></h1>
 		</div>
 		<div class="archives-container">
 		<?php

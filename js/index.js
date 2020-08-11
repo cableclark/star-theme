@@ -181,3 +181,34 @@ function debounce(func, wait, immediate) {
 		if (callNow) func.apply(context, args);
 	};
 }
+
+/**
+ *  Animate on scroll usign Intersection Observer API
+ */
+
+
+let observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: [0.0, 0.75]
+  };
+
+const scrollTrigger = function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+        } else {
+            entry.target.classList.remove("is-visible");
+        }
+    });
+  };
+  
+
+const animatedElements = document.querySelectorAll(".animatable");
+
+
+const cardObserver = new IntersectionObserver(scrollTrigger, observerOptions);
+  
+animatedElements.forEach(function(target) {
+    cardObserver.observe(target);
+});

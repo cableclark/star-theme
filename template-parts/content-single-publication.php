@@ -9,7 +9,7 @@
 
 ?>
 <div id="app">
-	<article id="post-<?php the_ID(); ?>" class="single-article">
+	<article id="post-<?php the_ID(); ?>" class="single-article flexed-publication">
 		<header>
 		<?php
 			if ( is_singular() ) :
@@ -18,11 +18,6 @@
 				the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" class="single__title">', '</a></h2>' );
 			endif;
 			?>	
-			<div class="entry-meta">
-				<?php
-					star_star_posted_on();
-				?>
-			</div><!-- .entry-meta -->
 		<div class="thumb-container"><?php the_post_thumbnail();?></div>	
 
 			

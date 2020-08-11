@@ -14,9 +14,9 @@
     flex-direction: column;
     align-items: center;
     @media screen and(min-width: $large_screen)  {
-        max-width: 1400px;
+        max-width: 1009px;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: stretch;
         flex-wrap: wrap;
         margin: 0 auto; 
@@ -34,3 +34,19 @@
      }    
  }
 
+ .swork-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and(min-width: $large_screen)  {
+        max-width: 1240px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin: 0 auto; 
+    }
+    @media screen and(min-width: 1246px) {
+        justify-content: center;
+    }
+}

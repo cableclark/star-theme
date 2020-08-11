@@ -10,6 +10,7 @@
     border-radius: 5px;
     padding: 1rem;
     width: 260px;
+    @include smooth-shadow;
     @media screen  and (min-width: $small_screen){
         width: 280px;
     }    
@@ -45,22 +46,21 @@
 
 .flex-end {
     align-self: flex-end;
-   
     @media screen and (min-width: $large_screen){
         margin-top:auto;
     }
-
-    
 }
 
 .publication-image-container {
     @media screen and (min-width: $medium_screen) {
+        max-width: 240px;
         margin-right: 1rem; 
     }   
 }
 
 .publication-card__text {
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -88,4 +88,23 @@
 
 .issuuembed  {
     max-width: 300px;
+}
+
+.flexed-publication {
+    @media screen  and (min-width: $large_screen){
+        display: flex;
+    }
+    header {
+        @media screen  and (min-width: $large_screen){
+            margin-right: 2rem;
+            min-width: 300px;
+        }
+        h1 {
+            @media screen  and (min-width: $large_screen){
+                font-size: 24px;
+                line-height: 28px;
+                margin-top: 1.2rem;
+            } 
+        }
+    }
 }

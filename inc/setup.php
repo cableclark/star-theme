@@ -108,10 +108,13 @@ add_action( 'after_setup_theme', 'star_star_setup' );
  * @global int $content_width
  */
 function star_star_content_width() {
+
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+	
 	$GLOBALS['content_width'] = apply_filters( 'star_star_content_width', 740 );
+
 }
 
 add_action( 'after_setup_theme', 'star_star_content_width', 0 );
@@ -126,3 +129,47 @@ function tn_custom_excerpt_length( $length ) {
 }
 
 add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
+
+
+/*
+* Define a constant path to our single template folder
+*/
+define('SINGLE_PATH', TEMPLATEPATH . '/single');
+ 
+ 
+/**
+* Single template function which will choose our template
+*/
+function my_single_template($single) {
+	global $wp_query, $post;
+	
+	/**
+	* Checks for single template by category
+	* Check by category slug and ID
+	*/
+	foreach((array)get_the_category() as $cat) :
+
+		if(file_exists(SINGLE_PATH . '/single-cat-' . $cat->slug . '.php'))
+		return SINGLE_PATH . '/single-cat-' . $cat->slug . '.php';
+		
+		elseif(file_exists(SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php'))
+		return SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php';
+	
+	endforeach;
+
+	return $single;
+}
+
+/**
+* Filter the single_template with our custom function
+*/
+add_filter('single_template', 'my_single_template');
+
+
+/**
+* Load text domain
+*/
+function my_theme_load_theme_textdomain() {
+    load_theme_textdomain( 'star', get_template_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'my_theme_load_theme_textdomain' );

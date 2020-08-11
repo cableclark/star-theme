@@ -13,7 +13,7 @@
 	<div class="publication-card__text">
 		<header class="publication-card__header">
 		<?php
-			the_title( '<h3 class="publication-card-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );	
+			the_title( '<h3 class="publication-card-title hide-on-small-screen"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );	
 		?>
 		</header>
 		<div class="publication-card-content hide-on-small-screen">
@@ -34,7 +34,20 @@
 			);
 	 ?>
 		</div>
-	<a href="<?php the_permalink() ?>" class="red_link--more flex-end hide-on-small-screen">ПОВЕЌЕ...</a>
+			<a href="<?php esc_url( the_permalink()) ?>" class="flex-end mt-1">
+				<svg
+				class="arrow"
+				width="26.999975"
+				height="14.72795"
+				viewBox="0 0 26.999975 14.72795"
+				fill="none"
+				>
+				<path
+					d="m 26.7071,8.071075 c 0.3905,-0.3905 0.3905,-1.0237 0,-1.4142 l -6.364,-6.364 c -0.3905,-0.3905 -1.0236,-0.3905 -1.4142,0 -0.3905,0.3906 -0.3905,1.0237 0,1.4142 l 5.6569,5.6569 -5.6569,5.6569 c -0.3905,0.3905 -0.3905,1.0236 0,1.4142 0.3906,0.3905 1.0237,0.3905 1.4142,0 z M 0,8.363975 h 26 v -2 H 0 Z"
+					fill="#ee3626"
+					id="path2" />
+				</svg>
+			</a>
 	</div>	
 </article>
 

@@ -45,7 +45,8 @@ input[type="submit"]:hover {
 
 .red_link,
 .less,
-.red_link--more {
+.red_link--more,
+.red_link_extra {
 	display: grid;
 	place-items: center;
 	border: 1px solid $red_main;
@@ -68,13 +69,18 @@ input[type="submit"]:hover {
 
 .red_link:visited,
 .less:visited,
-.red_link--more:visited {
+.red_link--more:visited,
+.red_link_extra:visited {
 		color: $red_main;
 }
 
+
+
+
 .red_link:hover,
 .less:hover,
-.red_link--more:hover {
+.red_link--more:hover,
+.red_link_extra:visited {
 	background-color:$red_main;
 	color: $light_gray;
 }
@@ -82,12 +88,9 @@ input[type="submit"]:hover {
 
 
 .red_link--more {
-	display: none;
-	@media screen and (min-width: $medium_large_screen) {
 		display: grid;
 		place-items: center;
 		@include transition-read-more;
-	}
 }
 
 .start {
@@ -110,8 +113,8 @@ input[type="submit"]:hover {
 }
 
 .yellow-a {
-	border:1px solid antiquewhite;
-	background: antiquewhite;
+	border:1px solid white;
+	background: white;
 	color: $black_color;
 }
 

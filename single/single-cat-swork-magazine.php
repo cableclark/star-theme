@@ -18,11 +18,9 @@ get_header();
 				?>
 			<?php	
 			endwhile; // End of the loop.
-			get_sidebar('latest');
 			?>
 		</div>	
 	</main><!-- #main -->
 <?php
 get_sidebar();
-
 get_footer();

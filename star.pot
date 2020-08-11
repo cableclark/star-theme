@@ -15,11 +15,11 @@ msgstr ""
 "X-Domain: star\n"
 
 #. Theme Name of the theme
-msgid "star"
+msgid "star-star"
 msgstr ""
 
 #. Description of the theme
-msgid "A theme made a macedonian NGO"
+msgid "A theme made for a macedonian NGO"
 msgstr ""
 
 #. Author of the theme

@@ -40,6 +40,7 @@ a {
     justify-content: center;
     line-height: 1rem;
     margin: 1.3rem;
+    font-family: $font__main;
     .page-numbers {
         display: block;
         padding: 0.6rem;
@@ -74,7 +75,9 @@ a {
 }
 
 .tags-links {
-    font-size: 0.9rem;  
+    font-size: 1rem; 
+    line-height: 1.5rem;
+
 }
 
 .edit-link {
@@ -95,4 +98,8 @@ a {
         color: $mid_orange;
         text-decoration: underline;
     }
+}
+
+.post-date {
+    display: block;
 }

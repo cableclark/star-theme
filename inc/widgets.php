@@ -20,12 +20,12 @@ function star_star_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'similar', 'miss_albini' ),
-			'id'            => 'similar',
+			'name'          => esc_html__( 'latest', 'miss_albini' ),
+			'id'            => 'latest',
 			'description'   => esc_html__( 'Add widgets here.', 'miss_albini' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'before_widget' => '<section id="%1$s" class="widget latest %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="album-of-the-week">',
+			'before_title'  => '<h3 class="latest">',
 			'after_title'   => '</h3>',
 		)
 	);

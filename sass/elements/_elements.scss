@@ -16,7 +16,6 @@ html {
 body {
 	 // Fallback for when there is no custom background color defined.
 	overflow-y: hidden;
-	background-color: $light_color;
 }
 
 hr {
@@ -31,6 +30,7 @@ hr {
 img {
 	height: auto; // Make sure images are scaled correctly.
 	max-width: 100%; // Adhere to container width.
+	margin: 1rem 0;
 }
 
 .wp-block-cover	 {

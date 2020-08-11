@@ -12,7 +12,7 @@ get_header();
 		<div class="archive-title">
 			<h1><?php echo get_cat_name(get_queried_object_id());?></h1>
 		</div>
-		<div class="archives-container">
+		<div class="swork-container">
 		<?php
 		if ( have_posts() ) :
 			/* Start the Loop */
