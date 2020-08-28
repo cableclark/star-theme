@@ -1,3 +1,9 @@
+.site-main {
+    @media screen and(min-width: $large_screen) {
+        min-height: 500px;
+    }
+}
+
 .center, 
 .site-container {
     margin: 0 auto;
@@ -14,16 +20,14 @@
     flex-direction: column;
     align-items: center;
     @media screen and(min-width: $large_screen)  {
-        max-width: 1009px;
+        max-width: 1070px;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: stretch;
         flex-wrap: wrap;
         margin: 0 auto; 
     }
-    @media screen and(min-width: 1246px) {
-        justify-content: center;
-    }
+    
 }
 
 .container {
@@ -49,4 +53,13 @@
     @media screen and(min-width: 1246px) {
         justify-content: center;
     }
+}
+
+.body-container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.justify-center {
+    justify-content: center;
 }

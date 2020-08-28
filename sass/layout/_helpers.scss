@@ -3,7 +3,7 @@
 }
 
 .margin-top {
-    margin-top: 50px; 
+    margin-top: 70px; 
     @media screen and (min-width: $large_screen) {
         margin-top: 120px;
     }   
@@ -53,4 +53,17 @@
 
 .mt-1 {
     margin-top:1rem;
+}
+
+.margin-auto {
+
+    margin: 0 auto;
+}
+
+.campagns {
+    .margin-auto {
+        @media screen and (min-width: 352px) {
+            margin: 2rem auto;
+        }
+    }
 }

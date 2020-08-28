@@ -1,18 +1,16 @@
 p,
 li {
 	font-family: $font-headings;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 1.5rem;
 	overflow-wrap: break-all;
+	margin: 1rem 0;
 	@media screen and(min-width: $large_screen) {
 		line-height: 26px;
 		font-size: 16px;
 	 }	
 }
 
-p {
-	margin: 1rem 0;
-}
 
 dfn,
 cite,

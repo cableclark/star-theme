@@ -173,3 +173,33 @@ function my_theme_load_theme_textdomain() {
     load_theme_textdomain( 'star', get_template_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'my_theme_load_theme_textdomain' );
+
+
+/**
+* Load logos according the the langauge
+*/
+
+function polylang_get_multilang_logo( $value ) {
+
+	if ( function_exists( 'pll_current_language' ) ) {
+		$logos = array(
+			'en' => 'logo-en.png',
+			'mk' => 'logo-mk.png',
+		);
+
+		$default_logo = $logos['mk'];
+
+		$current_lang = pll_current_language();
+
+		$assets_url = get_template_directory_uri() . '/images/';
+
+		if ( isset( $logos[ $current_lang ] ) )
+			$value = $assets_url . $logos[ $current_lang ];
+		else
+			$value = $assets_url . $default_logo;
+	}
+	
+	return "<img src=" . $value . " alt='star logo'/>";
+}
+
+add_filter( 'get_custom_logo', 'polylang_get_multilang_logo' );

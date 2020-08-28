@@ -1,7 +1,7 @@
 /*!
 Theme Name: Star-Star
 Author: Igor Stojanovski
-Version: 1.6
+Version: 2
 Author URI: https://www.github.com/cableclark
 Description: A theme for a sex work NGO
 License: GNU General Public License v2 or later
@@ -398,6 +398,8 @@ h1 {
 h2,
 .search-title {
 	font-size: 1.09273rem;
+	color: #EE3626;
+	margin-top: 32px;
 }
 
 @media screen and (min-width: 768px) {
@@ -430,9 +432,10 @@ h5 {
 p,
 li {
 	font-family: "Playfair Display", serif;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 1.5rem;
 	overflow-wrap: break-all;
+	margin: 1rem 0;
 }
 
 @media screen and (min-width: 1023px) {
@@ -441,10 +444,6 @@ li {
 		line-height: 26px;
 		font-size: 16px;
 	}
-}
-
-p {
-	margin: 1rem 0;
 }
 
 dfn,
@@ -670,6 +669,10 @@ figure {
 	visibility: hidden;
 }
 
+ul {
+	margin-left: 10px;
+}
+
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
@@ -729,8 +732,7 @@ input[type="submit"] {
 	display: -ms-grid;
 	display: grid;
 	place-items: center;
-	border: 1px solid #EE3626;
-	background-color: transparent;
+	background-color: #F7F7F8;
 	border-radius: 5px;
 	height: 45px;
 	width: 150px;
@@ -753,6 +755,15 @@ input[type="submit"] {
 	}
 }
 
+@media screen and (min-width: 1023px) and (min-width: 1023px) {
+	.red_link,
+	.less,
+	.red_link--more,
+	.red_link_extra {
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+	}
+}
+
 .red_link:visited,
 .less:visited,
 .red_link--more:visited,
@@ -763,7 +774,7 @@ input[type="submit"] {
 .red_link:hover,
 .less:hover,
 .red_link--more:hover,
-.red_link_extra:visited {
+.red_link_extra:hover {
 	background-color: #EE3626;
 	color: #E5E5E5;
 }
@@ -905,10 +916,10 @@ textarea {
 	background-color: #F7F7F8;
 }
 
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1023px) and (min-width: 1023px) {
 	.smaller-header,
 	.smaller-header-nothomed {
-		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
 	}
 }
 
@@ -1066,6 +1077,12 @@ textarea {
 /*--------------------------------------------------------------
 # Containers
 --------------------------------------------------------------*/
+@media screen and (min-width: 1023px) {
+	.site-main {
+		min-height: 500px;
+	}
+}
+
 .center,
 .site-container {
 	margin: 0 auto;
@@ -1092,23 +1109,16 @@ textarea {
 
 @media screen and (min-width: 1023px) {
 	.archives-container {
-		max-width: 1009px;
+		max-width: 1070px;
 		-ms-flex-direction: row;
 		    flex-direction: row;
-		-ms-flex-pack: distribute;
-		    justify-content: space-around;
+		-ms-flex-pack: justify;
+		    justify-content: space-between;
 		-ms-flex-align: stretch;
 		    align-items: stretch;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 		margin: 0 auto;
-	}
-}
-
-@media screen and (min-width: 1246px) {
-	.archives-container {
-		-ms-flex-pack: center;
-		    justify-content: center;
 	}
 }
 
@@ -1152,6 +1162,16 @@ textarea {
 		-ms-flex-pack: center;
 		    justify-content: center;
 	}
+}
+
+.body-container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.justify-center {
+	-ms-flex-pack: center;
+	    justify-content: center;
 }
 
 /*--------------------------------------------------------------
@@ -1249,6 +1269,8 @@ a:hover, a:active {
 .tags-links {
 	font-size: 1rem;
 	line-height: 1.5rem;
+	margin-top: 1rem;
+	display: block;
 }
 
 .edit-link {
@@ -1537,7 +1559,7 @@ a:hover, a:active {
 }
 
 .margin-top {
-	margin-top: 50px;
+	margin-top: 70px;
 }
 
 @media screen and (min-width: 1023px) {
@@ -1596,6 +1618,16 @@ a:hover, a:active {
 
 .mt-1 {
 	margin-top: 1rem;
+}
+
+.margin-auto {
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 352px) {
+	.campagns .margin-auto {
+		margin: 2rem auto;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -2063,8 +2095,9 @@ figcaption .wp-caption-text {
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
-	background-color: black;
+	background-color: #EE3626;
 	min-height: 400px;
+	max-width: unset;
 	color: #F7F7F8;
 	display: -ms-flexbox;
 	display: flex;
@@ -2076,6 +2109,7 @@ figcaption .wp-caption-text {
 	    justify-content: center;
 	-ms-flex-align: center;
 	    align-items: center;
+	padding: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -2090,8 +2124,12 @@ figcaption .wp-caption-text {
 }
 
 .footer-text-container {
-	max-width: 280px;
-	margin-top: 1rem;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-align: center;
+	    align-items: center;
 }
 
 .social-icons-container {
@@ -2106,22 +2144,36 @@ figcaption .wp-caption-text {
 	font-family: "Montserrat", sans-serif;
 	font-size: 0.9rem;
 	margin: 0;
+	text-align: center;
 }
 
 .footer-logo {
-	max-width: 280px;
 	margin: 1rem 0;
+	margin-top: 2rem;
 }
 
 @media screen and (min-width: 768px) {
+	.footer-logo {
+		max-width: 280px;
+	}
+}
+
+@media screen and (min-width: 1023px) {
 	.footer-logo {
 		max-width: 320px;
 	}
 }
 
 .footer-icon {
-	margin-right: 1rem;
-	margin-bottom: 1rem;
+	margin: 1rem;
+}
+
+#cookie-law-info-again {
+	display: none;
+}
+
+.socmed-icon {
+	width: 40px;
 }
 
 /*--------------------------------------------------------------
@@ -2133,7 +2185,7 @@ figcaption .wp-caption-text {
 	-ms-flex-pack: center;
 	    justify-content: center;
 	margin: 0 auto;
-	max-width: 400px;
+	max-width: 500px;
 }
 
 .archive-title h1 {
@@ -2410,13 +2462,13 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1023px) {
 	.hero-container {
-		max-width: 383px;
+		max-width: 343px;
 	}
 }
 
 @media screen and (min-width: 1600px) {
 	.hero-container {
-		max-width: 500px;
+		max-width: 400px;
 	}
 }
 
@@ -2524,6 +2576,12 @@ figcaption .wp-caption-text {
 	color: white;
 }
 
+@media screen and (min-width: 1023px) {
+	.hero-container__call-to-action:hover {
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+	}
+}
+
 #more {
 	position: absolute;
 	top: 89vh;
@@ -2539,7 +2597,7 @@ figcaption .wp-caption-text {
 		background-color: unset;
 		display: block;
 		margin: 0 auto;
-		transform: translateY(-110px);
+		transform: translateY(-130px);
 		border-radius: 50%;
 		background-color: #EE3626;
 		width: 60px;
@@ -2575,6 +2633,12 @@ figcaption .wp-caption-text {
 	z-index: 1000000;
 }
 
+@media screen and (min-width: 1023px) {
+	.top-active {
+		box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.12), 0 -2px 2px rgba(0, 0, 0, 0.12), 0 -4px 4px rgba(0, 0, 0, 0.12), 0 -8px 8px rgba(0, 0, 0, 0.12), 0 -16px 16px rgba(0, 0, 0, 0.12);
+	}
+}
+
 #aktuelno {
 	position: relative;
 	top: -120px;
@@ -2583,6 +2647,12 @@ figcaption .wp-caption-text {
 @media screen and (min-width: 1023px) {
 	#aktuelno {
 		top: -50px;
+	}
+}
+
+@media screen and (min-width: 1023px) {
+	#aktuelno {
+		top: 100px;
 	}
 }
 
@@ -3016,14 +3086,14 @@ figcaption .wp-caption-text {
 
 .campagns {
 	background: #B62626;
-	background-image: url("http://localhost/star/wp-content/themes/star/images/campagn_mobile.png");
+	background-image: url("https://starsexwork.org/wp-content/themes/star/images/campagn_mobile.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 1023px) {
 	.campagns {
-		background-image: url("http://localhost/star/wp-content/themes/star/images/campagn_large.png");
+		background-image: url("https://starsexwork.org/wp-content/themes/star/images/campagn_large.png");
 	}
 }
 

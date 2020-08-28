@@ -42,7 +42,7 @@
 {
     background-color: $light_color;
     @media screen and (min-width: $large_screen) {
-        @include box-shadow-normal;
+        @include smooth-shadow;
        
     } 
 }

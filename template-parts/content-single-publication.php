@@ -20,7 +20,6 @@
 			?>	
 		<div class="thumb-container"><?php the_post_thumbnail();?></div>	
 
-			
 		</header><!-- .entry-header -->
 		<div class="entry-content">
 		

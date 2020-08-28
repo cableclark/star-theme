@@ -10,9 +10,9 @@ get_header();
 ?>
 	<main id="primary" class="site-main margin-top">
 		<div class="archive-title">
-			<h1><?php echo get_cat_name(get_queried_object_id());?></h1>
+			<h1 class="sexwork__title"><?php echo get_cat_name(get_queried_object_id());?></h1>
 		</div>
-		<div class="archives-container">
+		<div class="archives-container justify-center">
 		<?php
 		if ( have_posts() ) :
 			/* Start the Loop */

@@ -39,8 +39,7 @@ img {
 	max-height: 300px;
 }
 
-// .attachment-post-thumbnail  {
-    
+// .attachment-post-thumbnail  { 
 
 // }
 
@@ -49,10 +48,12 @@ figure {
 }
 
 
-
 .grecaptcha-badge {
 	opacity: 0;
 	visibility: hidden;
  }
 
+ul {
+	margin-left:10px;
+} 
 @import "tables";

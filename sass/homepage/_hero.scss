@@ -31,10 +31,6 @@
         min-height: 95vh;
         max-height: 95vh;
     }
-    // @media screen  and (min-width: $extra_large_screen){
-    //     min-height: 1020px;
-    //     max-height: unset;
-    // }
 }
 
 .hero__image {
@@ -74,10 +70,10 @@
         margin: 0 auto;
     }
     @media screen  and (min-width: $large_screen){  
-        max-width: 383px; 
+        max-width: 343px; 
     }
     @media screen  and (min-width: $extra_large_screen){
-        max-width: 500px;
+        max-width: 400px;
     }
 }
 
@@ -153,6 +149,7 @@
     background-color: unset;
     box-shadow: 0px 0px 2px white;
     color: white;
+    @include smooth-shadow;
 }
 
 #more {
@@ -167,7 +164,7 @@
         background-color: unset;
         display: block;
         margin: 0 auto;
-        transform: translateY(-110px);
+        transform: translateY(-130px);
         border-radius: 50%;
         background-color: $red_main;
         width: 60px;
@@ -198,6 +195,7 @@
     position: fixed;
     will-change: opacity;
     z-index: 1000000;
+    @include smooth-shadow-upsidedown;
 }
 
 #aktuelno {
@@ -205,6 +203,10 @@
     top: -120px;
     @media screen  and (min-width: $large_screen){ 
         top: -50px;
+
+    }
+    @media screen  and (min-width: $large_screen){ 
+        top: 100px;
 
     }
 }

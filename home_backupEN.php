@@ -1,19 +1,18 @@
-<div class="hero" id="hero"><img class="hero__image" src="http://localhost/star/wp-content/themes/star/images/front_page.svg" alt="umbrrella balkans" />
+<div class="hero" id="hero"><img class="hero__image" src="https://starsexwork.org/wp-content/themes/star/images/front_page.svg" alt="umbrrella balkans" />
     <div class="hero-container">
         <h2 class="hero-container__heading">STAR</h2>
-        <p class="hero-container__slogan">The first sex work collective in the Balkans</p>
+        <p class="hero-container__slogan">The First Sex Workers Collective in the Balkans</p>
         <a href="#aktuelno"><div class="hero-container__call-to-action call-to-action">Get Informed</div> </a>
     </div>
 </div>
-
 <span id="more"></span>
 <div class="more"> 
-    <a href="#more"> <img class="down" src= "http://localhost/star/wp-content/themes/star/images/down.png"></a> 
+    <a href="#more"> <img class="down" src= "https://starsexwork.org/wp-content/themes/star/images/down.png"></a> 
 </div>
 <div class="sexwork-area"><!-- wp:heading -->
     <h2 class="sexwork__title">ABOUT SEX WORK</h2>
 <!-- /wp:heading -->
-    <div class="sexwork">
+    <div class="sexwork body-container">
         <div class="sexwork__card card animatable" >
             <svg data-name="Layer 1"  class="sexwork_svg__image" viewBox="0 0 401.85 360.37">
                 <path d="M367.2 34.7h0a109.58 109.58 0 00-155.19 0l-11.09 11.11-11.08-11.11a109.59 109.59 0 00-155.2 0h0a110.11 110.11 0 000 155.51l166.28 166.62 155.2-155.51 11.08-11.11a110.11 110.11 0 000-155.51z" fill="none" stroke="#EE3626" stroke-miterlimit="10" stroke-width="5"/>
@@ -85,42 +84,42 @@
 </div>
 <div class="about-us"> 
     <div>
-        <a href="#hero"><img class="top" src= "http://localhost/star/wp-content/themes/star/images/down.png"> </a>
+        <a href="#hero"><img class="top" src= "https://starsexwork.org/wp-content/themes/star/images/down.png"> </a>
     </div>
     <div class="flexed">
         <div class="about-us__image">
-            <img class="card__image stagered animatable" src="http://localhost/star/wp-content/themes/star/images/about-us.jpg" alt="declaration" /></div>
+            <img class="card__image stagered animatable" src="https://starsexwork.org/wp-content/themes/star/images/about-us.jpg" alt="declaration" /></div>
             <div class="about-us-container ">
                 <div class="about-us-container__text stagered animatable">
-                    <h2 class="about-us-container__title">WHO ARE STAR?</h2>
+                    <h2 class="about-us-container__title">WHO WE ARE</h2>
                     <p class="about-us-container__paragraph">In the period between 2007 and 2010, STAR-STAR used to operate as an activists’ movement of a group of young people who shared a common goal – improvement and promotion of sex workers’ rights in the Republic of Macedonia, therefore actively engaging individuals who are part of the sex industry in the process of implementation of their activities.</p>
                     <p class="about-us-container__paragraph">In order to promote the importance of the civil sector in the process of democratic management, towards the middle of 2010 STAR-STAR initiated its entry in the Central Registry Office in the Republic of Macedonia. On 25th May 2010, STAR-STAR was officially registered in the Central Registry Office as Association for Support of Marginalized Workers STAR-STAR</p>
-                    <a  class="red_link">MORE...</a> <span id="aktuelno" > </span> 
+                    <a href="https://starsexwork.org/en/about-us-2/" class="red_link_extra">MORE...</a> <span id="aktuelno" > </span> 
                 </div>
             </div>
         </div> 
     </div>    
 <div class="aktuelno">
     <h3 class="aktuelno__title font-white">NEWS</h3>
-    <div class="aktuelno__posts">[cat_posts cat="3" post_type="vesti"]</div>
-        <a href="/aktuelno" class="red_link--more yellow-a middle">PREVIOUS...</a> </a>
+    <div class="aktuelno__posts body-container">[cat_posts cat="337" post_type="vesti"]</div>
+        <a href="https://starsexwork.org/en/category/news-en/" class="red_link--more yellow-a middle">PREVIOUS...</a> </a>
 </div>
 <div class="s-work">
         <h3 class="s-work__title">S-WORK MAGAZINE</h3>
-        <div class="s-work__posts">[cat_posts cat="2" post_type="swork-magazine"]</div>
+        <div class="s-work__posts body-container">[cat_posts cat="673" post_type="swork-magazine"]</div>
         <span id="campagns"> </span>
-        <a href ="/s-work" class="red_link--more middle">PREVIOUS...</a> </a>
+        <a href ="https://starsexwork.org/en/category/s-work-magazine/" class="red_link--more middle">PREVIOUS...</a> </a>
              
 </div>
 <div class="aktuelno campagns">
     <h3 class="aktuelno__title font-white">CAMPAIGNS</h3>
-    <div class="aktuelno__posts">
+    <div class="aktuelno__posts body-container">
         <div class="news-card no-hover-shadow stagered animatable">
              <p class="mt-0 font-white"> In the last few years, STAR has been involved in celebrating days of importance for sex workers both locally and internationally. By means of organizing campaigns and activities, STAR alongside with sex workers tries to reach public awareness promoting human rights and freedom.
 We would like to present the day celebrated by the sex industry throughout the world:. </p>
         </div>
     </div>
-    <div class="aktuelno__posts">
+    <div class="aktuelno__posts body-container">
         <div class="news-card kampanja stagered animatable">
             <h3 class="font-white"><span class="large-title">March 3rd</span> <span class="selected">The International Day for Sex Workers’ Rights </span> </h3>
             <p class="font-white">The International Day for Sex Workers’ Rights – this day was first celebrated in 2001 when over 25,000 sex workers gathered in India for a sex workers’ festival. Sex workers’ associations worldwide celebrate March 3rd as an international day for sex workers’ rights. </p>
@@ -140,6 +139,6 @@ We would like to present the day celebrated by the sex industry throughout the w
 </div>
 <div class="s-work">
     <h3 class="s-work__title">PUBLICATIONS</h3>
-    <div class="s-work__posts">[cat_posts cat="662" post_type="publikacija"]</div>
-    <a href ="/publikacii" class="middle"><a class="red_link--more middle">OLDER...</a> </a>
+    <div class="s-work__posts body-container">[cat_posts cat="665" post_type="publikacija"]</div>
+    <a href ="https://starsexwork.org/en/category/publications/" class="middle red_link--more middle">OLDER...</a>
 </div>
