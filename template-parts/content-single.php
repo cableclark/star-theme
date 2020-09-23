@@ -22,13 +22,11 @@
 				<?php
 					star_star_posted_on();
 				?>
+				<?php edit_post_link( __( 'Edit', 'textdomain' ), '<p>', '</p>' );?>
 			</div><!-- .entry-meta -->
-		<div class="thumb-container"><?php the_post_thumbnail();?></div>	
-
-			
+		<div class="img-container"><?php the_post_thumbnail();?></div>	
 		</header><!-- .entry-header -->
 		<div class="entry-content">
-		
 			<?php
 			the_content(
 				sprintf(

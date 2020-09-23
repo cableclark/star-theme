@@ -39,7 +39,10 @@
 			?>
 			<?php 
 				star_get_tags(); 
-			?>
+				?>
+			<div class="edit-button">
+				<?php edit_post_link( __( 'edit', 'textdomain' ), '<p>', '</p>' );?> 
+			</div>
 		</div><!-- .entry-content -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 </div> <!-- Container ends -->

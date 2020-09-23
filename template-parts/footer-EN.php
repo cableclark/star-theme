@@ -2,7 +2,7 @@
     <img class="footer-logo" src="<?php echo get_template_directory_uri() . '/images/footer_logo_EN.png' ?>">
 </div>
 <div class="footer-text-container">
-    <p class="footer-text-container__paragraph"> Association for support of marginalized workers <strong>STAR-STAR</strong> Skopje</p>
+    <p class="footer-text-container__paragraph"> Association for Support of Marginalized Workers <strong>STAR-STAR</strong> Skopje</p>
 </div>	
 <div class="footer-text-container">
     <p class="footer-text-container__paragraph"> ADDRESS: 11 Oktomvri 22/2, 1000 Skopje</p>

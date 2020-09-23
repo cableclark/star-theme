@@ -442,7 +442,7 @@ li {
 	p,
 	li {
 		line-height: 26px;
-		font-size: 16px;
+		font-size: 18px;
 	}
 }
 
@@ -651,6 +651,7 @@ dd {
 
 img {
 	height: auto;
+	width: 100%;
 	max-width: 100%;
 	margin: 1rem 0;
 }
@@ -760,7 +761,7 @@ input[type="submit"] {
 	.less,
 	.red_link--more,
 	.red_link_extra {
-		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04), 0 8px 8px rgba(0, 0, 0, 0.04), 0 16px 16px rgba(0, 0, 0, 0.04);
 	}
 }
 
@@ -919,7 +920,7 @@ textarea {
 @media screen and (min-width: 1023px) and (min-width: 1023px) {
 	.smaller-header,
 	.smaller-header-nothomed {
-		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04), 0 8px 8px rgba(0, 0, 0, 0.04), 0 16px 16px rgba(0, 0, 0, 0.04);
 	}
 }
 
@@ -1373,17 +1374,12 @@ a:hover, a:active {
 	font-family: "Montserrat", sans-serif;
 	position: relative;
 	padding: 0.6rem 0;
+	margin: 0;
 }
 
 @media all and (orientation: landscape) {
 	.menu li {
 		padding: 0.3rem 0;
-	}
-}
-
-@media all and (min-width: 1023px) and (orientation: landscape) {
-	.menu li {
-		padding: 0.6rem 0;
 	}
 }
 
@@ -2172,8 +2168,8 @@ figcaption .wp-caption-text {
 	display: none;
 }
 
-.socmed-icon {
-	width: 40px;
+.socmed-icon img {
+	width: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -2215,7 +2211,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1023px) {
 	.archive-card {
-		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04), 0 8px 8px rgba(0, 0, 0, 0.04), 0 16px 16px rgba(0, 0, 0, 0.04);
 	}
 }
 
@@ -2314,10 +2310,15 @@ figcaption .wp-caption-text {
 	    flex-grow: 4;
 }
 
-.thumb-container img {
-	object-fit: cover;
-	width: 100%;
-	border-radius: 5px;
+@media screen and (min-width: 768px) {
+	.img-container img {
+		width: 50%;
+		padding: 0;
+		float: left;
+		margin: unset;
+		margin-right: 30px;
+		margin-bottom: 20px;
+	}
 }
 
 .posted-on {
@@ -2358,7 +2359,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1023px) {
 	.hero {
-		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04), 0 8px 8px rgba(0, 0, 0, 0.04), 0 16px 16px rgba(0, 0, 0, 0.04);
 	}
 }
 
@@ -2578,7 +2579,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1023px) {
 	.hero-container__call-to-action:hover {
-		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04), 0 8px 8px rgba(0, 0, 0, 0.04), 0 16px 16px rgba(0, 0, 0, 0.04);
 	}
 }
 
@@ -2635,7 +2636,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1023px) {
 	.top-active {
-		box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.12), 0 -2px 2px rgba(0, 0, 0, 0.12), 0 -4px 4px rgba(0, 0, 0, 0.12), 0 -8px 8px rgba(0, 0, 0, 0.12), 0 -16px 16px rgba(0, 0, 0, 0.12);
+		box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.04), 0 -2px 2px rgba(0, 0, 0, 0.04), 0 -4px 4px rgba(0, 0, 0, 0.04), 0 -8px 8px rgba(0, 0, 0, 0.04), 0 -16px 16px rgba(0, 0, 0, 0.04);
 	}
 }
 
@@ -2984,7 +2985,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1023px) {
 	.news-card {
-		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04), 0 8px 8px rgba(0, 0, 0, 0.04), 0 16px 16px rgba(0, 0, 0, 0.04);
 	}
 }
 
@@ -3134,7 +3135,7 @@ figcaption .wp-caption-text {
 
 @media screen and (min-width: 1023px) {
 	.publication-card {
-		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04), 0 8px 8px rgba(0, 0, 0, 0.04), 0 16px 16px rgba(0, 0, 0, 0.04);
 	}
 }
 

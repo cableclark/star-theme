@@ -47,7 +47,6 @@
         height: 200px; 
     } 
 }  
-
 .archive-article-title {
     margin-bottom: 0.5rem;
     @media screen and(min-width: $large_screen)  {
@@ -55,7 +54,6 @@
         line-height: 1.3rem;
     }
 }
-
 .archive-card:first-of-type {
     @media screen and(min-width: $large_screen)  {
        max-width: unset;
@@ -102,12 +100,17 @@
     flex-grow: 4;
 }
 
-.thumb-container {
-    img {
-        object-fit: cover;
-        width: 100%;
-        border-radius: 5px;
-      
+.img-container {
+    @media screen and(min-width: $medium_screen)  {
+        img {
+            width: 50%;
+            padding: 0;
+            float: left;
+            margin:unset;
+            margin-right: 30px; 
+            margin-bottom: 20px; 
+            
+        }
     }
 }
 

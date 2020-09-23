@@ -5,7 +5,6 @@
         <a href="#aktuelno"><div class="hero-container__call-to-action call-to-action">Информирај се</div> </a>
     </div>
 </div>
-
 <span id="more"></span>
 <div class="more"> 
     <a href="#more"> <img class="down" src= "https://starsexwork.org/wp-content/themes/star/images/down.png"></a> 

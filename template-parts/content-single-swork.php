@@ -10,11 +10,10 @@
 <div id="app">
 	<article id="post-<?php the_ID(); ?>" class="single-article flexed-publication">
 		<header>
+		<div class="thumb-container"><?php the_post_thumbnail();?></div>
 		<?php
-		the_title( '<h1 class="single__title">', '</h1>' );
 		edit_post_link( __( 'Edit', 'textdomain' ), '<p>', '</p>' );
-        ?>	
-		<div class="thumb-container"><?php the_post_thumbnail();?></div>	
+        ?>		
 		</header><!-- .entry-header -->
 		<div class="entry-content">
 		<?php

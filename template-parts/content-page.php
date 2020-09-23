@@ -6,11 +6,12 @@
  *
  * @package Star Star
  */
-
 ?>
 <article id="post-<?php the_ID(); ?>" >
 	<header class="entry-header">
-		<?php the_title( '<h1 class="sexwork__title single__title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="sexwork__title single__title">', '</h1>' ); 
+		edit_post_link( __( 'Edit', 'textdomain' ), '<p>', '</p>' );
+		?>
 	</header><!-- .entry-header -->
 	<?php the_post_thumbnail("large"); ?>
 	<div class="entry-content">
