@@ -12,6 +12,7 @@
 	transform: translateX(-101vw);
 	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
 	transition: transform 0.4s ease-out;
+    padding: 30px;	
 	@media screen and (min-width: $medium_screen) {
 		width: 30vw;
 	}
@@ -28,7 +29,6 @@
 		top:0;
     }    
 }
-
 .menu {	
 	color: $black_color;
 	margin: 0;
@@ -38,6 +38,13 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	padding: 30px;
+	@media screen and (min-width: $medium_screen) {
+		padding: 50px;
+	}  
+	@media screen and (min-width: $medium_screen) {
+		padding: 80px;
+    }     
 	@media screen and (min-width: $larger_screen) {
 		flex-direction: row;
 		height: unset;
@@ -45,6 +52,7 @@
 		background-color: unset;
 		justify-content: flex-end;
 		min-width: 500px;
+		padding: unset;
 	} 
 	li {
 		font-family: $font__main;
@@ -75,23 +83,11 @@
 		a:focus,
 		a:active
 		 {
-			color: $red_main;
-			
+			color: $black_color;	
 		}
 	}	
 }
-#primary-menu {
-	padding: 30px;
-	@media screen and (min-width: $medium_screen) {
-		padding: 50px;
-	}  
-	@media screen and (min-width: $medium_screen) {
-		padding: 80px;
-    }  
-	@media screen and (min-width: $larger_screen) {
-		padding: unset;
-    }    
-}
+
 
 .menu-active {
 	display: flex;
@@ -118,18 +114,20 @@
 * Do you know the song "Such a Shame"? Well, this is it..
 */
 .smaller-header-dark {
-    @media screen and (min-width: $large_screen) {
+    @media screen and (min-width: $extra_large_screen) {
         .menu {
             li {
                 a {
-                 color: black;
+                    color: black;
+                }
+                a:hover {
+                    color: $red_main;
                 }
             }
          
         }
-    }  
+    }
 }
-
 .toggler {
     display: flex;
     flex-direction:column;
@@ -158,22 +156,19 @@
 .sub-menu {
 	list-style: none;
 	padding: 0px;
-	transform: scale(0);
+	max-height: 0; 
 	overflow: hidden;
-	transition: all 0.3s ease-in; 
+	transition: max-height 0.4s ease-in; 
 	li {
 		a {
 			color:$black_main;
 			font-size: 0.7rem;
 			line-height: 1rem; 	
+			margin: 0 10px;
 		}
 	} 	
 	@media screen and (min-width: $larger_screen) {	
-		display:none;
 		border-radius: 5px;
-		height: unset;
-		overflow: unset;
-		padding: 10px;
 		@include smooth-shadow;
 		background: $light_color;
 		position:absolute;
@@ -184,11 +179,8 @@
  }
 
  .open-submenu {
-	transform: scale(1);
-	overflow: unset;
-	@media screen and (min-width: $larger_screen) {
-		display:block;
-	}
+	max-height: 200px; 
+	transition: max-height 0.4s ease-out; 	
  }
  .down-svg {
 	padding-left: 5px; 
@@ -215,6 +207,15 @@
 	li {
 	animation: 0.4s ease pulse;
 	animation-fill-mode: both; 
+	}
+}
+
+.close-menu {
+	position:absolute;
+	top: 20px;
+	right: 20px;
+	@media screen and (min-width: $larger_screen) {	
+		display: none;	
 	}
 }
 

@@ -924,18 +924,6 @@ textarea {
 	}
 }
 
-/*
-* Do you know the song "Such a Shame"? Well, this is it..
-*/
-@media screen and (min-width: 1600px) {
-	.smaller-header-dark .menu li a {
-		color: black;
-	}
-	.smaller-header-dark .menu li a:hover {
-		color: gray;
-	}
-}
-
 .site-branding {
 	display: -ms-flexbox;
 	display: flex;
@@ -1321,6 +1309,7 @@ a:hover, a:active {
 	transform: translateX(-101vw);
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 	transition: transform 0.4s ease-out;
+	padding: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1357,6 +1346,19 @@ a:hover, a:active {
 	    flex-direction: column;
 	-ms-flex-pack: start;
 	    justify-content: flex-start;
+	padding: 30px;
+}
+
+@media screen and (min-width: 768px) {
+	.menu {
+		padding: 50px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.menu {
+		padding: 80px;
+	}
 }
 
 @media screen and (min-width: 1420px) {
@@ -1369,6 +1371,7 @@ a:hover, a:active {
 		-ms-flex-pack: end;
 		    justify-content: flex-end;
 		min-width: 500px;
+		padding: unset;
 	}
 }
 
@@ -1415,29 +1418,7 @@ a:hover, a:active {
 .menu li a:hover,
 .menu li a:focus,
 .menu li a:active {
-	color: #EE3626;
-}
-
-#primary-menu {
-	padding: 30px;
-}
-
-@media screen and (min-width: 768px) {
-	#primary-menu {
-		padding: 50px;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	#primary-menu {
-		padding: 80px;
-	}
-}
-
-@media screen and (min-width: 1420px) {
-	#primary-menu {
-		padding: unset;
-	}
+	color: #413742;
 }
 
 .menu-active {
@@ -1464,9 +1445,12 @@ a:hover, a:active {
 /*
 * Do you know the song "Such a Shame"? Well, this is it..
 */
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1600px) {
 	.smaller-header-dark .menu li a {
 		color: black;
+	}
+	.smaller-header-dark .menu li a:hover {
+		color: #EE3626;
 	}
 }
 
@@ -1507,24 +1491,21 @@ a:hover, a:active {
 .sub-menu {
 	list-style: none;
 	padding: 0px;
-	transform: scale(0);
+	max-height: 0;
 	overflow: hidden;
-	transition: all 0.3s ease-in;
+	transition: max-height 0.4s ease-in;
 }
 
 .sub-menu li a {
 	color: #282626;
 	font-size: 0.7rem;
 	line-height: 1rem;
+	margin: 0 10px;
 }
 
 @media screen and (min-width: 1420px) {
 	.sub-menu {
-		display: none;
 		border-radius: 5px;
-		height: unset;
-		overflow: unset;
-		padding: 10px;
 		background: #F7F7F8;
 		position: absolute;
 		min-width: 150px;
@@ -1540,14 +1521,8 @@ a:hover, a:active {
 }
 
 .open-submenu {
-	transform: scale(1);
-	overflow: unset;
-}
-
-@media screen and (min-width: 1420px) {
-	.open-submenu {
-		display: block;
-	}
+	max-height: 200px;
+	transition: max-height 0.4s ease-out;
 }
 
 .down-svg {
@@ -1574,6 +1549,18 @@ a:hover, a:active {
 .open-menu-items li {
 	animation: 0.4s ease pulse;
 	animation-fill-mode: both;
+}
+
+.close-menu {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+@media screen and (min-width: 1420px) {
+	.close-menu {
+		display: none;
+	}
 }
 
 .open-menu-items li:nth-child(1) {

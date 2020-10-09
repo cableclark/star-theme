@@ -47,27 +47,6 @@
     } 
 }
 
-/*
-* Do you know the song "Such a Shame"? Well, this is it..
-*/
-
-.smaller-header-dark {
-    @media screen and (min-width: $extra_large_screen) {
-        .menu {
-            li {
-                a {
-                    color: black;
-                }
-                a:hover {
-                    color: gray;
-                }
-            }
-         
-        }
-    }
-   
-}
-
 .site-branding {
     display:flex;
     align-content:center;   

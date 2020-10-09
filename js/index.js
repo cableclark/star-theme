@@ -196,9 +196,9 @@ primaryMenuItems.forEach(function(item) {
        </g>
      </svg>
      `;
-        item.firstElementChild.addEventListener('click', function (event) {
+        item.addEventListener('click', function (event) {
             event.preventDefault();
-            event.target.nextElementSibling.classList.toggle("open-submenu");
+            this.firstElementChild.nextElementSibling.classList.toggle("open-submenu");
     });
     }
 });
@@ -213,13 +213,10 @@ primaryMenuItems.forEach(function(item) {
 
 
 
-// const subMenuItems = document.querySelectorAll(".sub-menu");
+const subMenuItems = document.querySelectorAll(".sub-menu");
 
- 
-// subMenuItems.forEach(function(item) {
-//     if (window.innerWidth > 1420) {
-//         item.addEventListener('mouseleave', function (event) {   
-//             event.target.classList.remove("open-submenu");
-//         });
-//     }
-// });
+subMenuItems.forEach(function(item) {
+        item.addEventListener('mouseleave', function (event) {   
+            event.target.classList.remove("open-submenu");
+        });
+});
