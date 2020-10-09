@@ -6,36 +6,41 @@
  *
  * @package Star Star
  */
+
 ?>
 <div id="app">
 	<article id="post-<?php the_ID(); ?>" class="single-article flexed-publication">
 		<header>
 		<?php
-		the_title( '<h1 class="single__title">', '</h1>' );
-		edit_post_link( __( 'Edit', 'textdomain' ), '<p>', '</p>' );
-        ?>	
+			if ( is_singular() ) :
+				the_title( '<h1 class="single__title">', '</h1>' );
+			else :
+				the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" class="single__title">', '</a></h2>' );
+			endif;
+			?>	
 		<div class="thumb-container"><?php the_post_thumbnail();?></div>	
 		</header><!-- .entry-header -->
 		<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading...<span class="screen-reader-text"> "%s"</span>', 'star' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-		?>
-		<?php 
-		star_get_tags(); 
-		?>
+			<?php
+			the_content(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading...<span class="screen-reader-text"> "%s"</span>', 'star' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					wp_kses_post( get_the_title() )
+				)
+			);
+			?>
+			<?php 
+			star_get_tags(); 
+			edit_post_link( __( 'edit', 'textdomain' ), '<p>', '</p>' );
+			?>
 		</div><!-- .entry-content -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 </div> <!-- Container ends -->

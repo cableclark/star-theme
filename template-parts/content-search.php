@@ -6,7 +6,6 @@
  *
  * @package Star Star
  */
-
 ?>
 <article id="post-<?php the_ID(); ?>" >
 	<header class="entry-header">

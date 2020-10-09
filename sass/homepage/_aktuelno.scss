@@ -149,7 +149,6 @@
         border-left: 1px solid antiquewhite;
         padding-left: 2rem;
     }  
-    
 }
 
 .kampanja:hover,
@@ -157,5 +156,14 @@
     @media screen  and (min-width: $medium_screen){
         box-shadow: unset;
     }
+}
+
+.items-center {
+    justify-content: center;
+    max-width: 870px;
+}
+
+.margin-auto {
+    margin: 0 auto;
 }
 

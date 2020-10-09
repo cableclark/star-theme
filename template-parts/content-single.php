@@ -22,30 +22,30 @@
 				<?php
 					star_star_posted_on();
 				?>
-				<?php edit_post_link( __( 'Edit', 'textdomain' ), '<p>', '</p>' );?>
 			</div><!-- .entry-meta -->
-		<div class="img-container"><?php the_post_thumbnail();?></div>	
+		<div class="thumb-container"><?php the_post_thumbnail();?></div>	
 		</header><!-- .entry-header -->
 		<div class="entry-content">
-			<?php
-			the_content(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Continue reading...<span class="screen-reader-text"> "%s"</span>', 'star' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					wp_kses_post( get_the_title() )
-				)
-			);
-			?>
-			<?php 
-			star_get_tags(); 
-			?>
+		<?php
+		the_content(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading...<span class="screen-reader-text"> "%s"</span>', 'star' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				wp_kses_post( get_the_title() )
+			)
+		);
+		?>
+		<?php 
+		star_get_tags(); 
+		edit_post_link( __( 'edit', 'textdomain' ), '<p>', '</p>' );
+		?>
 		</div><!-- .entry-content -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 </div> <!-- Container ends -->

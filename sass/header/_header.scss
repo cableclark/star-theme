@@ -52,14 +52,14 @@
 */
 
 .smaller-header-dark {
-    @media screen and (min-width: $large_screen) {
+    @media screen and (min-width: $extra_large_screen) {
         .menu {
             li {
                 a {
                     color: black;
                 }
                 a:hover {
-                    border-bottom: 1px solid $black_main;
+                    color: gray;
                 }
             }
          

@@ -54,6 +54,7 @@
 		</div>
 		<nav id="site-navigation" class="main-navigation">
 			<div class="main-menu">
+			<div class="close-menu">X</div>
 				<?php
 				wp_nav_menu(
 					array(

@@ -47,7 +47,10 @@
 				?><p class="site-description"><?php echo $miss_albini_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?></div>
 		<nav id="site-navigation" class="main-navigation">
-			<div class="main-menu"><?php
+		
+			<div class="main-menu">
+			<div class="close-menu">X</div>
+				<?php
 				wp_nav_menu(
 					array(
 						'theme_location' => 'menu-1',
@@ -59,6 +62,7 @@
 				}
 				?>  
 				<?php echo search_icon_svg();?> 
+					
 			</div>
 			<div class="toggler" aria-controls="primary-menu" aria-expanded="false"> 
 				<div></div>
