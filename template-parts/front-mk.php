@@ -1,8 +1,3 @@
-<?php /*
-Template Name: front-page
-*/
-?>
-
 <div class="hero" id="hero"><img class="hero__image" src="https://starsexwork.org/wp-content/themes/star/images/front_page.svg" alt="umbrrella balkans" />
     <div class="hero-container">
         <h2 class="hero-container__heading">СТАР</h2>
@@ -111,8 +106,7 @@ Template Name: front-page
         <h3 class="s-work__title ">S-WORK МАГАЗИН</h3>
         <div class="s-work__posts body-container">[cat_posts cat="4" post_type="swork-magazine"]</div>
         <span id="campagns"> </span>
-        <a href ="https://starsexwork.org/category/swork-magazine/" class="red_link--more middle">ПОСТАРИ...</a> </a>
-             
+        <a href ="https://starsexwork.org/category/swork-magazine/" class="red_link--more middle">ПОСТАРИ...</a> </a>      
 </div>
 <div class="aktuelno campagns">
     <h3 class="aktuelno__title font-white">КАМПАЊИ</h3>

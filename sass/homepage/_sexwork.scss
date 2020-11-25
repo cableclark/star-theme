@@ -19,7 +19,8 @@
 
 .sexwork__title {
     margin: 2rem 1.4rem;
-    margin-bottom: 0;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
     font-weight: normal;
     color:$red_main;
     text-align: center;
@@ -27,6 +28,7 @@
     @include front-page-title; 
     @media screen and (min-width: $larger_screen) {
         margin: 0rem 1.4rem;
+        line-height: 3.2rem;
     }
 }
 

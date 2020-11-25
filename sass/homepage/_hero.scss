@@ -164,15 +164,13 @@
         background-color: unset;
         display: block;
         margin: 0 auto;
-        transform: translateY(-130px);
+        transform: translateY(-150px);
         border-radius: 50%;
         background-color: $red_main;
         width: 60px;
         animation: 2s ease-out 0.5s infinite downer;
     }
-    @media screen  and (min-width: $extra_large_screen){
-        transform: translateY(-120px);
-    }
+   
 }
 
 .top {

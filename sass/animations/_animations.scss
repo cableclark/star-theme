@@ -25,7 +25,7 @@
     opacity 0.4s .5s ease;
     will-change: opacity;
 }
-
+@media screen and (min-width: $large_screen) {
   .hero-container__heading {
       animation: 0.2s ease 0.5s 1 slideInFromLeft;
       animation-fill-mode: both;
@@ -40,7 +40,7 @@
       animation: 0.2s ease 0.9s 1 slideInFromLeft;
       animation-fill-mode: both;
   }
-
+}
   .hero__image{
         animation: 2s ease-out 0s 1 fadeIn;
         animation-fill-mode: both;

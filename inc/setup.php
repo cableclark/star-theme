@@ -166,6 +166,7 @@ function my_single_template($single) {
 add_filter('single_template', 'my_single_template');
 
 
+
 /**
 * Load text domain
 */

@@ -56,14 +56,12 @@
 }
 
 .margin-auto {
-
-    margin: 0 auto;
+        margin: 0 auto;
+    
 }
 
 .campagns {
     .margin-auto {
-        @media screen and (min-width: 352px) {
             margin: 2rem auto;
-        }
     }
 }

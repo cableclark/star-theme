@@ -441,8 +441,14 @@ li {
 @media screen and (min-width: 1023px) {
 	p,
 	li {
-		line-height: 26px;
-		font-size: 18px;
+		line-height: 30px;
+		font-size: 17px;
+	}
+}
+
+@media screen and (min-width: 1023px) {
+	p {
+		line-height: 23px;
 	}
 }
 
@@ -517,19 +523,19 @@ big {
 	}
 }
 
-.hero-container__heading {
-	animation: 0.2s ease 0.5s 1 slideInFromLeft;
-	animation-fill-mode: both;
-}
-
-.hero-container__slogan {
-	animation: 0.2s ease 0.7s 1 slideInFromLeft;
-	animation-fill-mode: both;
-}
-
-.hero-container__call-to-action {
-	animation: 0.2s ease 0.9s 1 slideInFromLeft;
-	animation-fill-mode: both;
+@media screen and (min-width: 1023px) {
+	.hero-container__heading {
+		animation: 0.2s ease 0.5s 1 slideInFromLeft;
+		animation-fill-mode: both;
+	}
+	.hero-container__slogan {
+		animation: 0.2s ease 0.7s 1 slideInFromLeft;
+		animation-fill-mode: both;
+	}
+	.hero-container__call-to-action {
+		animation: 0.2s ease 0.9s 1 slideInFromLeft;
+		animation-fill-mode: both;
+	}
 }
 
 .hero__image {
@@ -1321,6 +1327,7 @@ a:hover, a:active {
 @media screen and (min-width: 1420px) {
 	.main-menu {
 		box-shadow: unset;
+		padding: unset;
 		position: static;
 		-ms-flex-direction: row;
 		    flex-direction: row;
@@ -1386,6 +1393,9 @@ a:hover, a:active {
 	.menu li {
 		padding: 0.3rem 0;
 	}
+	.menu li a {
+		font-size: 13px;
+	}
 }
 
 @media all and (min-width: 1023px) {
@@ -1398,33 +1408,31 @@ a:hover, a:active {
 	.menu li {
 		padding-right: 0.3rem;
 	}
+	.menu li a {
+		font-size: 15px;
+	}
 }
 
 .menu li a {
 	display: block;
-	color: #413742;
-	font-size: 14px;
+	color: black;
+	padding: 0.3rem;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1420px) {
 	.menu li a {
 		box-sizing: border-box;
-		color: #F7F7F8;
 		padding: 0.4em 0.6em;
 		border-width: 1px;
+		color: white;
 	}
-}
-
-.menu li a:hover,
-.menu li a:focus,
-.menu li a:active {
-	color: #413742;
 }
 
 .menu-active {
 	display: -ms-flexbox;
 	display: flex;
 	transform: translateX(0px);
+	transition: transform 0.4s ease-out;
 }
 
 @media screen and (min-width: 1420px) {
@@ -1445,9 +1453,12 @@ a:hover, a:active {
 /*
 * Do you know the song "Such a Shame"? Well, this is it..
 */
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1420px) {
 	.smaller-header-dark .menu li a {
 		color: black;
+	}
+	.smaller-header-dark .menu li a .down-svg {
+		stroke: #413742;
 	}
 	.smaller-header-dark .menu li a:hover {
 		color: #EE3626;
@@ -1493,22 +1504,31 @@ a:hover, a:active {
 	padding: 0px;
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.4s ease-in;
+	transition: max-height 0.3s ease-out;
 }
 
 .sub-menu li a {
 	color: #282626;
-	font-size: 0.7rem;
+	font-size: 0.9rem;
 	line-height: 1rem;
-	margin: 0 10px;
+}
+
+@media screen and (min-width: 1420px) {
+	.sub-menu {
+		max-height: 600px;
+		z-index: -100000;
+		opacity: 0;
+		transition: opacity 0.1s ease-out;
+	}
 }
 
 @media screen and (min-width: 1420px) {
 	.sub-menu {
 		border-radius: 5px;
+		padding: 0px 7px;
 		background: #F7F7F8;
 		position: absolute;
-		min-width: 150px;
+		min-width: 160px;
 		top: 50px;
 		left: -50px;
 	}
@@ -1521,12 +1541,40 @@ a:hover, a:active {
 }
 
 .open-submenu {
-	max-height: 200px;
-	transition: max-height 0.4s ease-out;
+	max-height: 450px;
+	transition: max-height 0.3s ease-in;
+}
+
+@media screen and (min-width: 1420px) {
+	.open-submenu {
+		z-index: 100000;
+		opacity: 1;
+		transition: opacity 0.1s ease-out;
+	}
 }
 
 .down-svg {
-	padding-left: 5px;
+	padding-left: 6px;
+	stroke: #413742;
+	transform: translate(50px, 5px);
+}
+
+@media screen and (min-width: 1420px) {
+	.down-svg {
+		transform: translate(0px, 5px);
+	}
+}
+
+@media screen and (min-width: 1420px) {
+	.down-svg {
+		stroke: white;
+	}
+}
+
+@media screen and (min-width: 1420px) {
+	.down-svg-dark {
+		stroke: #413742;
+	}
 }
 
 .menu-hider {
@@ -1555,6 +1603,7 @@ a:hover, a:active {
 	position: absolute;
 	top: 20px;
 	right: 20px;
+	cursor: pointer;
 }
 
 @media screen and (min-width: 1420px) {
@@ -1681,10 +1730,8 @@ a:hover, a:active {
 	margin: 0 auto;
 }
 
-@media screen and (min-width: 352px) {
-	.campagns .margin-auto {
-		margin: 2rem auto;
-	}
+.campagns .margin-auto {
+	margin: 2rem auto;
 }
 
 /*--------------------------------------------------------------
@@ -2244,7 +2291,6 @@ figcaption .wp-caption-text {
 	-ms-flex-pack: center;
 	    justify-content: center;
 	margin: 0 auto;
-	max-width: 500px;
 }
 
 .archive-title h1 {
@@ -2660,17 +2706,11 @@ figcaption .wp-caption-text {
 		background-color: unset;
 		display: block;
 		margin: 0 auto;
-		transform: translateY(-130px);
+		transform: translateY(-150px);
 		border-radius: 50%;
 		background-color: #EE3626;
 		width: 60px;
 		animation: 2s ease-out 0.5s infinite downer;
-	}
-}
-
-@media screen and (min-width: 1600px) {
-	.down {
-		transform: translateY(-120px);
 	}
 }
 
@@ -2762,7 +2802,8 @@ figcaption .wp-caption-text {
 
 .sexwork__title {
 	margin: 2rem 1.4rem;
-	margin-bottom: 0;
+	line-height: 1.5rem;
+	margin-bottom: 1rem;
 	font-weight: normal;
 	color: #EE3626;
 	text-align: center;
@@ -2780,6 +2821,7 @@ figcaption .wp-caption-text {
 @media screen and (min-width: 1420px) {
 	.sexwork__title {
 		margin: 0rem 1.4rem;
+		line-height: 3.2rem;
 	}
 }
 
@@ -3076,6 +3118,12 @@ figcaption .wp-caption-text {
 	}
 }
 
+@media screen and (min-width: 1023px) {
+	.wider-card {
+		max-width: 400px;
+	}
+}
+
 .news-card-content p {
 	display: none;
 }
@@ -3163,7 +3211,7 @@ figcaption .wp-caption-text {
 @media screen and (min-width: 1023px) {
 	.kampanja {
 		border-left: 1px solid antiquewhite;
-		padding-left: 2rem;
+		padding-left: 1rem;
 	}
 }
 
@@ -3177,7 +3225,7 @@ figcaption .wp-caption-text {
 .items-center {
 	-ms-flex-pack: center;
 	    justify-content: center;
-	max-width: 870px;
+	max-width: 1020px;
 }
 
 .margin-auto {

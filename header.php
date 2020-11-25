@@ -1,10 +1,7 @@
 <?php
 /**
  * The header for our theme
- *
- *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
  * @package Star Star
  */
 ?><!doctype html>
@@ -19,7 +16,7 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-		gtag('config', 'UA-169345385-1');
+		gtag('config', 'UA-104976595-1');
 	</script>
 	<?php 
 	wp_head(); 
@@ -47,7 +44,6 @@
 				?><p class="site-description"><?php echo $miss_albini_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?></div>
 		<nav id="site-navigation" class="main-navigation">
-		
 			<div class="main-menu">
 			<div class="close-menu"><svg
 					width="20"
@@ -69,18 +65,12 @@
 					</svg>
 					</div>
 				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
+				wp_nav_menu(array('theme_location' => 'menu-1','menu_id'=> 'primary-menu',));
 				if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 					return;
 				}
 				?>  
-				<?php echo search_icon_svg();?> 
-					
+				<?php echo search_icon_svg();?> 	
 			</div>
 			<div class="toggler" aria-controls="primary-menu" aria-expanded="false"> 
 				<div></div>

@@ -74,6 +74,12 @@
     
 }
 
+.wider-card {
+    @media screen  and (min-width: $large_screen){
+        max-width: 400px;
+    }
+}
+
 
 .news-card-content {
     p {
@@ -147,7 +153,7 @@
 .kampanja {
     @media screen and (min-width: $large_screen) {
         border-left: 1px solid antiquewhite;
-        padding-left: 2rem;
+        padding-left: 1rem;
     }  
 }
 
@@ -160,7 +166,7 @@
 
 .items-center {
     justify-content: center;
-    max-width: 870px;
+    max-width: 1020px;
 }
 
 .margin-auto {

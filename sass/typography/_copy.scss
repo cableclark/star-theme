@@ -6,11 +6,17 @@ li {
 	overflow-wrap: break-all;
 	margin: 1rem 0;
 	@media screen and(min-width: $large_screen) {
-		line-height: 26px;
-		font-size: 18px;
+		line-height: 30px;
+		font-size: 17px;
 	 }	
 }
 
+p {
+	@media screen and(min-width: $large_screen) {
+		line-height: 23px;
+
+	 }	
+}
 
 dfn,
 cite,

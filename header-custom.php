@@ -26,7 +26,7 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-		gtag('config', 'UA-169345385-1');
+		gtag('config', 'UA-104976595-1');
 	</script>
 	<?php 
 	wp_head(); 

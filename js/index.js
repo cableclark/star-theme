@@ -16,6 +16,7 @@ function toggleSearchBar (item, searchElement, className, classNameScrolled, foc
 const search = document.querySelector('.search-icon');
 const searchElement = document.querySelector('.widget_search');
 const inputField = document.querySelector('.search-field');
+
 toggleSearchBar(search, searchElement, 'search-active', 'search-active-scrolled', inputField);
 
 /**
@@ -38,6 +39,7 @@ const menuHider = document.querySelector('.menu-hider');
 
 toggleClass(toggler, menuElement, 'menu-active');
 toggleClass(closeIcon, menuElement, 'menu-active');
+toggleClass(search, menuElement, 'menu-active');
 toggleClass(toggler, menuUL, 'open-menu-items');
 toggleClass(toggler, menuHider, 'menu-hider-active');
 
@@ -82,65 +84,6 @@ removeClass(menuHiderActive, menuUL, 'open-menu-items');
 removeClass(menuElement, menuUL, 'open-menu-items');
 
 
-/**
- *  A function that increases and reduces the size of the navbar
- *
- */
-
-const title = document.querySelector(".site-title");
-const navbar = document.querySelector(".site-header");
-const menuItems = document.querySelector(".menu");
-const logoBlock = document.querySelector(".custom-logo-link");
-const siteBranding = document.querySelector(".site-branding");
-const topButton = document.querySelector(".top");
-
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    title.classList.add("smaller-navbar");
-    navbar.classList.add("smaller-header");
-    searchElement.classList.add("menu-scroller");  
-    searchElement.classList.remove("menu-scroller2"); 
-    menuItems.classList.add('scrolled-menu-items'); 
-    siteBranding.classList.add('site-branding--scrolled'); 
-    search.classList.add('search-icon--scrolled'); 
-  } else {
-    title.classList.remove("smaller-navbar");
-    navbar.classList.remove("smaller-header");
-    searchElement.classList.remove("menu-scroller"); 
-    searchElement.classList.add("menu-scroller2"); 
-    menuItems.classList.remove('scrolled-menu-items'); 
-    siteBranding.classList.remove('site-branding--scrolled'); 
-    search.classList.remove('search-icon--scrolled'); 
-    if (topButton !== 'undefined') {
-        topButton.classList.remove("top-active");
-    }
-  }
-} 
-
-window.onscroll = debounce(function() {
-    scrollFunction();
-}, 1000/120)
-
-/**
-* Returns a function, that, as long as it continues to be invoked, will not
-* be triggered. The function will be called after it stops being called for
-* N milliseconds. If `immediate` is passed, trigger the function on the
-* leading edge, instead of the trailing.
- */
-function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-}
 
 /**
  *  Animate on scroll usign Intersection Observer API
@@ -180,37 +123,40 @@ primaryMenuItems.forEach(function(item) {
         item.firstElementChild.innerHTML += `<svg
         class="down-svg"
         width="20"
-        height="10"
-        viewBox="0 0 5 5"
-     >
-       <defs
-          id="defs2" />
-       <g
-          inkscape:label="Layer 1"
-          inkscape:groupmode="layer"
-          id="layer1">
-         <path
-            style="fill:none;stroke:#000000;stroke-width:0.089535px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-            d="M 0.3093043,1.9456416 2.6744007,4.0040839 4.9939129,1.9485991"
-            id="path10" />
+        height="20"
+        viewBox="0 0 20 20"
+       >
+       <defs />
+       <g>
+         <g>
+           <g>
+             <path
+                style="fill:none;stroke-width:1.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                d="M 0.5787191,5.1323772 10.181743,13.377849 19.469081,5.3521393" />
+           </g>
+         </g>
        </g>
      </svg>
+     
      `;
-        item.addEventListener('click', function (event) {
-            event.preventDefault();
-            this.firstElementChild.nextElementSibling.classList.toggle("open-submenu");
-    });
     }
 });
 
-// primaryMenuItems.forEach(function(item) {
-//     if (window.innerWidth > 1420 && item.querySelector(".sub-menu") !== null ) {
-//         item.addEventListener('mouseenter', function (event) {
-//            event.target.querySelector(".sub-menu").classList.add("open-submenu");
-//         });
-//     }
-// });
+const downSvg = document.querySelectorAll(".down-svg");
 
+downSvg.forEach((item)=> {
+    item.addEventListener('click', function (event) {
+            event.preventDefault();
+            this.parentElement.nextElementSibling.classList.toggle("open-submenu");
+    });
+})
+
+downSvg.forEach((item)=> {
+    item.addEventListener('mouseEnter', function (event) {
+            event.preventDefault();
+            this.parentElement.nextElementSibling.classList.toggle("open-submenu");
+    });
+})
 
 
 const subMenuItems = document.querySelectorAll(".sub-menu");
@@ -220,3 +166,71 @@ subMenuItems.forEach(function(item) {
             event.target.classList.remove("open-submenu");
         });
 });
+
+
+/**
+ *  A function that increases and reduces the size of the navbar
+ *
+ */
+
+const title = document.querySelector(".site-title");
+const navbar = document.querySelector(".site-header");
+const menuItems = document.querySelector(".menu");
+const logoBlock = document.querySelector(".custom-logo-link");
+const siteBranding = document.querySelector(".site-branding");
+const topButton = document.querySelector(".top");
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    title.classList.add("smaller-navbar");
+    navbar.classList.add("smaller-header");
+    searchElement.classList.add("menu-scroller");  
+    searchElement.classList.remove("menu-scroller2"); 
+    menuItems.classList.add('scrolled-menu-items'); 
+    siteBranding.classList.add('site-branding--scrolled'); 
+    search.classList.add('search-icon--scrolled'); 
+    downSvg.forEach( function (item) {
+       
+        item.classList.add('down-svg-dark');
+    })
+  } else {
+    title.classList.remove("smaller-navbar");
+    navbar.classList.remove("smaller-header");
+    searchElement.classList.remove("menu-scroller"); 
+    searchElement.classList.add("menu-scroller2"); 
+    menuItems.classList.remove('scrolled-menu-items'); 
+    siteBranding.classList.remove('site-branding--scrolled'); 
+    search.classList.remove('search-icon--scrolled'); 
+    downSvg.forEach( function (item) {
+        item.classList.remove('down-svg-dark');
+    })
+    if (topButton !== 'undefined') {
+        topButton.classList.remove("top-active");
+    }
+  }
+} 
+
+window.onscroll = debounce(function() {
+    scrollFunction();
+}, 1000/120)
+
+/**
+* Returns a function, that, as long as it continues to be invoked, will not
+* be triggered. The function will be called after it stops being called for
+* N milliseconds. If `immediate` is passed, trigger the function on the
+* leading edge, instead of the trailing.
+ */
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+}
