@@ -500,6 +500,14 @@ big {
 	font-size: 125%;
 }
 
+.light-color .emoji {
+	min-width: unset;
+}
+
+.emoji {
+	min-width: unset;
+}
+
 /*--------------------------------------------------------------
 # Animations
 --------------------------------------------------------------*/
@@ -1316,6 +1324,7 @@ a:hover, a:active {
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 	transition: transform 0.4s ease-out;
 	padding: 30px;
+	overflow-y: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -1338,6 +1347,7 @@ a:hover, a:active {
 		transition: unset;
 		transform: translateX(0px);
 		top: 0;
+		overflow-y: unset;
 	}
 }
 
@@ -1354,18 +1364,6 @@ a:hover, a:active {
 	-ms-flex-pack: start;
 	    justify-content: flex-start;
 	padding: 30px;
-}
-
-@media screen and (min-width: 768px) {
-	.menu {
-		padding: 50px;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.menu {
-		padding: 80px;
-	}
 }
 
 @media screen and (min-width: 1420px) {
@@ -1509,7 +1507,7 @@ a:hover, a:active {
 
 .sub-menu li a {
 	color: #282626;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	line-height: 1rem;
 }
 
@@ -1517,6 +1515,7 @@ a:hover, a:active {
 	.sub-menu {
 		max-height: 600px;
 		z-index: -100000;
+		display: none;
 		opacity: 0;
 		transition: opacity 0.1s ease-out;
 	}
@@ -1548,6 +1547,7 @@ a:hover, a:active {
 @media screen and (min-width: 1420px) {
 	.open-submenu {
 		z-index: 100000;
+		display: block;
 		opacity: 1;
 		transition: opacity 0.1s ease-out;
 	}
@@ -1912,7 +1912,7 @@ a:hover, a:active {
 .search-active {
 	z-index: 150000;
 	opacity: 1;
-	opacity: 0.8;
+	opacity: 1;
 	background: white;
 }
 
@@ -1925,7 +1925,7 @@ a:hover, a:active {
 .search-active-scrolled {
 	z-index: 150000;
 	transform: translateY(0px);
-	opacity: 0.8;
+	opacity: 1;
 	background: white;
 }
 
@@ -2040,6 +2040,8 @@ a:hover, a:active {
 	fill: #413742;
 	padding: 10px;
 	border: 1px solid #413742;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 @media screen and (min-width: 1420px) {

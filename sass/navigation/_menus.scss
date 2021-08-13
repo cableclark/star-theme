@@ -12,7 +12,8 @@
 	transform: translateX(-101vw);
 	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
 	transition: transform 0.4s ease-out;
-    padding: 30px;	
+	padding: 30px;	
+	overflow-y: auto;
 	@media screen and (min-width: $medium_screen) {
 		width: 30vw;
 	}
@@ -28,6 +29,8 @@
 		transition: unset;
 		transform: translateX(0px);
 		top:0;
+		overflow-y: unset;
+	
     }    
 }
 .menu {	
@@ -40,12 +43,9 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	padding: 30px;
-	@media screen and (min-width: $medium_screen) {
-		padding: 50px;
-	}  
-	@media screen and (min-width: $medium_screen) {
-		padding: 80px;
-    }     
+	// @media screen and (min-width: $medium_screen) {
+	// 	padding: 50px;
+	// } 
 	@media screen and (min-width: $larger_screen) {
 		flex-direction: row;
 		height: unset;
@@ -168,13 +168,14 @@
 	li {
 		a {
 			color:$black_main;
-			font-size: 0.9rem;
+			font-size: 0.8rem;
 			line-height: 1rem; 	
 		}
 	} 	
 	@media screen and (min-width: 1420px) {	
 		max-height: 600px;
 		z-index:-100000;
+		display:none;
 		opacity: 0;
 		transition: opacity 0.1s ease-out; 
 	}
@@ -195,6 +196,7 @@
 	transition: max-height 0.3s ease-in; 	
 	@media screen and (min-width: 1420px) {	
 		z-index:100000;
+		display:block;
 		opacity: 1;
 		transition: opacity 0.1s ease-out; 
 	}

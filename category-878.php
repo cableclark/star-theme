@@ -12,18 +12,13 @@ get_header();
 		<div class="archive-title">
 			<h1 class="sexwork__title"><?php echo get_cat_name(get_queried_object_id());?></h1>
 		</div>
-		<div class="archives-container justify-center">
+		<div class="swork-container">
 		<?php
 		if ( have_posts() ) :
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to overridecho get_post_type();e this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/excerpt-publikacija', get_post_type() );
+				get_template_part( 'template-parts/excerpt-swork-magazine', get_post_type() );
 			endwhile;			
 		else :
 			get_template_part( 'template-parts/content', 'none' );

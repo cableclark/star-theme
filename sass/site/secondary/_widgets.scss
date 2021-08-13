@@ -80,7 +80,7 @@
 .search-active {
     z-index: 150000;
     opacity:1; 
-    opacity:0.8;
+    opacity:1;
     background: white;
     @media screen and (min-width: $large_screen) {
         transform: translateY(80px);
@@ -90,7 +90,7 @@
 .search-active-scrolled {
     z-index: 150000;
     transform: translateY(0px);
-    opacity:0.8;
+    opacity:1;
     background: white;
     @media screen and (min-width: $small_screen) {
         transform: translateY(70px);
@@ -180,6 +180,7 @@
     fill: $black_color;
     padding: 10px;
     border: 1px solid $black_color;
+    flex-shrink: 0;
     @media screen and (min-width: $larger_screen) {
         margin-top: 0;
         border: none;  

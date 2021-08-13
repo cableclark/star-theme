@@ -161,11 +161,11 @@ downSvg.forEach((item)=> {
 
 const subMenuItems = document.querySelectorAll(".sub-menu");
 
-subMenuItems.forEach(function(item) {
-        item.addEventListener('mouseleave', function (event) {   
-            event.target.classList.remove("open-submenu");
-        });
-});
+// subMenuItems.forEach(function(item) {
+//         item.addEventListener('mouseleave', function (event) {   
+//             event.target.classList.remove("open-submenu");
+//         });
+// });
 
 
 /**

@@ -65,3 +65,11 @@ ins {
 big {
 	font-size: 125%;
 }
+.light-color {
+	.emoji {
+		min-width: unset;
+	}
+}
+.emoji {
+	min-width: unset;
+}

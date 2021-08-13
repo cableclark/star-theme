@@ -6,7 +6,6 @@
  *
  * @package Star Star
  */
-
 get_header();
 ?>
 	<main id="primary" class="site-main white-bg">

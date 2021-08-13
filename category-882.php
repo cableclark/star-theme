@@ -1,44 +1,38 @@
 <?php
 /**
- * The template for displaying search results pages
+ * The template for displaying archive pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Star Star
  */
 get_header();
 ?>
-	<main id="primary" class="site-main site-container">
-		<?php if ( have_posts() ) : ?>
-			<header class="page-header">
-				<h1 class="search-title ">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Results: %s', 'Star-star' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-			<?php
+	<main id="primary" class="site-main margin-top">
+		<div class="archive-title">
+			<h1 class="sexwork__title"><?php echo get_cat_name(get_queried_object_id());?></h1>
+		</div>
+		<div class="swork-container">
+		<?php
+		if ( have_posts() ) :
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-			endwhile;
-			the_posts_pagination( array(
-				'mid_size'  => 1,
-				'prev_text' => __( '<', 'textdomain' ),
-				'next_text' => __( '>', 'textdomain' ),
-			) );
+				get_template_part( 'template-parts/excerpt-swork-magazine', get_post_type() );
+			endwhile;			
 		else :
 			get_template_part( 'template-parts/content', 'none' );
 		endif;
 		?>
+	</div>	
+	<?php the_posts_pagination( array(
+				'mid_size'  => 1,
+				'prev_text' => __( '<', 'textdomain' ),
+				'next_text' => __( '>', 'textdomain' ),
+			) );
+	?>
 	</main><!-- #main -->
 <?php
 get_sidebar();
 get_footer();
+?>
